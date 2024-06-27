@@ -214,15 +214,8 @@ section#profile {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  height: fit-content;
-  padding-bottom: 10rem;
-}
-
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  height: 83vh;
+  padding-bottom: 20vh;
 }
 
 .section__text {
