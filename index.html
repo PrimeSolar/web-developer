@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladislav Kazantsev</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css" title="Main Stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles/media-queries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Vladislav Kazantsev</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Vladislav Kazantsev</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title-card">Vladislav Kazantsev</h1>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-2" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/pepsico/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/FirstSolar'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title about-me">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="skills icon" class="icon" />
+            <h3 class="card-title">Eperiences</h3>
+            <p class="card-text"><span>5 Years in IT
+                <br />Financial Technologies, Server Software, Traffic Management</span></p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3 class="card-title">Education</h3>
+            <p class="card-text" id="education-text">Technological University<br />and Many Different Courses</p>
+          </div>
+        </div>
+        <div class="text-container about-me-text">
+          <p>I specialize in delivering innovative architecture solutions and top-notch web application development to help you boost your online presence, streamline your operations and achieve your business goals efficiently.</p>
+          <p>
+            <strong>Architecture</strong>. I provide reliable and scalable solutions to ensure seamless performance, security and maintenance of your web applications.
+          </p>
+          <p>
+            <strong>Web Development</strong>. I offer customized and user-friendly web solutions to help businesses increase their online presence and drive growth.
+          </p>
+          <p>
+            <strong>Vision & Strategy</strong>. I help organizations define their direction, set ambitious goals, and create a roadmap for success.
+          </p>
+          <p>
+            <strong>UI/UX</strong>. I advice on intuitive and engaging user experiences that improve customer satisfaction and drive conversions for your digital products.
+          </p>
+          <p>
+            <strong>Self-Improvement</strong>. I constantly research and evaluate new methodologies and technologies that improve the quality, reliability, and performance of software development systems and processes.
+          </p>
+          <p>If you need professional web solutions, contact me.<br />
+            I'm sure my expertise can help you.</p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills'" />
+  </section>
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="skills-details-container">
+      <div class="skills about-containers">
+        <div class="details-container">
+          <h2 class="skills-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>JQuery</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>Node.js</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>Express.js</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>EJS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>PostgreSQL</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="projects-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container" id="project-1-card">
+          <div class="article-container">
+            <img src="./assets/project-1.jpg" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">Transport&nbsp;Company<br />Web Site</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/move-it/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/move-it/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container" id="project-2-card">
+          <div class="article-container">
+            <img src="./assets/project-2.jpg" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">Real Estate App<br />Docs Site</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/docs/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/docs/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container" id="project-3-card">
+          <div class="article-container">
+            <img src="./assets/project-3.jpg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">Dating App<br />Web Site</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/unison/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/unison/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container" id="project-4-card">
+          <div class="article-container">
+            <img src="./assets/project-4.jpg" alt="Project 4" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">Praise<br />Generator</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/praise-generator/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/praise-generator/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container" id="project-5-card">
+          <div class="article-container">
+            <img src="./assets/project-5.jpg" alt="Project 5" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">$50.6 million<br />Masterpiece</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/pixel-perfect/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/pixel-perfect/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container" id="project-6-card">
+          <div class="article-container">
+            <img src="./assets/project-6.jpg" alt="Project 6" class="project-img" />
+          </div>
+          <h2 class="skills-sub-title project-title">Password<br />Generator</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FirstSolar/password-generator/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://firstsolar.github.io/password-generator/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p2">Get in Touch</p>
+    <h1 class="title-card">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:hypervisor7@pm.me">hypervisor7@pm.me</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/pepsico">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+
+  <div id="footerContainer"></div>
+
+  <noscript>
+    <style>
+      nav,
+      div,
+      img,
+      section:not(#enable-javascript),
+      footer {
+        display: none !important;
+      }
+    </style>
+    <section id="enable-javascript" class="level2">
+      <h2>Enable JavaScript</h2>
+      <p>Because this document uses web based technologies, it requires interactive browser functionality. This functionality is provided, in part, by JavaScript. You might have to enable JavaScript within the browser in order to ensure that the
+        document displays correctly and its features work as expected.</p>
+      <p>Instructions for enabling JavaScript vary by browser. Select your browser from the list to learn how.</p>
+      <details style="margin-top: 5vh;">
+        <summary>
+          <strong>Chrome</strong>
+        </summary>
+        <ol type="1">
+          <li>Click on the browser menu button in the browser upper right corner.</li>
+          <li>Click <strong>Settings</strong>.</li>
+          <li>Click <strong>Privacy and security</strong> in the side menu.</li>
+          <li>Click <strong>Site settings</strong>.</li>
+          <li>Scroll to the <strong>JavaScript</strong> section and click on it.</li>
+          <li>Click <strong>&lt;&gt; Sites can use Javascript</strong>.</li>
+          <li>Refresh this page.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          <strong>Edge</strong>
+        </summary>
+        <ol type="1">
+          <li>Click on the browser menu button in the browser upper right corner.</li>
+          <li>Click <strong>Settings</strong>.</li>
+          <li>Choose <strong>Cookies and site permissions</strong> section.</li>
+          <li>Scroll to the <strong>JavaScript</strong> section and click on it.</li>
+          <li>Click <strong>Allowed (recommended)</strong>.</li>
+          <li>Refresh this page.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          <strong>Firefox</strong>
+        </summary>
+        <ol type="1">
+          <li>Type <code>about:config</code> in the address bar and press <strong>Enter</strong>. A warning page may appear. Click <strong>Accept the Risk and Continue</strong> to go to the <strong>about:config</strong> page.</li>
+          <li>In <strong>Search preference name</strong> field, type <code>javascript.enabled</code>. It should be set to <code>true</code> by default.</li>
+          <li>If <code>javascript.enabled</code> is set to <code>false</code>, click <strong>Toggle</strong> or <strong>Reset</strong> to set it back to <code>true</code>.</li>
+          <li>Refresh this page.</li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          <strong>Opera</strong>
+        </summary>
+        <ol type="1">
+          <li>Click on the browser menu button in the browser upper right corner.</li>
+          <li>Scroll all the way down and click <strong>Go to full browser settings</strong>.</li>
+          <li>Scroll to the <strong>Privacy and security</strong> section.</li>
+          <li>Click <strong>Site Settings</strong>.</li>
+          <li>Scroll to the <strong>JavaScript</strong> section and click on it.</li>
+          <li>Click <strong>&lt;&gt; Sites can use Javascript</strong>.</li>
+          <li>Refresh this page.
+      </details>
+    </section>
+  </noscript>
+
+  <script type="text/javascript" src="scripts/menu.js"></script>
+  <script type="text/javascript" src="scripts/footer.js"></script>
+</body>
+
+</html>
