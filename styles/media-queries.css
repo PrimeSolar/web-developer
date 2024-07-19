@@ -66,8 +66,8 @@
 
   section#contact {
     position: relative;
-    width: fit-content;
-    height: 350px;
+    width: 35vw;
+    height: 50vh;
     margin: 100px 0 0;
     padding: 2rem;
     display: flex;
@@ -85,13 +85,34 @@
 
   div.contact-info-upper-container {
     display: flex;
+    gap: 0;
     flex-direction: column;
     justify-content: center;
-    height: 100px;
+    align-items: center;
+    width: fit-content;
+    height: 7.5vh;
     border-radius: 2rem;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 2rem;
+    padding: 2.5rem 0.5rem;
+  }
+
+  .contact-info-container {
+    margin: 0.5rem 0 0;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .title-card {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #0070ba;
+    padding: 0.5rem 0;
+  }
+
+  #contact>h1.title-card {
+    padding: 0;
   }
 }
 
@@ -164,6 +185,10 @@
   section#profile {
     height: 750px;
     margin-bottom: 0;
+  }
+
+  .section__text__p1 {
+    font-size: 20px;
   }
 
   section#about {
@@ -256,7 +281,7 @@
   }
 
   #profile>.section__text {
-  margin-bottom: 7vh;
+    margin-bottom: 7vh;
   }
 
   #about {
@@ -267,17 +292,22 @@
   #skills {
     height: 1000px;
   }
-    #projects>.projects-details-container>.about-containers>.details-container {
-      flex-basis: fit-content;
-    }
+
+  #projects>.projects-details-container>.about-containers>.details-container {
+    flex-basis: fit-content;
+  }
 
   section#contact {
     height: 225px;
     width: auto;
-    margin-top: 300px;
+    margin: 300px 5vw 5vh;
   }
 
   div.contact-info-upper-container {
+    flex-direction: row;
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
     padding: 0.5rem;
     margin-bottom: 50px;
   }
