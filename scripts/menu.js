@@ -1,6 +1,14 @@
+const menu = document.querySelector(".menu-links");
+const badge = document.querySelector(".hamburger-icon");
+
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  badge.classList.toggle("open");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches(".menu-links") && !event.target.matches(".hamburger-icon") && !event.target.matches(".hamburger-icon span") && menu.classList.contains("open") === true) {
+    menu.classList.toggle("open");
+    badge.classList.toggle("open");
+  }
 }
