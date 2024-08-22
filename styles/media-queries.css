@@ -67,9 +67,9 @@
   section#contact {
     position: relative;
     width: 35vw;
-    height: 50vh;
+    height: fit-content;
     margin: 100px 0 0;
-    padding: 2rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -161,6 +161,15 @@
     display: none;
   }
 
+  .to-top {
+    right: 0;
+  }
+
+  .arrow-up {
+    right: 0;
+    width: 5vw;
+  }
+
   section,
   .section-container {
     height: fit-content;
@@ -189,6 +198,22 @@
 
   .section__text__p1 {
     font-size: 20px;
+  }
+
+  .to-top {
+    bottom: 56px;
+    right: -3.5px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .arrow, .arrow-up {
+    font-size: 50px;
+    height: 50px;
+    width: auto;
+    transform: rotate(0);
+    right: 0;
+    bottom: 0;
   }
 
   section#about {
@@ -304,7 +329,7 @@
   }
 
   div.contact-info-upper-container {
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     width: fit-content;
     height: fit-content;
