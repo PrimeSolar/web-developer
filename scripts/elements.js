@@ -4,30 +4,26 @@
 // allowing for expanded capabilities and functionality in the project.
 
 // Scroll to Top Button
-class scrollToTop extends HTMLElement {
+class ToTop extends HTMLElement {
   connectedCallback() {
     if (window.innerWidth <= 600) {
       this.innerHTML += `
-      <a href="#" class="to-top">
+      <a href="#">
         <span class="badge arrow-up">⬆</span>
       </a>
       `
     } else {
       this.innerHTML += `
-      <a href="#" class="to-top">
-        <img src="./assets/arrow.png" alt="Arrow Badge" class="badge arrow-up"/>
+      <a href="#">
+        <img src="./assets/arrow-up.png" alt="Scroll to top" title="Scroll to top" aria-label="Scroll to top" class="badge arrow-up" />
       </a>
       `
     }
   }
 }
-customElements.define("scroll-to-top-button", scrollToTop);
-console.log(window.innerWidth);
+customElements.define("to-top", ToTop);
 
-const scrollToTopButton = document.createElement("scroll-to-top-button");
-document.querySelector("#about").appendChild(scrollToTopButton);
-
-const toTop = document.querySelector(".to-top");
+const toTop = document.querySelector("#about").appendChild(document.createElement("to-top")).querySelector("a");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 450) {
     toTop.classList.add("active");
