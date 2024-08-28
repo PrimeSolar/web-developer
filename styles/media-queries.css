@@ -161,7 +161,7 @@
     display: none;
   }
 
-  .to-top {
+  to-top > a {
     right: 0;
   }
 
@@ -200,7 +200,7 @@
     font-size: 20px;
   }
 
-  .to-top {
+  to-top > a {
     bottom: 56px;
     right: -3.5px;
     font-size: 16px;
@@ -211,7 +211,6 @@
     font-size: 50px;
     height: 50px;
     width: auto;
-    transform: rotate(0);
     right: 0;
     bottom: 0;
   }
