@@ -302,6 +302,10 @@ h3 {
 
 /* BADGES */
 .badge {
+  height: 2rem;
+}
+
+.badge-btn {
   cursor: pointer;
   height: 2rem;
 }
