@@ -241,8 +241,13 @@ section#profile {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  height: 83vh;
-  padding-bottom: 20vh;
+  height: fit-content !important;
+  margin: 14vh auto 57vh;
+  margin-bottom: 35vh;
+  padding: 0;
+  text-align: center;
+  border-radius: 2rem;
+  position: relative;
 }
 
 .section__text {
