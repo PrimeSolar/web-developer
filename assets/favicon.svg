@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"
 >
-    <circle cx="128" cy="128" r="128" fill="#1177ff" />
-    <text x="50%" y="57.7%" font-family="Arial" font-size="217" fill="white" text-anchor="middle"
-        alignment-baseline="middle">👨🏻‍💻 </text>
+    <text x="-11%" y="75%" font-family="Arial" font-size="217" fill="white" text-anchor="start"
+        alignment-baseline="start">👨🏻‍💻</text>
 </svg>
