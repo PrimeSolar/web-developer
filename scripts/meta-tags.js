@@ -17,29 +17,29 @@ document.querySelector("head").appendChild(metaViewport);
 // Set <title>Vladislav Kazantsev, Web Developer</title>
 document.title = "Vladislav Kazantsev | Web Developer";
 
-// Insert <meta name="author" content="Vladislav Kazantsev">
+// Set <meta name="author" content="Vladislav Kazantsev">
 const metaAuthor = document.createElement("meta");
 metaAuthor.name = "author";
 metaAuthor.content = "Vladislav Kazantsev";
 document.querySelector("head").appendChild(metaAuthor);
 
-// Insert <meta name="copyright" content="© `Current Year` Vladislav Kazantsev">
+// Set <meta name="copyright" content="© `Current Year` Vladislav Kazantsev">
 const metaCopyright = document.createElement("meta");
 metaCopyright.name = "copyright";
 metaCopyright.content =
   "© " + new Date().getFullYear() + " Vladislav Kazantsev";
 document.querySelector("head").appendChild(metaCopyright);
 
-// Insert the custom CSS
+// Connect the custom CSS
 
-// Insert "style-min.css"
+// Connect "style-min.css"
 const linkStyle = document.createElement("link");
 linkStyle.rel = "stylesheet";
 linkStyle.type = "text/css";
 linkStyle.href = "styles/style-min.css";
 document.querySelector("head").appendChild(linkStyle);
 
-// Insert "media-queries-min.css"
+// Connect "media-queries-min.css"
 const linkMediaQueries = document.createElement("link");
 linkMediaQueries.rel = "stylesheet";
 linkMediaQueries.type = "text/css";
@@ -50,11 +50,26 @@ linkStyle.onload = function () {
   document.body.style.display = "flex";
 };
 
-// Insert <link rel="icon" href="assets/favicon.svg">
+// Connect <link rel="icon" href="assets/logo.svg">
 const linkImage = document.createElement("link");
 linkImage.rel = "icon";
-linkImage.href = "assets/favicon.svg";
+linkImage.href = "assets/logo.svg";
 document.querySelector("head").appendChild(linkImage);
+
+// Connect "elements-min.js"
+const elementsScript = document.createElement("script");
+elementsScript.src = "scripts/elements-min.js";
+document.querySelector("body").appendChild(elementsScript);
+
+// Connect "menu-min.js"
+const menuScript = document.createElement("script");
+menuScript.src = "scripts/menu-min.js";
+document.querySelector("body").appendChild(menuScript);
+
+// Connect "scroll-animation-min.js"
+const scrollAnimationScript = document.createElement("script");
+scrollAnimationScript.src = "scripts/scroll-animation-min.js";
+document.querySelector("body").appendChild(scrollAnimationScript);
 
 // Set `type="text/javascript"` for all <script> elements for better compatibility
 document.body.onload = function () {
