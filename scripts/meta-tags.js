@@ -56,10 +56,10 @@ linkImage.rel = "icon";
 linkImage.href = "assets/logo.svg";
 document.querySelector("head").appendChild(linkImage);
 
-// Connect "elements-min.js"
-const elementsScript = document.createElement("script");
-elementsScript.src = "scripts/elements-min.js";
-document.querySelector("body").appendChild(elementsScript);
+// Connect "components-min.js"
+const componentsScript = document.createElement("script");
+componentsScript.src = "scripts/components-min.js";
+document.querySelector("body").appendChild(componentsScript);
 
 // Connect "menu-min.js"
 const menuScript = document.createElement("script");
