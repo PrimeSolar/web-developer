@@ -19,12 +19,12 @@
   .section__text {
     align-self: center;
     text-align: center;
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
     padding: 2.5rem;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border: #353535 0.1rem solid;
+    border-color: #a7a7a7;
   }
 
   .about-containers {
@@ -364,5 +364,36 @@
     > .about-containers
     > .details-container {
     flex-basis: 84%;
+  }
+}
+
+@media print {
+  * {
+    font-size: 12pt;
+    background-color: none !important;
+    opacity: 1 !important;
+  }
+
+  .title-card {
+    background: none;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
+
+  .section-container {
+    position: relative;
+    left: -22.5vw;
+    width: 95vw !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  section,
+  p {
+    page-break-inside: avoid;
   }
 }
