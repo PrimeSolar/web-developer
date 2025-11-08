@@ -13,7 +13,7 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/* The Common Style Rules */
+/* The Common Style Rules. */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -111,13 +111,13 @@ strong {
   color: #2f2f2f;
 }
 
-/* The Transition */
+/* The Transition. */
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* The Desktop Nav */
+/* The Desktop Nav. */
 nav,
 .nav-links {
   display: flex;
@@ -155,7 +155,7 @@ a:hover {
   cursor: default;
 }
 
-/* The Menu */
+/* The Menu. */
 #hamburger-nav {
   display: none;
 }
@@ -236,7 +236,7 @@ a:hover {
   transform: none;
 }
 
-/* The Sections */
+/* The Sections. */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -249,7 +249,7 @@ section {
   display: flex;
 }
 
-/* The Profile Section */
+/* The Profile Section. */
 section#profile {
   display: flex;
   justify-content: center;
@@ -336,7 +336,7 @@ h3 {
   gap: 1rem;
 }
 
-/* The Badges */
+/* The Badges. */
 .badge {
   height: 2rem;
 }
@@ -346,7 +346,7 @@ h3 {
   height: 2rem;
 }
 
-/* The Buttons */
+/* The Buttons. */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -393,7 +393,7 @@ h3 {
   gap: 1rem;
 }
 
-/* The About Section */
+/* The About Section. */
 #about {
   position: relative;
   height: fit-content;
@@ -468,7 +468,7 @@ h3 {
   margin: auto 0;
 }
 
-/* The Skills Section */
+/* The Skills Section. */
 #skills {
   position: relative;
   height: fit-content;
@@ -519,7 +519,7 @@ article .badge {
   cursor: default;
 }
 
-/* The Projects Section */
+/* The Projects Section. */
 #projects {
   position: relative;
   height: fit-content;
@@ -572,7 +572,7 @@ article .badge {
   bottom: 8rem;
 }
 
-/* The Contact Section */
+/* The Contact Section. */
 #contact {
   position: relative;
   width: 35vw;
@@ -653,7 +653,7 @@ article .badge {
   opacity: 1;
 }
 
-/* The Footer Section */
+/* The Footer Section. */
 footer {
   height: 26vh;
   margin: 0 1rem 1rem;
@@ -670,7 +670,7 @@ footer p {
   padding: 0 0 2.7vh;
 }
 
-/* noscript */
+/* noscript. */
 noscript #enable-javascript {
   display: flex;
   flex-direction: column;
