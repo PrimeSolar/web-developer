@@ -13,26 +13,29 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/* The Common Style Rules. */
+/* The common style rules. */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
+  margin: 0; /* Set the thickness for the margin area of the element. */
+  padding: 0; /* Set the padding of the element. */
+  color: #ffffff; /* Set the color for the text of the element. */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  margin: 0; /* Set the thickness for the margin area of the element. */
+  padding: 0; /* Set the padding of the element. */
   font-family: "Poppins", sans-serif;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
 }
 
 html {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Set the thickness for the margin area of the element. */
+  padding: 0; /* Set the padding of the element. */
   height: 100%;
   scroll-behavior: smooth;
   background-image: url(../assets/background.jpg);
@@ -43,19 +46,19 @@ html {
 }
 
 .card-title {
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 div img {
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .card-text {
-  color: #555555;
+  color: #555555; /* Set the color for the text of the element. */
 }
 
 .card-text > span {
-  color: #555555;
+  color: #555555; /* Set the color for the text of the element. */
 }
 
 #education-text {
@@ -63,7 +66,7 @@ div img {
 }
 
 .card-text > .nowrap {
-  color: #555555;
+  color: #555555; /* Set the color for the text of the element. */
 }
 
 .nowrap {
@@ -76,13 +79,16 @@ to-top > a {
   right: 56px;
   z-index: 1;
   opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 16px;
   text-decoration: none;
   pointer-events: none;
   transition: 0.25s;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  align-items: center;
+  justify-content: center;
 }
 
 to-top > a.active {
@@ -92,23 +98,23 @@ to-top > a.active {
 }
 
 p {
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .about-me-text {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Set the padding of the element. */
   flex: 1;
   background-color: #ffffff;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
   border-radius: 10px;
 }
 
 .about-me-text p {
-  padding: 0.5rem;
+  padding: 0.5rem; /* Set the padding of the element. */
 }
 
 strong {
-  color: #2f2f2f;
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 /* The Transition. */
@@ -120,8 +126,11 @@ a,
 /* The Desktop Nav. */
 nav,
 .nav-links {
-  display: flex;
   /*animation: brighten 0.5s;*/
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
 }
 
 nav {
@@ -137,7 +146,7 @@ nav {
 }
 
 a {
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
   text-decoration: none;
   text-decoration-color: #ffffff;
 }
@@ -166,12 +175,15 @@ a:hover {
 }
 
 .hamburger-badge {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 24px;
   width: 30px;
   cursor: pointer;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hamburger-badge span {
@@ -195,10 +207,10 @@ a:hover {
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 10px; /* Set the padding of the element. */
   text-align: center;
   font-size: 1.5rem;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -240,24 +252,30 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10.5rem;
+  margin: 0 10.5rem; /* Set the thickness for the margin area of the element. */
   box-sizing: border-box;
   min-height: fit-content;
 }
 
 .section-container {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
 }
 
 /* The Profile Section. */
 section#profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 5rem;
   height: 83vh;
   padding-bottom: 20vh;
   /*animation: brighten 0.5s;*/
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  justify-content: center;
+  align-items: center;
 }
 
 .section__text {
@@ -265,8 +283,8 @@ section#profile {
   text-align: center;
   background-color: #ffffff;
   /*background-color: #ffffee;*/
-  color: #000000;
-  padding: 3.5rem 5rem;
+  color: #000000; /* Set the color for the text of the element. */
+  padding: 3.5rem 5rem; /* Set the padding of the element. */
   border-radius: 2rem;
   border: #353535 0.1rem solid;
   border-color: #aaaaaa;
@@ -279,35 +297,35 @@ section#profile {
 
 .section__text p {
   font-weight: 600;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .section__text__p1 {
   font-size: 3.5vh;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
 }
 
 .section__text__p2 {
   font-size: 3.5vh;
   margin-bottom: 1rem;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .title {
   font-size: 3rem;
   line-height: 3rem;
   text-align: center;
-  color: #ffffff;
-  padding: 0.5rem 0;
+  color: #ffffff; /* Set the color for the text of the element. */
+  padding: 0.5rem 0; /* Set the padding of the element. */
 }
 
 .title-card {
   font-size: 4.5rem;
   line-height: 5rem;
   text-align: center;
-  color: #0070ba;
-  padding: 0.5rem 0;
+  color: #0070ba; /* Set the color for the text of the element. */
+  padding: 0.5rem 0; /* Set the padding of the element. */
   background: linear-gradient(to right, #1177ff, #1ab1ff);
   /*background: linear-gradient(90deg, #0162df, #50b0f0);
   background: linear-gradient(to right, #0162df, #1ab1ff);*/
@@ -326,14 +344,17 @@ section#profile {
 }
 
 h3 {
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 #socials-container {
-  display: flex;
-  justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  justify-content: center;
 }
 
 /* The Badges. */
@@ -348,7 +369,10 @@ h3 {
 
 /* The Buttons. */
 .btn-container {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   justify-content: center;
   gap: 1rem;
 }
@@ -356,7 +380,7 @@ h3 {
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
+  padding: 1rem; /* Set the padding of the element. */
   width: 8rem;
   border-radius: 2rem;
 }
@@ -374,7 +398,7 @@ h3 {
 .btn-color-1,
 .btn-color-2:hover {
   background: #353535;
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
 }
 
 .btn-color-1:hover {
@@ -404,7 +428,7 @@ h3 {
 
 #about > .section-container {
   width: 50vw;
-  padding: 0 calc(25vw - 10rem);
+  padding: 0 calc(25vw - 10rem); /* Set the padding of the element. */
 }
 
 .title.about-me {
@@ -426,7 +450,10 @@ h3 {
 
 .about-containers,
 .about-details-container {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
 }
 
 .arrow,
@@ -442,7 +469,7 @@ h3 {
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Set the padding of the element. */
   flex: 1;
   align-self: center;
   background-color: #ffffff;
@@ -465,7 +492,7 @@ h3 {
 .section__pic-container {
   height: 400px;
   width: 400px;
-  margin: auto 0;
+  margin: auto 0; /* Set the thickness for the margin area of the element. */
 }
 
 /* The Skills Section. */
@@ -476,43 +503,54 @@ h3 {
 }
 
 .skills-sub-title {
-  color: #555555;
+  color: #555555; /* Set the color for the text of the element. */
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
 .skills-details-container {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
 }
 
 .skills.about-containers {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
 }
 
 .article-container {
-  display: flex;
   text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: column;
   gap: 2rem;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
 
 article {
-  display: flex;
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   justify-content: center;
   align-content: center;
+  gap: 0.5rem;
 }
 
 article .badge {
@@ -555,8 +593,8 @@ article .badge {
 }
 
 .project-title {
-  margin: 1rem;
-  color: #000000;
+  margin: 1rem; /* Set the thickness for the margin area of the element. */
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .skills-sub-title.project-title {
@@ -564,7 +602,7 @@ article .badge {
 }
 
 .project-btn {
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
   border-color: #a5a5a5;
 }
 
@@ -577,57 +615,66 @@ article .badge {
   position: relative;
   width: 35vw;
   height: fit-content;
-  margin: 25vh 0 10vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: 25vh 0 10vh; /* Set the thickness for the margin area of the element. */
   background: #ffffff;
   border-radius: 2rem;
   border: #353535 0.1rem solid;
   border-color: #aaaaaa;
   text-align: center;
   align-self: center;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  justify-content: center;
+  flex-direction: column;
 }
 
 #contact .section__text__p2 {
-  margin: 0;
+  margin: 0; /* Set the thickness for the margin area of the element. */
 }
 
 #contact > h1.title-card {
-  padding: 0 0 2.5vh;
+  padding: 0 0 2.5vh; /* Set the padding of the element. */
 }
 
 .contact-info-upper-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border-radius: 2rem;
   border: #353535 0.1rem solid;
   border-color: #aaaaaa;
-  margin: auto auto 2rem;
-  padding: 0.5rem;
+  margin: auto auto 2rem; /* Set the thickness for the margin area of the element. */
+  padding: 0.5rem; /* Set the padding of the element. */
   background: #ffffff;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-info-container {
-  display: flex;
+  margin: 1rem; /* Set the thickness for the margin area of the element. */
+  color: #000000; /* Set the color for the text of the element. */
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1rem;
-  color: #000000;
 }
 
 .contact-info-container p {
   font-size: larger;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
 }
 
 .contact-info-container p a {
   font-size: larger;
-  color: #000000;
+  color: #000000; /* Set the color for the text of the element. */
   text-decoration: none;
 }
 
@@ -656,31 +703,34 @@ article .badge {
 /* The Footer Section. */
 footer {
   height: 26vh;
-  margin: 0 1rem 1rem;
+  margin: 0 1rem 1rem; /* Set the thickness for the margin area of the element. */
   text-align: center;
 }
 
 footer p {
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* Set the color for the text of the element. */
 }
 
 #footerContainer {
   text-align: center;
-  padding: 0 0 2.7vh;
+  padding: 0 0 2.7vh; /* Set the padding of the element. */
 }
 
 /* noscript. */
 noscript #enable-javascript {
-  display: flex;
+  height: fit-content;
+  margin: 10vh 5vw 1vh; /* Set the thickness for the margin area of the element. */
+  padding: 0 20vw 5vh; /* Set the padding of the element. */
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  margin: 10vh 5vw 1vh;
-  padding: 0 20vw 5vh;
-  background-color: #f2f2f2;
-  border-radius: 10px;
 }
 
 noscript h1 {
@@ -692,38 +742,38 @@ noscript main {
 }
 
 noscript h2 {
-  padding: 5vh 0;
-  color: #2f2f2f;
+  padding: 5vh 0; /* Set the padding of the element. */
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript p {
   min-width: 50vw;
-  margin: 1vh 0;
-  color: #2f2f2f;
+  margin: 1vh 0; /* Set the thickness for the margin area of the element. */
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript details {
   min-width: 50vw;
-  margin: 1vh 0;
+  margin: 1vh 0; /* Set the thickness for the margin area of the element. */
   text-align: inherit;
 }
 
 noscript details summary {
   cursor: pointer;
-  color: #2f2f2f;
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript li {
   line-height: 1.5em;
-  margin: 2vh 0;
-  color: #2f2f2f;
+  margin: 2vh 0; /* Set the thickness for the margin area of the element. */
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript strong {
-  color: #2f2f2f;
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
 noscript code {
   font-size: 16px;
-  color: #2f2f2f;
+  color: #2f2f2f; /* Set the color for the text of the element. */
 }
