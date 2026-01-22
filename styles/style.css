@@ -74,7 +74,7 @@ div img {
 }
 
 to-top > a {
-  position: fixed;
+  position: fixed; /* Specify the positioning method for the element. */
   bottom: 56px;
   right: 56px;
   z-index: 1;
@@ -170,7 +170,7 @@ a:hover {
 }
 
 .hamburger-menu {
-  position: relative;
+  position: relative; /* Specify the positioning method for the element. */
   display: inline-block;
 }
 
@@ -194,7 +194,7 @@ a:hover {
 }
 
 .menu-links {
-  position: absolute;
+  position: absolute; /* Specify the positioning method for the element. */
   top: 100%;
   right: 0;
   background-color: #ffffff;
@@ -343,8 +343,20 @@ section#profile {
   }
 }
 
-h3 {
+div:has(h4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3,
+h4 {
   color: #000000; /* Set the color for the text of the element. */
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 #socials-container {
@@ -419,7 +431,7 @@ h3 {
 
 /* The About Section. */
 #about {
-  position: relative;
+  position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
   padding-top: 2.5vh;
   margin-bottom: 10vh;
@@ -460,7 +472,7 @@ h3 {
 .arrow-up {
   width: 5vw;
   height: auto;
-  position: absolute;
+  position: absolute; /* Specify the positioning method for the element. */
 }
 
 .arrow {
@@ -497,7 +509,7 @@ h3 {
 
 /* The Skills Section. */
 #skills {
-  position: relative;
+  position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
   margin-bottom: 10vh;
 }
@@ -506,7 +518,7 @@ h3 {
   color: #555555; /* Set the color for the text of the element. */
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin: calc(2rem - 24px) auto 2rem;
 }
 
 .skills-details-container {
@@ -559,7 +571,7 @@ article .badge {
 
 /* The Projects Section. */
 #projects {
-  position: relative;
+  position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
 }
 
@@ -593,6 +605,7 @@ article .badge {
 }
 
 .project-title {
+  font-size: 1.5rem;
   margin: 1rem; /* Set the thickness for the margin area of the element. */
   color: #000000; /* Set the color for the text of the element. */
 }
@@ -612,7 +625,7 @@ article .badge {
 
 /* The Contact Section. */
 #contact {
-  position: relative;
+  position: relative; /* Specify the positioning method for the element. */
   width: 35vw;
   height: fit-content;
   margin: 25vh 0 10vh; /* Set the thickness for the margin area of the element. */
