@@ -61,8 +61,12 @@ div img {
   color: #555555; /* Set the color for the text of the element. */
 }
 
-#education-text {
+.experiences-text {
   padding-top: 0.5em;
+}
+
+.education-text {
+  padding-top: 1em;
 }
 
 .card-text > .nowrap {
@@ -117,13 +121,15 @@ strong {
   color: #2f2f2f; /* Set the color for the text of the element. */
 }
 
-/* The Transition. */
+/*----- The Transition -----*/
+
 a,
-.btn {
+.button {
   transition: all 300ms ease;
 }
 
-/* The Desktop Nav. */
+/*----- The Desktop Navigation -----*/
+
 nav,
 .nav-links {
   /*animation: brighten 0.5s;*/
@@ -145,10 +151,34 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-links a,
+.contact-info-container a {
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none !important;
+}
+
+.nav-links a::before,
+.contact-info-container a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  transition: width 0.27s ease, left 0.27s ease;
+}
+
+.nav-links a:hover::before,
+.contact-info-container a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
 a {
   color: #ffffff; /* Set the color for the text of the element. */
   text-decoration: none;
-  text-decoration-color: #ffffff;
 }
 
 a:hover {
@@ -164,8 +194,9 @@ a:hover {
   cursor: default;
 }
 
-/* The Menu. */
-#hamburger-nav {
+/*----- The Menu -----*/
+
+.hamburger-nav {
   display: none;
 }
 
@@ -175,8 +206,8 @@ a:hover {
 }
 
 .hamburger-badge {
-  height: 24px;
   width: 30px;
+  height: 24px;
   cursor: pointer;
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
@@ -248,7 +279,8 @@ a:hover {
   transform: none;
 }
 
-/* The Sections. */
+/*----- The Sections -----*/
+
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -264,8 +296,9 @@ section {
   display: flex; /* Standard syntax for modern browsers (widely supported). */
 }
 
-/* The Profile Section. */
-section#profile {
+/*----- The Profile Section -----*/
+
+section.profile {
   gap: 5rem;
   height: 83vh;
   padding-bottom: 20vh;
@@ -326,7 +359,7 @@ section#profile {
   text-align: center;
   color: #0070ba; /* Set the color for the text of the element. */
   padding: 0.5rem 0; /* Set the padding of the element. */
-  background: linear-gradient(to right, #1177ff, #1ab1ff);
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
   /*background: linear-gradient(90deg, #0162df, #50b0f0);
   background: linear-gradient(to right, #0162df, #1ab1ff);*/
   background-clip: text;
@@ -344,7 +377,10 @@ section#profile {
 }
 
 div:has(h4) {
-  display: flex;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -359,7 +395,7 @@ h4 {
   font-size: 1.5rem;
 }
 
-#socials-container {
+.socials-container {
   margin-top: 1rem;
   gap: 1rem;
   /* Use flexbox to align the content inside the element. */
@@ -369,18 +405,39 @@ h4 {
   justify-content: center;
 }
 
-/* The Badges. */
+/*----- The Badges -----*/
+
 .badge {
   height: 2rem;
 }
 
-.badge-btn {
+.badge-button {
   cursor: pointer;
   height: 2rem;
+  transition: transform 0.27s ease-in-out;
 }
 
-/* The Buttons. */
-.btn-container {
+.badge-button.linkedin-badge {
+  content: url(../assets/linkedin.svg);
+}
+
+.badge-button.linkedin-badge:hover {
+  content: url(../assets/linkedin-blue.svg);
+  transform: scale(1.1);
+}
+
+.github-badge {
+  content: url(../assets/github.svg);
+}
+
+.github-badge:hover {
+  content: url(../assets/github-blue.svg);
+  transform: scale(1.1);
+}
+
+/*----- The Buttons -----*/
+
+.button-container {
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
   display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
@@ -389,7 +446,7 @@ h4 {
   gap: 1rem;
 }
 
-.btn {
+.button {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem; /* Set the padding of the element. */
@@ -397,40 +454,27 @@ h4 {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
+.button-color-1,
+.button-color-2 {
+  background: #353535;
   border: #cdcdcd 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-  background: #353535;
   color: #ffffff; /* Set the color for the text of the element. */
+  transition: none;
 }
 
-.btn-color-1:hover {
-  background: #000000;
+.button-color-1:hover,
+.button-color-2:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
 }
 
-.btn-color-2 {
-  background: #353535;
-}
-
-.btn-color-2:hover {
-  border: #ffffff 0.1rem solid;
-}
-
-.btn-container {
+.button-container {
   gap: 1rem;
 }
 
-/* The About Section. */
-#about {
+/*----- The About Section -----*/
+
+.about {
   position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
   padding-top: 2.5vh;
@@ -438,7 +482,7 @@ h4 {
   align-items: center;
 }
 
-#about > .section-container {
+.about > .section-container {
   width: 50vw;
   padding: 0 calc(25vw - 10rem); /* Set the padding of the element. */
 }
@@ -483,7 +527,7 @@ h4 {
 .details-container {
   padding: 1.5rem; /* Set the padding of the element. */
   flex: 1;
-  align-self: center;
+  align-self: auto;
   background-color: #ffffff;
   border-radius: 2rem;
   border: #353535 0.1rem solid;
@@ -508,7 +552,8 @@ h4 {
 }
 
 /* The Skills Section. */
-#skills {
+
+.skills {
   position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
   margin-bottom: 10vh;
@@ -570,35 +615,53 @@ article .badge {
 }
 
 /* The Projects Section. */
-#projects {
+
+.projects {
   position: relative; /* Specify the positioning method for the element. */
   height: fit-content;
 }
 
-#projects > .projects-details-container {
+.projects-external-container {
   margin-top: 10vh;
 }
 
-#projects > .projects-details-container > .about-containers {
+.projects-internal-container {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
 }
 
-#projects
-  > .projects-details-container
-  > .about-containers
-  > .details-container {
+.projects-internal-container > .details-container {
   flex-basis: calc(32vw - 14rem);
   flex-grow: 0;
   flex-shrink: 0;
 }
 
 .color-container {
-  border-color: #a5a5a5;
   background: #f7f7f7;
+  border-color: #a5a5a5;
 }
 
-.project-img {
+.project-image-container {
+  text-align: initial;
+  gap: 2rem;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.project-image {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
@@ -610,21 +673,21 @@ article .badge {
   color: #000000; /* Set the color for the text of the element. */
 }
 
-.skills-sub-title.project-title {
-  font-size: 1.5rem;
+[class^="skill-badge-"] {
+  color: #373737;
 }
 
-.project-btn {
+.project-button {
   color: #ffffff; /* Set the color for the text of the element. */
   border-color: #a5a5a5;
 }
 
-#projects > .arrow {
+.projects > .arrow {
   bottom: 8rem;
 }
 
 /* The Contact Section. */
-#contact {
+.contact {
   position: relative; /* Specify the positioning method for the element. */
   width: 35vw;
   height: fit-content;
@@ -644,20 +707,20 @@ article .badge {
   flex-direction: column;
 }
 
-#contact .section__text__p2 {
+.contact .section__text__p2 {
   margin: 0; /* Set the thickness for the margin area of the element. */
 }
 
-#contact > h1.title-card {
+.contact > h1.title-card {
   padding: 0 0 2.5vh; /* Set the padding of the element. */
 }
 
 .contact-info-upper-container {
+  margin: 1.5rem auto 2rem;
+  padding: 1rem; /* Set the padding of the element. */
   border-radius: 2rem;
   border: #353535 0.1rem solid;
   border-color: #aaaaaa;
-  margin: auto auto 2rem; /* Set the thickness for the margin area of the element. */
-  padding: 0.5rem; /* Set the padding of the element. */
   background: #ffffff;
   color: #000000; /* Set the color for the text of the element. */
   /* Use flexbox to align the content inside the element. */
@@ -666,6 +729,7 @@ article .badge {
   display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
+  gap: 0;
 }
 
 .contact-info-container {
@@ -681,27 +745,28 @@ article .badge {
 }
 
 .contact-info-container p {
+  display: inline;
   font-size: larger;
   color: #000000; /* Set the color for the text of the element. */
 }
 
-.contact-info-container p a {
+.contact-info-container a {
   font-size: larger;
   color: #000000; /* Set the color for the text of the element. */
   text-decoration: none;
-}
-
-.contact-info-container p a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contact-badge {
-  cursor: default;
+  transition: all 0.27s ease-in-out;
 }
 
 .email-badge {
-  height: 2.5rem;
+  width: auto;
+  height: 32px;
 }
 
 .scroll-animation {
@@ -713,7 +778,8 @@ article .badge {
   opacity: 1;
 }
 
-/* The Footer Section. */
+/*----- The Footer Section -----*/
+
 footer {
   height: 26vh;
   margin: 0 1rem 1rem; /* Set the thickness for the margin area of the element. */
@@ -725,13 +791,13 @@ footer p {
   color: #ffffff; /* Set the color for the text of the element. */
 }
 
-#footerContainer {
+.footerContainer {
   text-align: center;
   padding: 0 0 2.7vh; /* Set the padding of the element. */
 }
 
 /* noscript. */
-noscript #enable-javascript {
+noscript .enable-javascript {
   height: fit-content;
   margin: 10vh 5vw 1vh; /* Set the thickness for the margin area of the element. */
   padding: 0 20vw 5vh; /* Set the padding of the element. */
@@ -789,4 +855,21 @@ noscript strong {
 noscript code {
   font-size: 16px;
   color: #2f2f2f; /* Set the color for the text of the element. */
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the element. */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#1ab1ff, #1177ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007fff;
 }
