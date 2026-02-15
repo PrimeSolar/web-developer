@@ -1,5 +1,5 @@
 /*
- * Style Sheet
+ * The Professional Web Developer Personal Website Style Sheet
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
@@ -13,7 +13,8 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/* The common style rules. */
+/*----- The common style rules -----*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -61,12 +62,9 @@ div img {
   color: #555555; /* Set the color for the text of the element. */
 }
 
-.experiences-text {
-  padding-top: 0.5em;
-}
-
+.experiences-text,
 .education-text {
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 .card-text > .nowrap {
@@ -392,7 +390,7 @@ h4 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .socials-container {
@@ -403,6 +401,10 @@ h4 {
   display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
   display: flex; /* Standard syntax for modern browsers (widely supported). */
   justify-content: center;
+}
+
+.socials-container a {
+  display: inherit;
 }
 
 /*----- The Badges -----*/
@@ -521,6 +523,7 @@ h4 {
 
 .arrow {
   right: -5rem;
+  display: none;
   bottom: 3.5rem;
 }
 
@@ -540,6 +543,23 @@ h4 {
   min-height: fit-content;
 }
 
+.projects .details-container {
+  position: relative;
+}
+
+.project-content {
+  margin-bottom: 70px;
+}
+
+.projects .button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -551,7 +571,7 @@ h4 {
   margin: auto 0; /* Set the thickness for the margin area of the element. */
 }
 
-/* The Skills Section. */
+/*----- The Skills Section -----*/
 
 .skills {
   position: relative; /* Specify the positioning method for the element. */
@@ -673,8 +693,23 @@ article .badge {
   color: #000000; /* Set the color for the text of the element. */
 }
 
+.project-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 [class^="skill-badge-"] {
-  color: #373737;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  box-shadow: 4px 4px 15px #00000037, -4px -4px 15px #ffffffcd;
 }
 
 .project-button {
