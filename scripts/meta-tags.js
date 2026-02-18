@@ -122,7 +122,7 @@ document.querySelector("body").appendChild(scrollAnimationScript);
 
 /** Connect "headings.js". */
 const headingsScript = document.createElement("script");
-headingsScript.src = "scripts/headings-min.js";
+headingsScript.src = "scripts/headings.js";
 document.querySelector("body").appendChild(headingsScript);
 
 /** Set `type="text/javascript"` for all <script> elements for better compatibility. */
