@@ -15,7 +15,9 @@
 
 const projectCollection = document.querySelector(".project-collection");
 
-fetch("/index.html")
+fetch(
+  "https://raw.githubusercontent.com/PrimeSolar/web-developer/refs/heads/main/index.html"
+)
   .then((response) => response.text())
   .then((html) => {
     const doc = new DOMParser().parseFromString(html, "text/html");
