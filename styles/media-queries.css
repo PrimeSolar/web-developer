@@ -13,20 +13,20 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
- @media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) {
   section,
   .section-container {
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
   }
 
   .section__pic-container {
     width: 275px;
-    height: 275px;
+    height: 275px; /* Set the height of the element. */
     margin: 0 auto 2rem;
   }
 
-  section#profile {
-    height: 83vh;
+  section.profile {
+    height: 83vh; /* Set the height of the element. */
     margin: 0;
     padding-bottom: 6rem;
   }
@@ -56,35 +56,24 @@
     padding: 0;
   }
 
-  #about {
-    height: fit-content;
+  .about {
+    height: fit-content; /* Set the height of the element. */
   }
 
-  .details-container {
-    align-self: auto;
+  .projects {
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #projects {
-    height: fit-content;
-  }
-
-  .projects-display-container {
-    display: block;
-  }
-
-  #projects
-    > .projects-details-container
-    > .about-containers
-    > .details-container {
+  .projects-internal-container > .details-container {
     flex-basis: calc(45vw - 14rem);
     flex-grow: 0;
     flex-shrink: 0;
   }
 
-  section#contact {
+  section.contact {
     position: relative;
     width: 35vw;
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
     margin: 100px 0 0;
     padding: 0 2rem;
     display: flex;
@@ -95,27 +84,25 @@
     align-self: center;
   }
 
-  section#contact > p.section__text__p2 {
+  section.contact > p.section__text__p2 {
     margin-top: 5vh;
     margin-bottom: 0;
   }
 
   div.contact-info-upper-container {
     display: flex;
-    gap: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    height: 7.5vh;
+    height: 7.5vh; /* Set the height of the element. */
     border-radius: 2rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 2.5rem 0.5rem;
+    padding: 2.5rem; /* Set the padding of the element. */
+    gap: 0.5rem;
   }
 
   .contact-info-container {
-    margin: 0.5rem 0 0;
+    margin: 0.25rem 0;
   }
 }
 
@@ -125,51 +112,51 @@
     line-height: 3rem;
     text-align: center;
     color: #0070ba;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
 
-  #contact > h1.title-card {
+  .contact > h1.title-card {
     padding: 0;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  section#profile {
+  section.profile {
     flex-direction: column;
   }
 
-  section#profile > .section__text {
+  section.profile > .section__text {
     width: fit-content;
   }
 
-  #about {
+  .about {
     width: fit-content;
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #about > .section-container {
+  .about > .section-container {
     width: fit-content;
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #skills {
-    height: fit-content;
+  .skills {
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #desktop-nav {
+  .desktop-nav {
     display: none;
   }
 
-  #hamburger-nav {
+  .hamburger-nav {
     display: flex;
   }
 
-  #skills,
+  .skills,
   .skills-details-container {
     margin-top: 2rem;
   }
 
-  #profile,
+  .profile,
   .section-container {
     display: block;
   }
@@ -189,35 +176,54 @@
 
   section,
   .section-container {
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
   }
 
   section {
     margin: 0 5%;
   }
 
-  #projects
-    > .projects-details-container
-    > .about-containers
-    > .details-container {
+  .projects-internal-container > .details-container {
     flex-basis: 30vw;
   }
 
-  section#contact {
+  section.contact {
     width: fit-content;
     margin-top: 225px;
     margin-bottom: 75px;
   }
 }
 
+@media screen and (min-width: 600px) and (max-width: 645px) {
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .projects .button-container {
+    gap: 0.15rem !important;
+  }
+
+  .project-stack {
+    gap: 5px;
+  }
+
+  [class^="skill-badge-"] {
+    font-size: 0.7em;
+  }
+}
+
 @media screen and (max-width: 600px) {
-  section#profile {
-    height: 750px;
+  section.profile {
+    height: 750px; /* Set the height of the element. */
     margin-bottom: 0;
   }
 
   .section__text__p1 {
     font-size: 20px;
+  }
+
+  .nav-links a:hover {
+    transform: none;
   }
 
   to-top > a {
@@ -230,31 +236,31 @@
   .arrow,
   .arrow-up {
     font-size: 50px;
-    height: 50px;
+    height: 50px; /* Set the height of the element. */
     width: auto;
     right: 0;
     bottom: 0;
   }
 
-  section#about {
-    height: fit-content;
+  section.about {
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #profile > div.section__text > h1.title-card {
-    font-size: 2.5rem;
-  }
-
-  #profile > div.section__text {
+  .profile > div.section__text {
     margin: 0 1.7rem 10vh;
   }
 
-  #contact,
-  footer {
-    height: 37vh;
+  .skills {
+    flex: 0;
   }
 
-  #profile {
-    height: fit-content;
+  .contact,
+  footer {
+    height: 37vh; /* Set the height of the element. */
+  }
+
+  .profile {
+    height: fit-content; /* Set the height of the element. */
     margin-bottom: 7.5rem;
   }
 
@@ -263,13 +269,13 @@
   }
 
   footer nav {
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
     margin-bottom: 2rem;
   }
 
   .about-containers,
   .contact-info-upper-container,
-  .btn-container {
+  .button-container {
     flex-wrap: wrap;
   }
 
@@ -286,10 +292,6 @@
     font-size: 1rem;
   }
 
-  .skills-sub-title {
-    font-size: 1.25rem;
-  }
-
   .logo {
     font-size: 1.5rem;
   }
@@ -299,13 +301,13 @@
     text-align: center;
   }
 
-  #about {
+  .about {
     margin-top: 20vh;
   }
 
   .section__pic-container {
     width: auto;
-    height: 46vw;
+    height: 46vw; /* Set the height of the element. */
     justify-content: center;
   }
 
@@ -321,39 +323,37 @@
     text-align: justify;
   }
 
-  #profile {
-    height: fit-content;
+  .profile {
+    height: fit-content; /* Set the height of the element. */
   }
 
-  #profile > .section__text {
+  .profile > .section__text {
     margin-bottom: 7vh;
+    padding: 5rem 2.5rem;
   }
 
-  #about {
-    height: fit-content;
+  .about {
+    height: fit-content; /* Set the height of the element. */
     margin-top: 0;
   }
 
-  #skills {
-    height: 1000px;
+  .skills {
+    height: 1000px; /* Set the height of the element. */
   }
 
-  #projects
-    > .projects-details-container
-    > .about-containers
-    > .details-container {
+  .projects {
+    margin-bottom: 300px;
+  }
+
+  .projects-internal-container > .details-container {
     flex-basis: 88%;
   }
 
-  section#contact {
-    height: 225px;
+  section.contact {
+    height: 225px; /* Set the height of the element. */
     width: 90vw;
-    margin: 300px 5vw 5vh;
+    margin: 0 5vw 5vh;
     padding: 0;
-  }
-
-  .title-card {
-    font-size: 2.5rem;
   }
 
   div.contact-info-upper-container {
@@ -362,22 +362,24 @@
     max-width: fit-content;
     width: fit-content;
     max-height: fit-content;
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
     padding: 1rem;
-    gap: 0.5rem;
+    gap: 1.5rem;
     margin-bottom: 50px;
+    padding: 2.5rem;
+  }
+
+  div.contact-info-upper-container * {
+    font-size: 19px;
   }
 
   footer {
-    height: 30vh;
+    height: 30vh; /* Set the height of the element. */
   }
 }
 
 @media screen and (max-width: 370px) and (min-height: 800px) {
-  #projects
-    > .projects-details-container
-    > .about-containers
-    > .details-container {
+  .projects-internal-container > .details-container {
     flex-basis: 84%;
   }
 }
