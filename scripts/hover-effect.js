@@ -1,5 +1,7 @@
 /*
- * Script
+ * The Hover Effect Script for the Email and LinkedIn Badges
+ *
+ * This script implements hover effects to the email and LinkedIn badges, updating their images and scale on mouse events.
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
