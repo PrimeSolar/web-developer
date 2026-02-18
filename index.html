@@ -18,19 +18,18 @@
 
   <body style="display: none">
     <!--prettier-ignore-->
-    <noscript>Please enable JavaScript for the full application experience.</noscript>
-    <nav id="desktop-nav">
+    <nav class="desktop-nav">
       <div class="logo">Vladislav Kazantsev</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
+    <nav class="hamburger-nav">
       <div class="logo">Vladislav Kazantsev</div>
       <div class="hamburger-menu">
         <div class="hamburger-badge">
@@ -39,50 +38,56 @@
           <span></span>
         </div>
         <ul class="menu-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <section id="profile">
+    <section class="profile">
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title-card">Vladislav Kazantsev</h1>
         <p class="section__text__p2">Web Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.html')"
+        <div class="button-container">
+          <a
+            href="./assets/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-2" onclick="location.href='#contact'">
-            Contact Info
-          </button>
+            <button class="button button-color-2">Download CV</button></a
+          >
+          <a href="#contact-section" rel="noopener noreferrer">
+            <button class="button button-color-2">Contact Info</button></a
+          >
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            title="My LinkedIn Profile"
-            alt="My LinkedIn Profile"
-            aria-label="My LinkedIn Profile"
-            class="badge-btn"
-            onclick="location.href='https://www.linkedin.com/in/pepsico/'"
-          />
-          <img
-            src="./assets/github.png"
-            title="My Github Profile"
-            alt="My Github Profile"
-            aria-label="My Github Profile"
-            class="badge-btn"
-            onclick="location.href='https://github.com/PrimeSolar'"
-          />
+        <div class="socials-container">
+          <a
+            href="https://www.linkedin.com/in/pepsico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View my LinkedIn profile"
+            ><img
+              title="View my LinkedIn profile"
+              alt="Professional LinkedIn profile of Vladislav Kazantsev - let's connect"
+              class="badge-button linkedin-badge"
+          /></a>
+          <a
+            href="https://github.com/PrimeSolar"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View my GitHub profile"
+          >
+            <img
+              title="View my GitHub profile"
+              alt="GitHub portfolio of Vladislav Kazantsev - software development projects"
+              class="badge-button github-badge"
+          /></a>
         </div>
       </div>
     </section>
-    <section id="about">
+    <section class="about" id="about-section">
       <p class="section__text__p1">Get To Know More</p>
       <h2 class="title about-me">About Me</h2>
       <div class="section-container">
@@ -90,27 +95,28 @@
           <div class="about-containers">
             <div class="details-container scroll-animation">
               <img
-                src="./assets/experience.png"
-                alt="Experiences Badge"
-                aria-label="Experiences Badge"
+                src="./assets/briefcase.svg"
+                alt="Years of professional work experience | Financial technologies, server software & traffic management"
+                aria-label="Professional journey in financial tech, server-side engineering, and traffic management"
                 class="badge"
               />
               <h3 class="card-title">Experiences</h3>
-              <p class="card-text">
-                Years in IT <br />Financial Technologies, Server Software,
-                Traffic Management
+              <p class="card-text experiences-text">
+                Years in IT <br />Financial technologies, server software,
+                traffic management
               </p>
             </div>
             <div class="details-container scroll-animation">
               <img
-                src="./assets/education.png"
-                alt="Education Badge"
-                aria-label="Education Badge"
+                src="./assets/cap.svg"
+                alt="Academic Credentials | Tech Education and Professional Development"
+                aria-label="Educational Background and Achievements"
                 class="badge"
               />
               <h3 class="card-title">Education</h3>
-              <p class="card-text" id="education-text">
-                Technological University<br />and Many Various Courses
+              <p class="card-text education-text">
+                Technological university graduate<br />with advanced
+                multidisciplinary technical certifications
               </p>
             </div>
           </div>
@@ -195,16 +201,19 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Scroll to next section"
-        title="Scroll to next section"
-        aria-label="Scroll to next section"
-        class="badge-btn arrow"
-        onclick="location.href='#skills'"
-      />
+      <a
+        href="#skills-section"
+        rel="noopener noreferrer"
+        aria-label="Navigate to the Skills Section"
+      >
+        <img
+          src="./assets/arrow.png"
+          title="Navigate to the Skills Section"
+          alt="Downward Arrow - Navigate to the Professional Skills Showcase"
+          class="badge-button arrow"
+      /></a>
     </section>
-    <section id="skills" class="scroll-animation">
+    <section class="skills scroll-animation" id="skills-section">
       <p class="section__text__p1">Explore My</p>
       <h2 class="title">Skills</h2>
       <div class="skills-details-container">
@@ -220,7 +229,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>HTML</h4>
+                  <h4>Node.js</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -231,7 +240,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>CSS</h4>
+                  <h4>Express</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -242,7 +251,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>JavaScript</h4>
+                  <h4>EJS</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -253,7 +262,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>Bootstrap</h4>
+                  <h4>JS&nbsp;(JavaScript)</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -275,7 +284,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>Node.js</h4>
+                  <h4>Tailwind&nbsp;CSS</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -286,7 +295,7 @@
                   class="badge"
                 />
                 <div>
-                  <h4>Express.js</h4>
+                  <h4>Bootstrap</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -297,7 +306,51 @@
                   class="badge"
                 />
                 <div>
-                  <h4>EJS</h4>
+                  <h4>CSS</h4>
+                </div>
+              </article>
+              <article class="scroll-animation">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills Badge"
+                  aria-label="Skills Badge"
+                  class="badge"
+                />
+                <div>
+                  <h4>HTML</h4>
+                </div>
+              </article>
+              <article class="scroll-animation">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills Badge"
+                  aria-label="Skills Badge"
+                  class="badge"
+                />
+                <div>
+                  <h4>Python</h4>
+                </div>
+              </article>
+              <article class="scroll-animation">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills Badge"
+                  aria-label="Skills Badge"
+                  class="badge"
+                />
+                <div>
+                  <h4>PHP</h4>
+                </div>
+              </article>
+              <article class="scroll-animation">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Skills Badge"
+                  aria-label="Skills Badge"
+                  class="badge"
+                />
+                <div>
+                  <h4>Docker</h4>
                 </div>
               </article>
               <article class="scroll-animation">
@@ -326,296 +379,442 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Scroll to next section"
-        title="Scroll to next section"
-        aria-label="Scroll to next section"
-        class="badge-btn arrow"
-        onclick="location.href='#projects'"
-      />
+      <a
+        href="#projects-section"
+        rel="noopener noreferrer"
+        aria-label="Navigate to the Projects Section"
+      >
+        <img
+          src="./assets/arrow.png"
+          title="Navigate to the Projects Section"
+          alt="Downward Arrow - Navigate to the Professional Projects Showcase"
+          class="badge-button arrow"
+      /></a>
     </section>
-    <section id="projects" class="scroll-animation">
+    <section class="projects scroll-animation" id="projects-section">
       <p class="section__text__p1">Browse My Recent</p>
       <h2 class="title">Projects</h2>
-      <div class="projects-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container" id="project-1-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Cryptocurrency tracker web application showcasing responsive web design and JavaScript development, featuring real-time market data displayed using HTML and CSS, designed for effective user experience (UX/UI)."
-                class="project-img"
-              />
+      <div class="projects-external-container">
+        <div class="projects-internal-container">
+          <div
+            class="project-card project-1-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-1.jpg"
+                  alt="Cryptocurrency tracker web application showcasing responsive web design and JS (JavaScript) development, featuring real-time market data displayed using HTML and CSS, designed for effective user experience (UX/UI)."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Cryptocurrency<br />Tracker</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-api">API</span>
+                <span class="skill-badge-rss">RSS</span>
+                <span class="skill-badge-git">Git</span>
+                <span class="skill-badge-tailwind-css">Tailwind CSS</span>
+              </div>
             </div>
-            <h3 class="project-title">Cryptocurrency<br />Tracker</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/cryptocurrency-tracker/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/cryptocurrency-tracker/"
+                rel="noopener noreferrer"
+                ><button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/cryptocurrency-tracker/'"
+              <a
+                href="https://primesolar.github.io/cryptocurrency-tracker/"
+                rel="noopener noreferrer"
               >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container" id="project-2-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.jpg"
-                alt="Transport company web application utilizing development principles, emphasizing responsive web design for mobile-friendly access, adhering to best web development practices."
-                class="project-img"
-              />
-            </div>
-            <h3 class="project-title">
-              Transport Company<br />Web Application
-            </h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/move-it/'"
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/move-it/'"
-              >
-                Live Demo
-              </button>
             </div>
           </div>
-          <div class="details-container color-container" id="project-3-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.jpg"
-                alt="Real estate application documentation platform, featuring custom web design for enhanced user experience and SEO for web development effectiveness."
-                class="project-img"
-              />
+          <div
+            class="project-card project-2-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-2.jpg"
+                  alt="Transport company web application utilizing development principles, emphasizing responsive web design for mobile-friendly access, adhering to best web development practices."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">
+                Transport Company<br />Web Application
+              </h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-bootstrap">Bootstrap</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
             </div>
-            <h3 class="project-title">
-              Real Estate Application<br />Documentation Platform
-            </h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/docs/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/move-it/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/docs/'"
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container" id="project-4-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.jpg"
-                alt="News blog platform highlighting front end development skills, with a focus on responsive web design and graphic design for developers, aimed at delivering engaging content in a mobile-friendly format."
-                class="project-img"
-              />
-            </div>
-            <h3 class="project-title">News<br />Blog</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/news-blog/'"
+              <a
+                href="https://primesolar.github.io/move-it/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/news-blog/'"
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
               >
-                Live Demo
-              </button>
             </div>
           </div>
-          <div class="details-container color-container" id="project-5-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-5.jpg"
-                alt="Travel agency web application featuring modern UX/UI design and web development elements, built using HTML, CSS, JavaScript and Node.js, optimized for search engines and best development practices."
-                class="project-img"
-              />
+          <div
+            class="project-card project-3-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-3.jpg"
+                  alt="Real estate application documentation platform, featuring custom web design for enhanced user experience and SEO for web development effectiveness."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Documentation<br />Platform</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-normalize-css">normalize.css</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
             </div>
-            <h3 class="project-title">Travel Agency<br />Web Application</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/ocean-minded/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/docs/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://ocean-minded.onrender.com/'"
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container" id="project-6-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-6.jpg"
-                alt="Dating application website utilizing development techniques and responsive web design for smooth user experiences on all devices."
-                class="project-img"
-              />
-            </div>
-            <h3 class="project-title">Dating Application<br />Website</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/unison/'"
+              <a
+                href="https://primesolar.github.io/docs/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/unison/'"
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
               >
-                Live Demo
-              </button>
             </div>
           </div>
-          <div class="details-container color-container" id="project-7-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-7.jpg"
-                alt="Shopping application offers eCommerce web development functionality through local data management for individual users. It is designed to provide a seamless shopping experience using responsive web design and JavaScript, while adhering to SEO for web development best practices."
-                class="project-img"
-              />
+          <div
+            class="project-card project-4-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-4.jpg"
+                  alt="News blog platform highlighting front end development skills, with a focus on responsive web design and graphic design for developers, aimed at delivering engaging content in a mobile-friendly format."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">News<br />Blog</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-bootstrap">Bootstrap</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
             </div>
-            <h3 class="project-title">Shopping<br />Application</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/shopping-app/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/news-blog/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/shopping-app/'"
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container" id="project-8-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-8.jpg"
-                alt="Praise generator tool designed using JavaScript, CSS and HTML, aimed at enhancing user interaction with a focus on responsive web design for generating compliments effectively."
-                class="project-img"
-              />
-            </div>
-            <h3 class="project-title">Praise<br />Generator</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/praise-generator/'"
+              <a
+                href="https://primesolar.github.io/news-blog/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/praise-generator/'"
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
               >
-                Live Demo
-              </button>
             </div>
           </div>
-          <div class="details-container color-container" id="project-9-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-9.jpg"
-                alt="Simon game created with JavaScript, highlighting front end development skills and responsive design, aimed at providing an interactive experience that adapts to various screen sizes."
-                class="project-img"
-              />
+          <div
+            class="project-card project-5-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-5.jpg"
+                  alt="Travel agency web application featuring modern UX/UI design and web development elements, built using HTML, CSS, JS (JavaScript) and Node.js, optimized for search engines and best development practices."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Travel Agency<br />Web Application</h3>
+              <div class="project-stack">
+                <span class="skill-badge-node-js">Node.js</span>
+                <span class="skill-badge-express">Express</span>
+                <span class="skill-badge-ejs">EJS</span>
+                <span class="skill-badge-twig">Twig</span>
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-jquery">jQuery</span>
+                <span class="skill-badge-api">API</span>
+                <span class="skill-badge-bootstrap">Bootstrap</span>
+                <span class="skill-badge-git">Git</span>
+                <span class="skill-badge-docker">Docker</span>
+              </div>
             </div>
-            <h3 class="project-title">Simon<br />Game</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/simon-game/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/ocean-minded/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/simon-game/'"
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Live Demo
-              </button>
+              <a
+                href="https://ocean-minded.onrender.com/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
             </div>
           </div>
-          <div class="details-container color-container" id="project-10-card">
-            <div class="article-container">
-              <img
-                src="./assets/project-10.jpg"
-                alt="Password generator application focusing on security, built with responsive web design principles and showcasing HTML, CSS, and JS skills, optimized for user-friendly interaction and best web development practices."
-                class="project-img"
-              />
+          <div
+            class="project-card project-6-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-6.jpg"
+                  alt="Dating application website utilizing development techniques and responsive web design for smooth user experiences on all devices."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Dating Application<br />Website</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-bootstrap">Bootstrap</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
             </div>
-            <h3 class="project-title">Password<br />Generator</h3>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/PrimeSolar/password-generator/'"
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/unison/"
+                rel="noopener noreferrer"
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://primesolar.github.io/password-generator/'"
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
               >
-                Live Demo
-              </button>
+              <a
+                href="https://primesolar.github.io/unison/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card project-7-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-7.jpg"
+                  alt="Shopping application offers eCommerce web development functionality through local data management for individual users. It is designed to provide a seamless shopping experience using responsive web design and JS (JavaScript), while adhering to SEO for web development best practices."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Shopping<br />Application</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-normalize-css">normalize.css</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
+            </div>
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/shopping-app/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
+              >
+              <a
+                href="https://primesolar.github.io/shopping-app/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card project-8-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-8.jpg"
+                  alt="Praise generator tool designed using JS (JavaScript), CSS and HTML, aimed at enhancing user interaction with a focus on responsive web design for generating compliments effectively."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Praise<br />Generator</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-normalize-css">normalize.css</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
+            </div>
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/praise-generator/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
+              >
+              <a
+                href="https://primesolar.github.io/praise-generator/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card project-9-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-9.jpg"
+                  alt="Simon game created with JS (JavaScript), highlighting front end development skills and responsive design, aimed at providing an interactive experience that adapts to various screen sizes."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Simon<br />Game</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-jquery">jQuery</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
+            </div>
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/simon-game/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
+              >
+              <a
+                href="https://primesolar.github.io/simon-game/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card project-10-card details-container color-container scroll-animation"
+          >
+            <div class="project-content">
+              <div class="project-image-container">
+                <img
+                  src="./assets/project-10.jpg"
+                  alt="Password generator application focusing on security, built with responsive web design principles and showcasing HTML, CSS, and JS skills, optimized for user-friendly interaction and best web development practices."
+                  class="project-image"
+                />
+              </div>
+              <h3 class="project-title">Password<br />Generator</h3>
+              <div class="project-stack">
+                <span class="skill-badge-javascript">JS (JavaScript)</span>
+                <span class="skill-badge-normalize-css">normalize.css</span>
+                <span class="skill-badge-git">Git</span>
+              </div>
+            </div>
+            <div class="button-container">
+              <a
+                href="https://github.com/PrimeSolar/password-generator/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  GitHub
+                </button></a
+              >
+              <a
+                href="https://primesolar.github.io/password-generator/"
+                rel="noopener noreferrer"
+              >
+                <button class="button button-color-2 project-button">
+                  Live Demo
+                </button></a
+              >
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Scroll to next section"
-        title="Scroll to next section"
-        aria-label="Scroll to next section"
-        class="badge-btn arrow"
-        onclick="location.href='#contact'"
-      />
+      <a
+        href="#contact-section"
+        rel="noopener noreferrer"
+        aria-label="Navigate to the Contact Section"
+      >
+        <img
+          src="./assets/arrow.png"
+          title="Navigate to the Contact Section"
+          alt="Downward Arrow - Navigate to the Professional Contact Showcase"
+          class="badge-button arrow"
+      /></a>
     </section>
-    <section id="contact" class="scroll-animation">
+    <section class="contact scroll-animation" id="contact-section">
       <p class="section__text__p2">Get in Touch</p>
       <h2 class="title-card">Contact Me</h2>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email Badge"
-            aria-label="Email Badge"
-            class="badge contact-badge email-badge"
-          />
-          <p><a href="mailto:hypervisor7@pm.me">hypervisor7@pm.me</a></p>
+          <a href="mailto:hypervisor7@pm.me" class="email-link"
+            ><img
+              src="./assets/envelope.svg"
+              alt="Email Badge"
+              aria-label="Email Badge"
+              class="badge contact-badge email-badge"
+            />
+            <p>hypervisor7@pm.me</p></a
+          >
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn Badge"
-            aria-label="LinkedIn Badge"
-            class="badge contact-badge"
-          />
-          <p><a href="https://www.linkedin.com/in/pepsico">LinkedIn</a></p>
+          <a href="https://www.linkedin.com/in/pepsico" class="linkedin-link"
+            ><img
+              src="./assets/linkedin.svg"
+              alt="LinkedIn Badge"
+              aria-label="LinkedIn Badge"
+              class="badge contact-badge linkedin-badge"
+            />
+            <p>LinkedIn</p></a
+          >
         </div>
       </div>
     </section>
@@ -624,35 +823,38 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
       </nav>
     </footer>
 
-    <div id="footerContainer"></div>
+    <div class="footerContainer"></div>
 
     <noscript>
       <style>
+        body {
+          display: block !important;
+        }
         nav,
         div,
         img,
-        section:not(#enable-javascript),
+        section:not(.enable-javascript),
         footer {
           display: none !important;
         }
       </style>
-      <section id="enable-javascript" class="level2">
+      <section class="enable-javascript">
         <h2>Enable JavaScript</h2>
         <p>
           Because this document uses web based technologies, it requires
           interactive browser functionality. This functionality is provided, in
-          part, by JavaScript. You might have to enable JavaScript within the
-          browser in order to ensure that the document displays correctly and
-          its features work as expected.
+          part, by JS (JavaScript). You might have to enable JavaScript within
+          the browser in order to ensure that the document displays correctly
+          and its features work as expected.
         </p>
         <p>
           Instructions for enabling JavaScript vary by browser. Select your
