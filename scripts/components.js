@@ -27,8 +27,17 @@ class ToTop extends HTMLElement {
       `;
     } else {
       this.innerHTML += `
-      <a href="#">
-        <img src="./assets/arrow-up.png" alt="Scroll to top" title="Scroll to top" aria-label="Scroll to top" class="badge arrow-up" />
+      <a
+        href="#"
+        aria-label="Navigate to page top"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./assets/arrow-up.png"
+          title="Navigate to page top"
+          alt="Upward Arrow - Navigate to page top"
+          class="badge arrow-up"
+        />
       </a>
       `;
     }
@@ -37,12 +46,12 @@ class ToTop extends HTMLElement {
 customElements.define("to-top", ToTop);
 
 // The Years of Experience
-let experiencesText = document.querySelector("#about .card-text");
+let experiencesText = document.querySelector(".about .card-text");
 experiencesText.innerHTML =
   new Date().getFullYear() - 2019 + experiencesText.innerHTML;
 
 const toTop = document
-  .querySelector("#about")
+  .querySelector(".about")
   .appendChild(document.createElement("to-top"))
   .querySelector("a");
 window.addEventListener("scroll", () => {
@@ -54,7 +63,7 @@ window.addEventListener("scroll", () => {
 });
 
 // The Footer
-const footerContainer = document.querySelector("#footerContainer");
+const footerContainer = document.querySelector(".footerContainer");
 const year = new Date().getFullYear();
 
 function footerContainerF(footerContainer) {
