@@ -20,7 +20,8 @@ body {
   line-height: 1.6;
   text-align: center;
   padding: 15px;
-  font-family: "Arial", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   background-color: #f7f7f7;
   color: #555555;
 }
@@ -36,10 +37,61 @@ header {
   border-radius: 5px;
 }
 
+p,
+p * {
+  font-size: 16px;
+}
+
+.wrapper {
+  margin-left: 8px;
+  display: inline;
+}
+
+.copy-button {
+  --bg: linear-gradient(to right, #1ab1ff, #1177ff);
+  --text: #ffffff;
+  --shadow: 0 6px 18px #0f175a29;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 220ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 220ms,
+    filter 220ms;
+  position: relative;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.copy-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px #0f172a37;
+  filter: saturate(1.05);
+}
+
+.copy-button:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+.copy-button.copied {
+  background: var(--text);
+  color: var(--bg);
+}
+
 nav {
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: #007bff;
+  background: linear-gradient(#1ab1ff, #1177ff);
 }
 
 nav ul {
@@ -79,6 +131,10 @@ h1 {
   margin: 0;
   font-size: 2.5em;
   color: #007bff;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brighten 1s;
 }
 
 h2 {
@@ -104,8 +160,8 @@ ul {
   margin-bottom: 20px;
 }
 
-#cover-letter,
-#recommendation {
+.cover-letter,
+.recommendation {
   margin-bottom: 25px;
   border-radius: 5px;
   padding: 20px;
@@ -113,24 +169,25 @@ ul {
   box-shadow: 0 2px 10px #0000001a;
 }
 
-#cover-letter h2 {
+.cover-letter h2 {
   margin-top: 0;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 5px;
 }
 
-#cover-letter p {
+.cover-letter p {
   margin: 10px 0;
   text-align: left;
   color: #555555;
 }
 
-#experience,
-#education,
-#skills,
-#certifications,
-#languages,
-#professional-summary {
+.skills,
+.projects,
+.experience,
+.education,
+.certifications,
+.languages,
+.professional-summary {
   margin-bottom: 25px;
   padding: 20px;
   border-radius: 5px;
@@ -143,7 +200,6 @@ ul {
 .certifications ul,
 .languages ul {
   list-style-type: none;
-  padding: 0;
 }
 
 .experience li,
@@ -151,17 +207,41 @@ ul {
 .certifications li,
 .languages li {
   margin: 5px 0;
-  padding-left: 1em;
-  text-indent: -1em;
 }
 
-.summary li:before,
-.experience li:before,
-.skills li:before,
-.certifications li:before,
-.languages li:before {
+.experience li:before {
   content: "•";
   color: #007bff;
+}
+
+.skills-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 870px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  background: linear-gradient(#1ab1ff, #1177ff);
+  box-shadow: 0 10px 25px #0000001a;
+}
+
+.skills-collection li {
+  list-style: none;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px #fffffffa;
+  border: 1px solid transparent;
+}
+
+.skills-collection li:hover {
+  box-shadow: 0 3px 7px #fffffff6;
 }
 
 a {
@@ -171,6 +251,21 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.contact-info a {
+  color: #007bff;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brighten 1s;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #1ab1ff, #1177ff) 1;
+  border-image-slice: 1;
 }
 
 .timeline {
@@ -200,10 +295,16 @@ a:hover {
   color: #555555;
 }
 
+.timeline-item > p {
+  text-align: center;
+}
+
 .timeline-details {
   margin-top: 8px;
   padding: 8px;
-  border-left: 3px solid #007bff;
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(#1ab1ff, #1177ff) 1;
+  border-image-slice: 1;
 }
 
 .timeline-details ul {
@@ -213,8 +314,24 @@ a:hover {
 
 .timeline-item li:before {
   content: "•";
-  position: absolute;
-  left: 41px;
+  position: relative;
   font-size: 1.2em;
   color: #007bff;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the element. */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#1ab1ff, #1177ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007fff;
 }
