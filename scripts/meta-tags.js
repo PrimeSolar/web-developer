@@ -44,8 +44,8 @@ metaViewport.name = "viewport";
 metaViewport.content = "width=device-width, initial-scale=1";
 document.querySelector("head").appendChild(metaViewport);
 
-/** Set <title>Vladislav Kazantsev, Web Developer</title>. */
-document.title = "Vladislav Kazantsev | Web Developer";
+/** Set <title>Vladislav Kazantsev | Front-End Web Developer</title>. */
+document.title = "Vladislav Kazantsev | Front-End Web Developer";
 
 /** Set <meta name="author" content="Vladislav Kazantsev">. */
 const metaAuthor = document.createElement("meta");
@@ -60,19 +60,45 @@ metaCopyright.content =
   "© " + new Date().getFullYear() + " Vladislav Kazantsev";
 document.querySelector("head").appendChild(metaCopyright);
 
-/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a Web Developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
+/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a front-end web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
 const metaDescription = document.createElement("meta");
 metaDescription.name = "description";
 metaDescription.content =
-  "Explore my curated collection of projects, skills, and passions as a Web Developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
+  "Explore my curated collection of projects, skills, and passions as a front-end web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
 document.querySelector("head").appendChild(metaDescription);
 
-/** Insert <meta name="keywords" content="cryptocurrency, prices, bitcoin price, ethereum price, market cap, crypto price alerts, cryptocurrency change percentage, top cryptocurrencies, crypto market, best cryptocurrency, crypto price comparison, altcoin prices">. */
+/** Insert <meta name="keywords" content="web developer portfolio, front end developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration">. */
 const metaKeywords = document.createElement("meta");
 metaKeywords.name = "keywords";
 metaKeywords.content =
   "web developer portfolio, front end developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration";
 document.querySelector("head").appendChild(metaKeywords);
+
+/** Connect the custom SVG files. */
+
+/** Connect "linkedin-blue.svg". */
+const linkedInSvgLink = document.createElement("link");
+linkedInSvgLink.rel = "preload";
+linkedInSvgLink.type = "image/svg+xml";
+linkedInSvgLink.as = "image";
+linkedInSvgLink.href = "./assets/linkedin-blue.svg";
+document.querySelector("head").appendChild(linkedInSvgLink);
+
+/** Connect "github-blue.svg". */
+const gitHubBlueSvgLink = document.createElement("link");
+gitHubBlueSvgLink.rel = "preload";
+gitHubBlueSvgLink.type = "image/svg+xml";
+gitHubBlueSvgLink.as = "image";
+gitHubBlueSvgLink.href = "./assets/github-blue.svg";
+document.querySelector("head").appendChild(gitHubBlueSvgLink);
+
+/** Connect "envelope-blue.svg". */
+const envelopeBlueSvgLink = document.createElement("link");
+envelopeBlueSvgLink.rel = "preload";
+envelopeBlueSvgLink.type = "image/svg+xml";
+envelopeBlueSvgLink.as = "image";
+envelopeBlueSvgLink.href = "./assets/envelope-blue.svg";
+document.querySelector("head").appendChild(envelopeBlueSvgLink);
 
 /** Connect the custom CSS. */
 
