@@ -13,7 +13,7 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-const projectCollection = document.querySelector(".project-collection");
+const projectsCollection = document.querySelector(".projects-collection");
 
 fetch(
   "https://raw.githubusercontent.com/PrimeSolar/web-developer/refs/heads/main/index.html"
@@ -23,34 +23,22 @@ fetch(
     const doc = new DOMParser().parseFromString(html, "text/html");
     const projectCards = Array.from(doc.querySelectorAll(".project-card"));
     projectCards.forEach((project) => {
-      const name = project
-        .querySelector(".project-title")
-        .innerHTML.replace(/<br\s*\/?>/gi, " ")
-        .trim();
+      const name = project.querySelector(".project-title").innerHTML.trim();
       const githubHref = project.querySelector(
         ".button-container > a:nth-of-type(1)"
       ).href;
       const projectHref = project.querySelector(
         ".button-container > a:nth-of-type(2)"
       ).href;
-      const li = document.createElement("li");
-      li.innerHTML = `${name}:
-      <li><a href=${githubHref} rel="noopener noreferrer">GitHub</a></li>
-      <li><a href=${projectHref} rel="noopener noreferrer">Live Demo</a></li>
+      const div = document.createElement("div");
+      div.classList.add("project-card");
+      div.innerHTML = `<p><strong>${name}</strong></p>
+      <ul>
+        <li><a href=${githubHref} rel="noopener noreferrer">GitHub</a></li>
+        <li><a href=${projectHref} rel="noopener noreferrer">Live Demo</a></li>
+      </ul>
       `;
-      projectCollection.appendChild(li);
+      projectsCollection.appendChild(div);
     });
   })
   .catch(console.error);
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  });
-});
