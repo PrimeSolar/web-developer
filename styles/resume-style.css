@@ -15,9 +15,22 @@
 
 /* The common style rules. */
 
+:root {
+  --font-size: 16px;
+  --line-height: 1.6;
+  --line-height-in-px: calc(var(--font-size) * var(--line-height));
+  --projects-collection-gap: 15px;
+  --project-column: calc(20% - var(--projects-collection-gap) * 0.8);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  line-height: 1.6;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   text-align: center;
   padding: 15px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
@@ -37,14 +50,48 @@ header {
   border-radius: 5px;
 }
 
+h1 {
+  margin: 0;
+  font-size: 2.8em;
+  color: #007bff;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brighten 1s;
+}
+
 p,
 p * {
-  font-size: 16px;
+  font-size: var(--font-size);
 }
 
 .wrapper {
   margin-left: 8px;
   display: inline;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact-info a {
+  color: #007bff;
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brighten 1s;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #1ab1ff, #1177ff) 1;
+  border-image-slice: 1;
 }
 
 .copy-button {
@@ -122,26 +169,11 @@ nav ul li a:hover {
   box-shadow: 0 2px 10px #0000001a;
 }
 
-.job-title {
-  margin-top: 5px;
-  margin-bottom: 17px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #007bff;
-  background: linear-gradient(to right, #1ab1ff, #1177ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: brighten 1s;
-}
-
 h2 {
-  color: #007bff;
-  margin-top: 21px;
+  margin-top: 0;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 5px;
+  color: #007bff;
 }
 
 h3 {
@@ -189,29 +221,60 @@ ul {
 .languages,
 .professional-summary {
   margin-bottom: 25px;
-  padding: 20px;
+  padding: calc(48px - (var(--line-height-in-px) - var(--font-size)) / 2) 20px
+    48px;
   border-radius: 5px;
   background: #ffffff;
   box-shadow: 0 2px 10px #0000001a;
 }
 
-.experience ul,
+to-top > a {
+  position: fixed; /* Specify the positioning method for the element. */
+  bottom: 2.5vw;
+  right: 2.5vw;
+  z-index: 1;
+  opacity: 0;
+  font-size: 16px;
+  text-decoration: none;
+  pointer-events: none;
+  transition: 0.25s;
+  /* Use flexbox to align the content inside the element. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  align-items: center;
+  justify-content: center;
+}
+
+to-top > a.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.arrow,
+.arrow-up {
+  width: 3.7vw;
+  height: auto;
+  position: absolute; /* Specify the positioning method for the element. */
+}
+
+.arrow {
+  display: none;
+  bottom: 3.5rem;
+}
+
 .skills ul,
+.experience ul,
 .certifications ul,
 .languages ul {
   list-style-type: none;
 }
 
-.experience li,
 .skills li,
+.experience li,
 .certifications li,
 .languages li {
   margin: 5px 0;
-}
-
-.experience li:before {
-  content: "•";
-  color: #007bff;
 }
 
 .skills-collection {
@@ -244,35 +307,53 @@ ul {
   box-shadow: 0 3px 7px #fffffff6;
 }
 
-a {
+.experience li:before {
+  content: "•";
   color: #007bff;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.projects-collection {
+  display: grid;
+  grid-template-columns:
+    var(--project-column) var(--project-column) var(--project-column)
+    var(--project-column) var(--project-column);
+  gap: var(--projects-collection-gap);
 }
 
-.contact-info a {
-  color: #007bff;
-  background: linear-gradient(to right, #1ab1ff, #1177ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: brighten 1s;
-  text-decoration: none;
+.project-card {
+  min-height: fit-content;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px #0000001a;
+  box-sizing: border-box;
 }
 
-.contact-info a:hover {
-  border-bottom: 1px solid transparent;
-  border-image: linear-gradient(to right, #1ab1ff, #1177ff) 1;
-  border-image-slice: 1;
+.project-card p {
+  height: 50%;
+  padding: 25px 25px 12.5px;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card ul {
+  height: 50%;
+  padding: 12.5px 25px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .timeline {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  padding: 25px 0;
+  padding: 25px 0 0;
 }
 
 .timeline-item {
@@ -282,6 +363,10 @@ a:hover {
   background: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 10px #0000001a;
+}
+
+.timeline-item:last-of-type {
+  margin: 10px 0 0;
 }
 
 .timeline-item h3 {
@@ -319,12 +404,30 @@ a:hover {
   color: #007bff;
 }
 
+.education p {
+  margin: 10px 10px 0;
+}
+
+.certifications ul {
+  margin: 10px 0 0;
+}
+
+.certifications li:last-of-type,
+.languages li:last-of-type {
+  margin: 5px 5px 0;
+}
+
+.professional-summary p {
+  margin: 1em auto 0;
+  width: 80vw;
+}
+
 ::-webkit-scrollbar {
   width: 12px; /* Set the width of the element. */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
