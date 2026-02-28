@@ -16,59 +16,72 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-// The Scroll to Top Button
-class ToTop extends HTMLElement {
-  connectedCallback() {
-    if (window.innerWidth <= 600) {
-      this.innerHTML += `
-      <a href="#">
-        <span class="badge arrow-up">⬆</span>
-      </a>
-      `;
-    } else {
-      this.innerHTML += `
-      <a
-        href="#"
-        aria-label="Navigate to page top"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="./assets/arrow-up.png"
-          title="Navigate to page top"
-          alt="Upward Arrow - Navigate to page top"
-          class="badge arrow-up"
-        />
-      </a>
-      `;
-    }
-  }
-}
-customElements.define("to-top", ToTop);
+/** The "navigate to page top" button. */
 
-// The Years of Experience
-let experiencesText = document.querySelector(".about .card-text");
-experiencesText.innerHTML =
-  new Date().getFullYear() - 2019 + experiencesText.innerHTML;
+const toTopButton = document.body.appendChild(document.createElement("to-top"));
 
-const toTop = document
-  .querySelector(".about")
-  .appendChild(document.createElement("to-top"))
-  .querySelector("a");
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 450) {
-    toTop.classList.add("active");
+toTopButton.innerHTML = `
+  <a href="#"
+    aria-label="Navigate to page top"
+    rel="noopener noreferrer"
+  >
+  </a>
+  `;
+
+const toTopButtonLink = document.querySelector("to-top a");
+
+const toTopButtonBehaviorOnWindowResize = () => {
+  if (window.innerWidth <= 600) {
+    toTopButtonLink.innerHTML = `
+    <span class="badge arrow-up">⬆</span>
+  `;
+  } else if (window.location.href.indexOf("resume") > -1) {
+    toTopButtonLink.innerHTML = `
+      <img
+        src="../assets/arrow-up-circle-blue.svg"
+        title="Navigate to page top"
+        alt="Navigate to page top"
+        class="badge arrow-up"
+      />
+    `;
   } else {
-    toTop.classList.remove("active");
+    toTopButtonLink.innerHTML = `
+    <img
+      src="./assets/arrow-up-circle-white.svg"
+      title="Navigate to page top"
+      alt="Navigate to page top"
+      class="badge arrow-up"
+    />
+  `;
   }
-});
+};
 
-// The Footer
+const toTopButtonBehaviorOnWindowScroll = () => {
+  if (window.pageYOffset > 450) {
+    toTopButtonLink.classList.add("active");
+  } else {
+    toTopButtonLink.classList.remove("active");
+  }
+};
+
+toTopButtonBehaviorOnWindowResize();
+window.addEventListener("resize", toTopButtonBehaviorOnWindowResize);
+window.addEventListener("scroll", toTopButtonBehaviorOnWindowScroll);
+
+/** The years of experience. */
+let experiencesText = document.querySelector(".about .card-text");
+if (experiencesText) {
+  experiencesText.innerHTML =
+    new Date().getFullYear() - 2019 + experiencesText.innerHTML;
+}
+
+/** The footer. */
 const footerContainer = document.querySelector(".footerContainer");
 const year = new Date().getFullYear();
 
 function footerContainerF(footerContainer) {
-  if (footerContainer != null) {
-    // Define the footer content:
+  if (footerContainer) {
+    /** Define the footer content. */
     footerContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All Rights Reserved.</span>`;
   }
 }
