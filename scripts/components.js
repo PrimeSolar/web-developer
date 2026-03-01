@@ -16,8 +16,44 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/** The "navigate to page top" button. */
+/** The years of experience. */
+let experiencesText = document.querySelector(".about .card-text");
+if (experiencesText) {
+  experiencesText.innerHTML =
+    new Date().getFullYear() - 2019 + experiencesText.innerHTML;
+}
 
+/** The dynamically created tooltips with project descriptions. */
+const projectImages = document.querySelectorAll(".project-image");
+for (const projectImage of projectImages) {
+  const projectCard = projectImage.closest(".project-card");
+  projectCard.setAttribute("data-tooltip", projectImage.alt);
+  const description = document.createElement("div");
+  description.classList.add("project-description");
+  description.innerHTML = "<p>> Open Description</p>";
+  projectCard.appendChild(description);
+  /** The logic for opening and closing a tooltip with a description for each project. */
+  description.addEventListener("click", function () {
+    if (!projectCard.classList.contains("project-description-enabled")) {
+      for (let x of document.querySelectorAll(".project-card")) {
+        if (x.classList.contains("project-description-enabled")) {
+          x.classList.toggle("project-description-enabled");
+          x.querySelector(".project-description p").innerHTML =
+            "> Open Description";
+        }
+      }
+      projectCard.classList.toggle("project-description-enabled");
+      projectCard.querySelector(".project-description p").innerHTML =
+        "> Close Description";
+    } else {
+      projectCard.classList.toggle("project-description-enabled");
+      projectCard.querySelector(".project-description p").innerHTML =
+        "> Open Description";
+    }
+  });
+}
+
+/** The "navigate to page top" button. */
 const toTopButton = document.body.appendChild(document.createElement("to-top"));
 
 toTopButton.innerHTML = `
@@ -67,13 +103,6 @@ const toTopButtonBehaviorOnWindowScroll = () => {
 toTopButtonBehaviorOnWindowResize();
 window.addEventListener("resize", toTopButtonBehaviorOnWindowResize);
 window.addEventListener("scroll", toTopButtonBehaviorOnWindowScroll);
-
-/** The years of experience. */
-let experiencesText = document.querySelector(".about .card-text");
-if (experiencesText) {
-  experiencesText.innerHTML =
-    new Date().getFullYear() - 2019 + experiencesText.innerHTML;
-}
 
 /** The footer. */
 const footerContainer = document.querySelector(".footerContainer");
