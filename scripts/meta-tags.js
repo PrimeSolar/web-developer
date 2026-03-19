@@ -44,8 +44,8 @@ metaViewport.name = "viewport";
 metaViewport.content = "width=device-width, initial-scale=1";
 document.querySelector("head").appendChild(metaViewport);
 
-/** Set <title>Vladislav Kazantsev | Front-End Web Developer</title>. */
-document.title = "Vladislav Kazantsev | Front-End Web Developer";
+/** Set <title>Vladislav Kazantsev | Frontend Web Developer</title>. */
+document.title = "Vladislav Kazantsev | Frontend Web Developer";
 
 /** Set <meta name="author" content="Vladislav Kazantsev">. */
 const metaAuthor = document.createElement("meta");
@@ -60,11 +60,11 @@ metaCopyright.content =
   "© " + new Date().getFullYear() + " Vladislav Kazantsev";
 document.querySelector("head").appendChild(metaCopyright);
 
-/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a front-end web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
+/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a frontend web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
 const metaDescription = document.createElement("meta");
 metaDescription.name = "description";
 metaDescription.content =
-  "Explore my curated collection of projects, skills, and passions as a front-end web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
+  "Explore my curated collection of projects, skills, and passions as a frontend web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
 document.querySelector("head").appendChild(metaDescription);
 
 /** Insert <meta name="keywords" content="web developer portfolio, front end developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration">. */
@@ -120,10 +120,10 @@ linkStyle.onload = function () {
   document.body.style.display = "flex";
 };
 
-/** Connect <link rel="icon" href="assets/logo.svg">. */
+/** Connect <link rel="icon" href="assets/logo.png">. */
 const linkImage = document.createElement("link");
 linkImage.rel = "icon";
-linkImage.href = "assets/logo.svg";
+linkImage.href = "assets/logo.png";
 document.querySelector("head").appendChild(linkImage);
 
 /** Connect "components-min.js". */
