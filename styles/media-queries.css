@@ -20,14 +20,14 @@
   }
 
   .section__pic-container {
-    width: 275px;
-    height: 275px; /* Set the height of the element. */
     margin: 0 auto 2rem;
+    width: 275px; /* Set the width of the element. */
+    height: 275px; /* Set the height of the element. */
   }
 
   section.profile {
-    height: 83vh; /* Set the height of the element. */
     margin: 0;
+    height: 83vh; /* Set the height of the element. */
     padding-bottom: 6rem;
   }
 
@@ -61,10 +61,11 @@
   }
 
   .projects {
+    margin: 5% 0 10%;
     height: fit-content; /* Set the height of the element. */
   }
 
-  .projects-internal-container > .details-container {
+  .project-card {
     flex-basis: calc(45vw - 14rem);
     flex-grow: 0;
     flex-shrink: 0;
@@ -72,7 +73,7 @@
 
   section.contact {
     position: relative;
-    width: 35vw;
+    width: 35vw; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
     margin: 100px 0 0;
     padding: 0 2rem;
@@ -94,7 +95,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
     height: 7.5vh; /* Set the height of the element. */
     border-radius: 2rem;
     padding: 2.5rem; /* Set the padding of the element. */
@@ -126,16 +127,16 @@
   }
 
   section.profile > .section__text {
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
   }
 
   .about {
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
   }
 
   .about > .section-container {
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
   }
 
@@ -165,13 +166,10 @@
     display: none;
   }
 
-  to-top > a {
-    right: 0;
-  }
-
   .arrow-up {
+    width: 5vw; /* Set the width of the element. */
     right: 0;
-    width: 5vw;
+    bottom: 0;
   }
 
   section,
@@ -183,24 +181,30 @@
     margin: 0 5%;
   }
 
-  .projects-internal-container > .details-container {
+  .project-card {
     flex-basis: 30vw;
   }
 
   section.contact {
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
     margin-top: 225px;
     margin-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .projects .button-container {
+    gap: 0.25rem !important;
+  }
+
+  .project-button {
+    width: 7rem; /* Set the width of the element. */
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 645px) {
   .project-title {
     font-size: 1.2rem;
-  }
-
-  .projects .button-container {
-    gap: 0.15rem !important;
   }
 
   .project-stack {
@@ -235,11 +239,11 @@
 
   .arrow,
   .arrow-up {
-    font-size: 50px;
+    width: auto; /* Set the width of the element. */
     height: 50px; /* Set the height of the element. */
-    width: auto;
     right: 0;
     bottom: 0;
+    font-size: 50px;
   }
 
   section.about {
@@ -252,6 +256,15 @@
 
   .skills {
     flex: 0;
+  }
+
+  .project-card {
+    padding: 1.5rem 0.5rem;
+  }
+
+  [data-tooltip]::after {
+    width: 100%; /* Set the width of the element. */
+    height: fit-content;
   }
 
   .contact,
@@ -280,7 +293,7 @@
   }
 
   .skills.about-containers > .details-container {
-    width: 75vw;
+    width: 75vw; /* Set the width of the element. */
   }
 
   .contact-info-container {
@@ -306,7 +319,7 @@
   }
 
   .section__pic-container {
-    width: auto;
+    width: auto; /* Set the width of the element. */
     height: 46vw; /* Set the height of the element. */
     justify-content: center;
   }
@@ -345,14 +358,14 @@
     margin-bottom: 300px;
   }
 
-  .projects-internal-container > .details-container {
+  .project-card {
     flex-basis: 88%;
   }
 
   section.contact {
-    height: 225px; /* Set the height of the element. */
-    width: 90vw;
     margin: 0 5vw 5vh;
+    width: 90vw; /* Set the width of the element. */
+    height: 225px; /* Set the height of the element. */
     padding: 0;
   }
 
@@ -360,7 +373,7 @@
     flex-direction: column;
     align-content: center;
     max-width: fit-content;
-    width: fit-content;
+    width: fit-content; /* Set the width of the element. */
     max-height: fit-content;
     height: fit-content; /* Set the height of the element. */
     padding: 1rem;
@@ -379,8 +392,16 @@
 }
 
 @media screen and (max-width: 370px) and (min-height: 800px) {
-  .projects-internal-container > .details-container {
+  .project-card {
     flex-basis: 84%;
+  }
+
+  .profile > .section__text {
+    padding: 3.7rem 2.5rem;
+  }
+
+  div.contact-info-upper-container {
+    padding: 1rem;
   }
 }
 
@@ -400,7 +421,7 @@
   .section-container {
     position: relative;
     left: -22.5vw;
-    width: 95vw !important;
+    width: 95vw !important; /* Set the width of the element. */
   }
 
   h1,
@@ -412,5 +433,9 @@
   section,
   p {
     page-break-inside: avoid;
+  }
+
+  [data-tooltip]::after {
+    opacity: 0 !important;
   }
 }
