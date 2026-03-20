@@ -30,8 +30,10 @@ fetch(
       const projectHref = project.querySelector(
         ".button-container > a:nth-of-type(2)"
       ).href;
+      const description = project.querySelector("img").alt.trim();
       const div = document.createElement("div");
       div.classList.add("project-card");
+      div.setAttribute("data-tooltip", description);
       div.innerHTML = `<p><strong>${name}</strong></p>
       <ul>
         <li><a href=${githubHref} rel="noopener noreferrer">GitHub</a></li>
