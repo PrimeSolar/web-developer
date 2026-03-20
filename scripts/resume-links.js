@@ -1,5 +1,15 @@
 /*
- * Script
+ * Project Cards for the Resume
+ *
+ * Dynamically load and render project cards from index.html.
+ * - Fetch and parse project data from index.html using DOMParser.
+ * - Extract project data (title, GitHub link, instance link, description).
+ * - Handle <br /> tags in titles by replacing with spaces for clean display.
+ * - Generate project card elements with proper semantic HTML structure.
+ * - Implement tooltip fallbacks for project information.
+ * - Establish error handling for fetch.
+ * This enables dynamic project portfolio rendering without duplicating HTML,
+ * implementing reusability and improving maintainability.
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
@@ -15,32 +25,70 @@
 
 const projectsCollection = document.querySelector(".projects-collection");
 
-fetch(
-  "https://raw.githubusercontent.com/PrimeSolar/web-developer/refs/heads/main/index.html"
-)
-  .then((response) => response.text())
+fetch("../index.html")
+  .then((response) => {
+    if (!response.ok) throw new Error("Failed to fetch index.html");
+    return response.text();
+  })
   .then((html) => {
+    let i = 1;
     const doc = new DOMParser().parseFromString(html, "text/html");
     const projectCards = Array.from(doc.querySelectorAll(".project-card"));
     projectCards.forEach((project) => {
-      const name = project.querySelector(".project-title").innerHTML.trim();
-      const githubHref = project.querySelector(
-        ".button-container > a:nth-of-type(1)"
-      ).href;
-      const projectHref = project.querySelector(
-        ".button-container > a:nth-of-type(2)"
-      ).href;
-      const description = project.querySelector("img").alt.trim();
+      const name =
+        project
+          .querySelector(".project-title")
+          ?.innerHTML?.replace(/<br\s*\/?>/gi, " ")
+          .trim() || `Project ${i}`;
+      i++;
+      const githubHref =
+        project.querySelector(".project-github-link")?.href || "";
+      const projectHref =
+        project.querySelector(".project-instance-link")?.href || "";
+      const description = project.querySelector("img")?.alt?.trim() || "";
       const div = document.createElement("div");
       div.classList.add("project-card");
-      div.setAttribute("data-tooltip", description);
-      div.innerHTML = `<p><strong>${name}</strong></p>
-      <ul>
-        <li><a href=${githubHref} rel="noopener noreferrer">GitHub</a></li>
-        <li><a href=${projectHref} rel="noopener noreferrer">Live Demo</a></li>
-      </ul>
-      `;
+      div.setAttribute(
+        "data-tooltip",
+        githubHref === "" && projectHref === "" && description === ""
+          ? "Project information will be available soon."
+          : description === ""
+          ? "Project description will be available soon."
+          : description
+      );
+
+      /** Create title. */
+      const title = document.createElement("p");
+      const strong = document.createElement("strong");
+      strong.textContent = name;
+      title.appendChild(strong);
+      div.appendChild(title);
+
+      /** Create links list. */
+      const ul = document.createElement("ul");
+
+      if (githubHref) {
+        const liGithub = document.createElement("li");
+        const linkGithub = document.createElement("a");
+        linkGithub.href = githubHref;
+        linkGithub.textContent = "GitHub";
+        linkGithub.rel = "noopener noreferrer";
+        liGithub.appendChild(linkGithub);
+        ul.appendChild(liGithub);
+      }
+
+      if (projectHref) {
+        const liDemo = document.createElement("li");
+        const linkDemo = document.createElement("a");
+        linkDemo.href = projectHref;
+        linkDemo.textContent = "Live Demo";
+        linkDemo.rel = "noopener noreferrer";
+        liDemo.appendChild(linkDemo);
+        ul.appendChild(liDemo);
+      }
+
+      div.appendChild(ul);
       projectsCollection.appendChild(div);
     });
   })
-  .catch(console.error);
+  .catch((error) => console.error("Error loading projects:", error));
