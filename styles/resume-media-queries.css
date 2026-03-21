@@ -87,6 +87,15 @@
   h2 {
     font-size: 1.8em;
   }
+
+  .skills-collection {
+    gap: unset;
+  }
+
+  .skills-collection li {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 }
 
 @media print {
@@ -129,6 +138,10 @@
 
   .projects-collection {
     gap: 1px;
+  }
+
+  [data-tooltip]::after {
+    opacity: 0 !important;
   }
 
   .pageBreak {
