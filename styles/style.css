@@ -149,14 +149,24 @@ nav {
 }
 
 .nav-links a,
-.contact-info-container a {
+.contact-info-container a,
+.about-me-text a {
   position: relative;
-  transition: color 0.3s ease, transform 0.2s ease;
   text-decoration: none !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.about-me-text a {
+  background: linear-gradient(to right, #1ab1ff, #1177ff);
+  /*background: linear-gradient(90deg, #0162df, #50b0f0);
+  background: linear-gradient(to right, #0162df, #1ab1ff);*/
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links a::before,
-.contact-info-container a::before {
+.contact-info-container a::before,
+.about-me-text a::before {
   content: "";
   position: absolute;
   width: 0;
@@ -167,8 +177,14 @@ nav {
   transition: width 0.27s ease, left 0.27s ease;
 }
 
+.about-me-text a::before {
+  height: 1px;
+  bottom: 1px;
+}
+
 .nav-links a:hover::before,
-.contact-info-container a:hover::before {
+.contact-info-container a:hover::before,
+.about-me-text a:hover::before {
   width: 100%;
   left: 0;
 }
