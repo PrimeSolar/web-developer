@@ -79,11 +79,11 @@ to-top > a {
   position: fixed; /* Specify the positioning method for the element. */
   bottom: 2.5vw;
   right: 2.5vw;
-  z-index: 1;
-  opacity: 0;
   font-size: 16px;
   text-decoration: none;
-  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
   transition: 0.25s;
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
@@ -907,7 +907,7 @@ footer p {
   color: #ffffff; /* Set the color for the text of the element. */
 }
 
-.footerContainer {
+.FooterContainer {
   text-align: center;
   padding: 0 0 2.7vh; /* Set the padding of the element. */
 }
