@@ -57,12 +57,17 @@ for (const projectImage of projectImages) {
 const toTopButton = document.body.appendChild(document.createElement("to-top"));
 
 toTopButton.innerHTML = `
-  <a href="#"
+  <a
     aria-label="Navigate to page top"
     rel="noopener noreferrer"
   >
   </a>
   `;
+
+toTopButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 const toTopButtonLink = document.querySelector("to-top a");
 
@@ -105,15 +110,15 @@ window.addEventListener("resize", toTopButtonBehaviorOnWindowResize);
 window.addEventListener("scroll", toTopButtonBehaviorOnWindowScroll);
 
 /** The footer. */
-const footerContainer = document.querySelector(".footerContainer");
+const FooterContainer = document.querySelector(".FooterContainer");
 const year = new Date().getFullYear();
 
-function footerContainerF(footerContainer) {
-  if (footerContainer) {
+function footerContainerF(FooterContainer) {
+  if (FooterContainer) {
     /** Define the footer content. */
-    footerContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All Rights Reserved.</span>`;
+    FooterContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All Rights Reserved.</span>`;
   }
 }
-footerContainerF(footerContainer);
+footerContainerF(FooterContainer);
 
 console.log("components.js is completed");
