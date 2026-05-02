@@ -15,6 +15,7 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
+/** The hover effect functionality for the email and LinkedIn badges. */
 const emailBadge = document.querySelector(".email-badge");
 const emailLink = document.querySelector(".email-link");
 emailLink.addEventListener("mouseenter", () => {
