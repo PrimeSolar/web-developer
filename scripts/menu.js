@@ -15,7 +15,10 @@
 
 const menu = document.querySelector(".menu-links");
 const badge = document.querySelector(".hamburger-badge");
-
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 menu.addEventListener("click", toggleMenu);
 badge.addEventListener("click", toggleMenu);
 
@@ -24,7 +27,7 @@ function toggleMenu() {
   badge.classList.toggle("open");
 }
 
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
   if (
     !event.target.matches(".menu-links") &&
     !event.target.matches(".hamburger-badge") &&
@@ -34,4 +37,4 @@ window.onclick = function (event) {
     menu.classList.toggle("open");
     badge.classList.toggle("open");
   }
-};
+});
