@@ -18,9 +18,13 @@
 
 /** The years of experience. */
 let experiencesText = document.querySelector(".about .card-text");
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 if (experiencesText) {
-  experiencesText.innerHTML =
-    new Date().getFullYear() - 2019 + experiencesText.innerHTML;
+  experiencesText.textContent =
+    new Date().getFullYear() - 2019 + experiencesText.textContent;
 }
 
 /** The dynamically created tooltips with project descriptions. */
@@ -30,7 +34,9 @@ for (const projectImage of projectImages) {
   projectCard.setAttribute("data-tooltip", projectImage.alt);
   const description = document.createElement("div");
   description.classList.add("project-description");
-  description.innerHTML = "<p>> Open Description</p>";
+  const p = document.createElement("p");
+  p.textContent = "> Open Description";
+  description.appendChild(p);
   projectCard.appendChild(description);
   /** The logic for opening and closing a tooltip with a description for each project. */
   description.addEventListener("click", function () {
@@ -38,70 +44,57 @@ for (const projectImage of projectImages) {
       for (let x of document.querySelectorAll(".project-card")) {
         if (x.classList.contains("project-description-enabled")) {
           x.classList.toggle("project-description-enabled");
-          x.querySelector(".project-description p").innerHTML =
-            "> Open Description";
+          p.textContent = "> Open Description";
         }
       }
       projectCard.classList.toggle("project-description-enabled");
-      projectCard.querySelector(".project-description p").innerHTML =
-        "> Close Description";
+      p.textContent = "> Close Description";
     } else {
       projectCard.classList.toggle("project-description-enabled");
-      projectCard.querySelector(".project-description p").innerHTML =
-        "> Open Description";
+      p.textContent = "> Open Description";
     }
   });
 }
 
-/** The "navigate to page top" button. */
+/** The "Navigate to page top" button. */
 const toTopButton = document.body.appendChild(document.createElement("to-top"));
-
-toTopButton.innerHTML = `
-  <a
-    aria-label="Navigate to page top"
-    rel="noopener noreferrer"
-  >
-  </a>
-  `;
-
+const a = document.createElement("a");
+a.areaLabel = "Navigate to page top";
+a.rel = "noopener noreferrer";
+toTopButton.appendChild(a);
 toTopButton.addEventListener("click", (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-const toTopButtonLink = document.querySelector("to-top a");
-
 const toTopButtonBehaviorOnWindowResize = () => {
-  if (window.innerWidth <= 600) {
-    toTopButtonLink.innerHTML = `
-    <span class="badge arrow-up">⬆</span>
-  `;
-  } else if (window.location.href.indexOf("resume") > -1) {
-    toTopButtonLink.innerHTML = `
-      <img
-        src="../assets/arrow-up-circle-blue.svg"
-        title="Navigate to page top"
-        alt="Navigate to page top"
-        class="badge arrow-up"
-      />
-    `;
+  a.replaceChildren();
+
+  const isMobile = window.innerWidth <= 600;
+  const isResumePage = new URL(window.location).pathname.includes("resume");
+
+  if (isMobile) {
+    const span = document.createElement("span");
+    span.append(document.createTextNode("⬆"));
+    span.classList.add("badge", "arrow-up");
+    a.appendChild(span);
   } else {
-    toTopButtonLink.innerHTML = `
-    <img
-      src="./assets/arrow-up-circle-white.svg"
-      title="Navigate to page top"
-      alt="Navigate to page top"
-      class="badge arrow-up"
-    />
-  `;
+    const img = document.createElement("img");
+    img.src = isResumePage
+      ? "../assets/arrow-up-circle-blue.svg"
+      : "./assets/arrow-up-circle-white.svg";
+    img.title = "Navigate to page top";
+    img.alt = "Navigate to page top";
+    img.classList.add("badge", "arrow-up");
+    a.appendChild(img);
   }
 };
 
 const toTopButtonBehaviorOnWindowScroll = () => {
   if (window.pageYOffset > 450) {
-    toTopButtonLink.classList.add("active");
+    a.classList.add("active");
   } else {
-    toTopButtonLink.classList.remove("active");
+    a.classList.remove("active");
   }
 };
 
