@@ -14,6 +14,10 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  /**
+   * The script includes detailed comments
+   * to support stakeholders with varying JS knowledge.
+   */
   const email = document.querySelector(".email");
   if (!email) return;
   const emailWrapper = document.createElement("div");
@@ -33,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         copyEmailBtn.classList.remove("copied");
       }, 1700);
     } catch (e) {
-      alert("Clipboard unavailable");
+      copyEmailBtn.textContent = "Clipboard unavailable";
     }
   });
   emailWrapper.appendChild(copyEmailBtn);
@@ -59,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         copyPhoneBtn.classList.remove("copied");
       }, 1700);
     } catch (e) {
-      alert("Clipboard unavailable");
+      copyPhoneBtn.textContent = "Clipboard unavailable";
     }
   });
   phoneWrapper.appendChild(copyPhoneBtn);
