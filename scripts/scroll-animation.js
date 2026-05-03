@@ -14,21 +14,26 @@
  */
 
 const sections = document.querySelectorAll(".scroll-animation");
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
+if (sections) {
+  const options = {
+    root: null,
+    threshold: 0.1,
+  };
 
-const options = {
-  root: null,
-  threshold: 0.1,
-};
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
+  sections.forEach((section) => {
+    observer.observe(section);
   });
-}, options);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
+}
