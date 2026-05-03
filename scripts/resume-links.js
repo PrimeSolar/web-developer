@@ -25,6 +25,10 @@
 
 const projectsCollection = document.querySelector(".projects-collection");
 
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 fetch("../index.html")
   .then((response) => {
     if (!response.ok) throw new Error("Failed to fetch index.html");
@@ -72,6 +76,7 @@ fetch("../index.html")
         const linkGithub = document.createElement("a");
         linkGithub.href = githubHref;
         linkGithub.textContent = "GitHub";
+        linkGithub.ariaLabel = `${name} GitGub`;
         linkGithub.rel = "noopener noreferrer";
         liGithub.appendChild(linkGithub);
         ul.appendChild(liGithub);
@@ -82,6 +87,7 @@ fetch("../index.html")
         const linkDemo = document.createElement("a");
         linkDemo.href = projectHref;
         linkDemo.textContent = "Live Demo";
+        linkDemo.ariaLabel = `${name} Live Demo`;
         linkDemo.rel = "noopener noreferrer";
         liDemo.appendChild(linkDemo);
         ul.appendChild(liDemo);
