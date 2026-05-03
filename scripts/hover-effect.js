@@ -18,21 +18,37 @@
 /** The hover effect functionality for the email and LinkedIn badges. */
 const emailBadge = document.querySelector(".email-badge");
 const emailLink = document.querySelector(".email-link");
-emailLink.addEventListener("mouseenter", () => {
-  emailBadge.src = "./assets/envelope-blue.svg";
-  emailBadge.style.transform = "scale(1.1)";
-});
-emailLink.addEventListener("mouseleave", () => {
-  emailBadge.src = "./assets/envelope.svg";
-  emailBadge.style.transform = "scale(1)";
-});
+if (emailLink) {
+  emailLink.addEventListener("mouseenter", () => {
+    if (emailBadge) {
+      emailBadge.src = "./assets/envelope-blue.svg";
+      emailBadge.style.transform = "scale(1.1)";
+    }
+  });
+  emailLink.addEventListener("mouseleave", () => {
+    if (emailBadge) {
+      emailBadge.src = "./assets/envelope.svg";
+      emailBadge.style.transform = "scale(1)";
+    }
+  });
+}
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 const linkedinBadge = document.querySelector(".contact-badge.linkedin-badge");
 const linkedinLink = document.querySelector(".linkedin-link");
-linkedinLink.addEventListener("mouseenter", () => {
-  linkedinBadge.src = "./assets/linkedin-blue.svg";
-  linkedinBadge.style.transform = "scale(1.05)";
-});
-linkedinLink.addEventListener("mouseleave", () => {
-  linkedinBadge.src = "./assets/linkedin.svg";
-  linkedinBadge.style.transform = "scale(1)";
-});
+if (linkedinLink) {
+  linkedinLink.addEventListener("mouseenter", () => {
+    if (linkedinBadge) {
+      linkedinBadge.src = "./assets/linkedin-blue.svg";
+      linkedinBadge.style.transform = "scale(1.05)";
+    }
+  });
+  linkedinLink.addEventListener("mouseleave", () => {
+    if (linkedinBadge) {
+      linkedinBadge.src = "./assets/linkedin.svg";
+      linkedinBadge.style.transform = "scale(1)";
+    }
+  });
+}
