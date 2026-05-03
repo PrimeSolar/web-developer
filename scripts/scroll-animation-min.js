@@ -1,1 +1,1 @@
-const sections=document.querySelectorAll(".scroll-animation"),options={root:null,threshold:.1},observer=new IntersectionObserver(((e,o)=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("visible"),o.unobserve(e.target))}))}),options);sections.forEach((e=>{observer.observe(e)}));
+const sections=document.querySelectorAll(".scroll-animation");if(sections){const e=new IntersectionObserver(((e,s)=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("visible"),s.unobserve(e.target))}))}),{root:null,threshold:.1});sections.forEach((s=>{e.observe(s)}))}
