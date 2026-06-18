@@ -44,7 +44,8 @@ for (const projectImage of projectImages) {
       for (let x of document.querySelectorAll(".project-card")) {
         if (x.classList.contains("project-description-enabled")) {
           x.classList.toggle("project-description-enabled");
-          p.textContent = "> Open Description";
+          x.querySelector(".project-description p").textContent =
+            "> Open Description";
         }
       }
       projectCard.classList.toggle("project-description-enabled");
