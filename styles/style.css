@@ -23,6 +23,8 @@
   color: #ffffff; /* Set the color for the text of the element. */
 }
 
+/* The style sheet includes detailed property comments
+to support stakeholders with varying CSS knowledge. */
 body {
   margin: 0; /* Set the thickness for the margin area of the element. */
   padding: 0; /* Set the padding of the element. */
@@ -312,8 +314,8 @@ section {
 /*----- The Profile Section -----*/
 
 section.profile {
-  gap: 5rem;
   height: 83vh;
+  padding-top: 0;
   padding-bottom: 20vh;
   /*animation: brighten 0.5s;*/
   /* Use flexbox to align the content inside the element. */
@@ -322,6 +324,7 @@ section.profile {
   display: flex; /* Standard syntax for modern browsers (widely supported). */
   justify-content: center;
   align-items: center;
+  gap: 5rem;
 }
 
 .section__text {
@@ -356,6 +359,17 @@ section.profile {
   /* transform: translateY(-5px); */
   -webkit-box-shadow: 0 8px 21px #ffffff7a;
   box-shadow: 0 8px 21px #ffffff7a;
+}
+
+.profile .section__text__p4 {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  color: #575757;
+}
+
+abbr {
+  color: inherit;
+  font-size: inherit;
 }
 
 /*.section__text:hover {
