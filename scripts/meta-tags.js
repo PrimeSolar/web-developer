@@ -8,13 +8,18 @@
  * Key Features:
  * - Sets the default language of the document to English (`lang = "en"`).
  * - Defines the default text direction as left-to-right (`dir = "ltr"`).
- * - Inserts viewport settings to ensure responsive design.
  * - Configures the document title for the web page.
  * - Includes metadata for author, copyright, description, and keywords to enhance SEO.
  * - Links to the style sheets for styling the interface.
  * - Adds a badge to enhance brand identity.
  * - Links to the scripts for functionality.
  * - Specifies the type attribute for all script elements for better compatibility.
+ *
+ * Any corresponding manual changes in the HTML document would be overridden at runtime if the script is connected.
+ * The <meta> charset tag must be hardcoded because it needs to be guaranteed to be within the first 1024 bytes of the HTML document,
+ * as some browsers only look at those bytes before choosing an encoding
+ * (see https://html.spec.whatwg.org/multipage/semantics.html#charset).
+ * The <meta> viewport tag must be hardcoded to ensure the immediate correct page rendering.
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
@@ -32,20 +37,19 @@
 const html = document.querySelector("html");
 html.lang = "en";
 
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 /** Set `dir="ltr"` for the <html> element. */
 html.dir = "ltr";
 
 /** Set `prefix="og: https://ogp.me/ns#"` for the <html> element. */
 document.documentElement.setAttribute("prefix", "og: https://ogp.me/ns#");
 
-/** Set <meta name="viewport" content="width=device-width, initial-scale=1" />. */
-const metaViewport = document.createElement("meta");
-metaViewport.name = "viewport";
-metaViewport.content = "width=device-width, initial-scale=1";
-document.querySelector("head").appendChild(metaViewport);
-
-/** Set <title>Vladislav Kazantsev | Frontend Web Developer</title>. */
-document.title = "Vladislav Kazantsev | Frontend Web Developer";
+/** Set <title>Vladislav Kazantsev | Full Stack Web Developer & Technical Writer</title>. */
+document.title =
+  "Vladislav Kazantsev | Full Stack Web Developer & Senior Technical Writer";
 
 /** Set <meta name="author" content="Vladislav Kazantsev">. */
 const metaAuthor = document.createElement("meta");
@@ -60,18 +64,18 @@ metaCopyright.content =
   "© " + new Date().getFullYear() + " Vladislav Kazantsev";
 document.querySelector("head").appendChild(metaCopyright);
 
-/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a frontend web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
+/** Insert <meta name="description" content="Explore my curated collection of projects, skills, and passions as a full stack web developer & technical writer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!">. */
 const metaDescription = document.createElement("meta");
 metaDescription.name = "description";
 metaDescription.content =
-  "Explore my curated collection of projects, skills, and passions as a frontend web developer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
+  "Explore my curated collection of projects, skills, and passions as a full stack web developer & technical writer. This website showcases my work, tells about my journey, and highlights opportunities for us to connect and collaborate!";
 document.querySelector("head").appendChild(metaDescription);
 
-/** Insert <meta name="keywords" content="web developer portfolio, front end developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration">. */
+/** Insert <meta name="keywords" content="web developer portfolio, frontend developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, JS, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration">. */
 const metaKeywords = document.createElement("meta");
 metaKeywords.name = "keywords";
 metaKeywords.content =
-  "web developer portfolio, front end developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration";
+  "web developer portfolio, frontend developer, backend developer, full stack developer, responsive web design, UX/UI design, web application development, JavaScript developer, JS, HTML, CSS, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration";
 document.querySelector("head").appendChild(metaKeywords);
 
 /** Connect the custom SVG files. */
