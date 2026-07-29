@@ -19,6 +19,8 @@
     height: fit-content; /* Set the height of the element. */
   }
 
+  /* The style sheet includes detailed property comments
+  to support stakeholders with varying CSS knowledge. */
   .section__pic-container {
     margin: 0 auto 2rem;
     width: 275px; /* Set the width of the element. */
@@ -26,7 +28,6 @@
   }
 
   section.profile {
-    margin: 0;
     height: 83vh; /* Set the height of the element. */
     padding-bottom: 6rem;
   }
@@ -130,6 +131,10 @@
     width: fit-content; /* Set the width of the element. */
   }
 
+  .profile .section__text__p2 {
+    font-size: 28px;
+  }
+
   .about {
     width: fit-content; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
@@ -193,6 +198,10 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) {
+  .profile .section__text__p2 {
+    font-size: 18px;
+  }
+
   .projects .button-container {
     gap: 0.25rem !important;
   }
@@ -324,8 +333,8 @@
     justify-content: center;
   }
 
-  .section__text__p2 {
-    font-size: 1.25rem;
+  .profile .section__text__p2 {
+    font-size: 18px;
   }
 
   .title {
