@@ -18,6 +18,8 @@
     display: none;
   }
 
+  /* The style sheet includes detailed property comments
+  to support stakeholders with varying CSS knowledge. */
   .arrow-up {
     width: 5vw;
     right: 0;
@@ -28,6 +30,24 @@
 @media (max-width: 900px) {
   :root {
     --project-column: calc(50% - var(--projects-collection-gap) / 2);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info p {
+    margin: 0;
+    padding: 1em;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-info p:first-of-type {
+    margin-top: 1.5em;
   }
 
   .projects-collection {
@@ -42,14 +62,6 @@
 
   nav ul li {
     margin: 5px 0;
-  }
-}
-
-@media (max-width: 680px) {
-  .copy-button {
-    padding: 12px 16px;
-    border-radius: 10px;
-    font-size: 15px;
   }
 }
 
@@ -98,6 +110,12 @@
   }
 }
 
+@media (max-width: 370px) {
+  .contact-info * {
+    font-size: 14px;
+  }
+}
+
 @media print {
   body {
     margin: 0;
@@ -125,15 +143,17 @@
     -webkit-text-fill-color: unset;
   }
 
-  button,
-  to-top {
-    display: none !important;
-  }
-
   .skills-collection {
     margin: 0 !important;
     padding: 0 !important;
     gap: 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .skills-collection li {
+    font-size: 12px;
+    padding: 7px 10px;
   }
 
   .projects-collection {
@@ -142,6 +162,11 @@
 
   [data-tooltip]::after {
     opacity: 0 !important;
+  }
+
+  button,
+  to-top {
+    display: none !important;
   }
 
   .pageBreak {
