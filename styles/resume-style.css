@@ -23,6 +23,8 @@
   --project-column: calc(20% - var(--projects-collection-gap) * 0.8);
 }
 
+/* The style sheet includes detailed property comments
+to support stakeholders with varying CSS knowledge. */
 * {
   scroll-behavior: smooth;
 }
@@ -79,6 +81,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.contact-info {
+  display: flex;
+}
+
+.contact-info p {
+  margin-top: 1.5em;
+  padding: 1em;
+  border-left: 1px solid transparent;
+  border-image: linear-gradient(#1ab1ff, #1177ff) 1;
+  border-image-slice: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p:first-of-type {
+  border-left: none;
+}
+
 .contact-info a {
   color: #007bff;
   background: linear-gradient(to right, #1ab1ff, #1177ff);
@@ -103,7 +123,7 @@ a:hover {
   justify-content: center;
   gap: 8px;
   white-space: nowrap;
-  padding: 10px 14px;
+  padding: 17px 14px;
   font-size: 14px;
   color: var(--text);
   background: var(--bg);
@@ -118,6 +138,10 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
   backface-visibility: hidden;
   text-align: center;
+  width: 100px;
+  height: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .copy-button:hover {
@@ -158,15 +182,17 @@ nav ul li a {
   padding: 8px 12px;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 5px;
   color: #ffffff;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 nav ul li a:hover {
-  border-radius: 5px;
   text-decoration: none;
   background-color: #ffffff;
   color: #007bff;
   box-shadow: 0 2px 10px #0000001a;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 h2 {
@@ -226,17 +252,28 @@ ul {
   border-radius: 5px;
   background: #ffffff;
   box-shadow: 0 2px 10px #0000001a;
+  transition: box-shadow 0.5s ease;
+}
+
+.skills:hover,
+.projects:hover,
+.experience:hover,
+.education:hover,
+.certifications:hover,
+.languages:hover,
+.professional-summary:hover {
+  box-shadow: 0 8px 16px #2568ea17;
 }
 
 to-top > a {
   position: fixed; /* Specify the positioning method for the element. */
   bottom: 2.5vw;
   right: 2.5vw;
-  z-index: 1;
-  opacity: 0;
   font-size: 16px;
   text-decoration: none;
-  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
   transition: 0.25s;
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
@@ -278,17 +315,17 @@ to-top > a.active {
 }
 
 .skills-collection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  max-width: 870px;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 20px;
   border-radius: 15px;
+  padding: 20px;
   font-weight: bold;
   background: linear-gradient(#1ab1ff, #1177ff);
   box-shadow: 0 10px 25px #0000001a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
 
 .skills-collection li {
@@ -349,6 +386,32 @@ to-top > a.active {
   box-sizing: border-box;
 }
 
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 8px);
+  width: 100%;
+  border: solid 1px #555555;
+  border-radius: 6px;
+  padding: 8px 12px;
+  z-index: 100;
+  opacity: 0;
+  background: #ffffff;
+  color: #555555;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
 .timeline {
   position: relative;
   margin: 0 auto;
@@ -369,7 +432,8 @@ to-top > a.active {
   margin: 10px 0 0;
 }
 
-.timeline-item h3 {
+.timeline-item h3,
+.education h3 {
   margin: 0;
   color: #007bff;
 }
@@ -405,7 +469,30 @@ to-top > a.active {
 }
 
 .education p {
-  margin: 10px 10px 0;
+  width: 80vw;
+  margin: 1em auto 0;
+  align-items: center;
+}
+
+.education p:first-of-type {
+  color: #373737;
+}
+
+.education p:last-of-type {
+  border-top: 1px solid #e5e7ea;
+  padding-top: 1rem;
+  font-style: italic;
+  color: #575757;
+}
+
+.education::after {
+  content: "✓ Official Diploma";
+  display: block;
+  font-size: 0.75rem;
+  color: #1177ff;
+  font-weight: 700;
+  margin-top: 2rem;
+  letter-spacing: 0.5px;
 }
 
 .certifications ul {
