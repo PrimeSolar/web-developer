@@ -63,6 +63,19 @@
   nav ul li {
     margin: 5px 0;
   }
+
+  .education {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .education h3 {
+    font-size: 1.1rem;
+  }
+
+  .education p {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
