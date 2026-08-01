@@ -50,11 +50,17 @@ fetch("../index.html")
       const projectHref =
         project.querySelector(".project-instance-link")?.href || "";
       const description = project.querySelector("img")?.alt?.trim() || "";
+      const readmeHref =
+        (project.querySelector(".project-github-link")?.href || "") +
+        "blob/main/README.md";
       const div = document.createElement("div");
       div.classList.add("project-card");
       div.setAttribute(
         "data-tooltip",
-        githubHref === "" && projectHref === "" && description === ""
+        githubHref === "" &&
+          projectHref === "" &&
+          description === "" &&
+          readmeHref === ""
           ? "Project information will be available soon."
           : description === ""
           ? "Project description will be available soon."
@@ -91,6 +97,17 @@ fetch("../index.html")
         linkDemo.rel = "noopener noreferrer";
         liDemo.appendChild(linkDemo);
         ul.appendChild(liDemo);
+      }
+
+      if (readmeHref) {
+        const liReadme = document.createElement("li");
+        const linkReadme = document.createElement("a");
+        linkReadme.href = readmeHref;
+        linkReadme.textContent = "README";
+        linkReadme.ariaLabel = `${name} README`;
+        linkReadme.rel = "noopener noreferrer";
+        liReadme.appendChild(linkReadme);
+        ul.appendChild(liReadme);
       }
 
       div.appendChild(ul);
