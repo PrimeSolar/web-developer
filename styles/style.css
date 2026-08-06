@@ -141,7 +141,11 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  margin: 0;
+  height: 15vh;
+  border: 1px solid #ffffff37;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .nav-links {
@@ -314,6 +318,8 @@ section {
 /*----- The Profile Section -----*/
 
 section.profile {
+  margin-top: 7.5vh;
+  /* margin-top: 3.5vh; */
   height: 83vh;
   padding-top: 0;
   padding-bottom: 20vh;
@@ -338,6 +344,8 @@ section.profile {
   border: #353535 0.1rem solid;
   border-color: #aaaaaa;
   /*transition: 0.5s ease-in-out;*/
+  /* padding-top: 1rem;
+  padding-bottom: 1rem; */
 }
 
 .profile .section__text,
@@ -413,6 +421,7 @@ abbr {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: brighten 1s;
+  /* padding-top: 0; */
 }
 
 @keyframes brighten {
@@ -499,11 +508,16 @@ h4 {
 }
 
 .button {
-  font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem; /* Set the padding of the element. */
   width: 8rem;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1rem; /* Set the padding of the element. */
   border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.button:hover {
+  text-decoration: none;
 }
 
 .button-color-1,
@@ -771,7 +785,7 @@ article .badge {
 }
 
 .project-button {
-  color: #ffffff; /* Set the color for the text of the element. */
+  box-sizing: border-box;
   border-color: #a5a5a5;
 }
 
@@ -817,17 +831,25 @@ article .badge {
 }
 
 /* The Contact Section. */
+#contact-section {
+  height: 75vh;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact {
   position: relative; /* Specify the positioning method for the element. */
   width: 35vw;
   height: fit-content;
-  margin: 25vh 0 10vh; /* Set the thickness for the margin area of the element. */
-  background: #ffffff;
-  border-radius: 2rem;
   border: #353535 0.1rem solid;
+  border-radius: 2rem;
   border-color: #aaaaaa;
+  padding: 0 2rem;
   text-align: center;
   align-self: center;
+  background: #ffffff;
   color: #000000; /* Set the color for the text of the element. */
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
@@ -837,8 +859,9 @@ article .badge {
   flex-direction: column;
 }
 
-.contact .section__text__p2 {
-  margin: 0; /* Set the thickness for the margin area of the element. */
+.contact > p.section__text__p2 {
+  margin-top: 5vh; /* Set the thickness for the margin area of the element. */
+  margin-bottom: 0;
 }
 
 .contact > h1.title-card {
@@ -847,6 +870,7 @@ article .badge {
 
 .contact-info-upper-container {
   margin: 1.5rem auto 2rem;
+  width: calc(100% - 5rem); /* Set the width of the element. */
   padding: 1rem; /* Set the padding of the element. */
   border-radius: 2rem;
   border: #353535 0.1rem solid;
@@ -911,9 +935,15 @@ article .badge {
 /*----- The Footer Section -----*/
 
 footer {
-  height: 26vh;
-  margin: 0 1rem 1rem; /* Set the thickness for the margin area of the element. */
   text-align: center;
+}
+
+footer nav {
+  box-sizing: border-box;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 footer p {
@@ -923,7 +953,6 @@ footer p {
 
 .FooterContainer {
   text-align: center;
-  padding: 0 0 2.7vh; /* Set the padding of the element. */
 }
 
 /* noscript. */
