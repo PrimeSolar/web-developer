@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<html
+  lang="en"
+  dir="ltr"
+  prefix="og: https://ogp.me/ns#"
+  itemscope
+  itemtype="https://schema.org/ProfilePage"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Vladislav Kazantsev | Full Stack Web Developer & Senior Technical Writer
+    </title>
     <meta name="author" content="Vladislav Kazantsev" />
     <meta name="copyright" content="© 2026 Vladislav Kazantsev" />
+    <meta
+      name="description"
+      content="Full Stack Web Developer & Technical Writer showcasing portfolio and resume."
+    />
     <meta property="og:title" content="Vladislav Kazantsev" />
     <meta
       property="og:description"
       content="Full Stack Web Developer & Technical Writer"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vladislav Kazantsev" />
     <meta
       property="og:url"
       content="https://primesolar.github.io/web-developer/"
     />
-    <meta property="og:image" content="assets/logo.png" />
+    <meta
+      property="og:image"
+      content="https://primesolar.github.io/web-developer/assets/logo.png"
+    />
     <meta name="twitter:card" content="summary" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://primesolar.github.io/web-developer/assets/logo.png"
+    />
+    <link
+      rel="canonical"
+      content="https://primesolar.github.io/web-developer/"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "headline": "Vladislav Kazantsev | Full Stack Web Developer & Senior Technical Writer",
+        "description": "Full Stack Web Developer & Technical Writer showcasing portfolio and resume.",
+        "url": "https://primesolar.github.io/web-developer/",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Vladislav Kazantsev",
+          "jobTitle": "Full Stack Web Developer & Senior Technical Writer",
+          "url": "https://primesolar.github.io/web-developer/",
+          "sameAs": [
+            "https://www.linkedin.com/in/pepsico/",
+            "https://github.com/PrimeSolar"
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body style="display: none">
@@ -49,8 +94,9 @@
     </nav>
     <section class="profile">
       <div class="section__text">
+        <!-- <img src="assets/logo.png" alt="" style="width: 10vw" /> -->
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title-card">Vladislav Kazantsev</h1>
+        <h1 class="title-card" itemprop="headline">Vladislav Kazantsev</h1>
         <p class="section__text__p2">
           Full Stack Web Developer & Senior Technical Writer
         </p>
@@ -65,15 +111,12 @@
             href="./assets/resume.html"
             target="_blank"
             rel="noopener noreferrer"
+            class="button button-color-2"
           >
-            <button type="button" class="button button-color-2">
-              Download CV
-            </button></a
+            Download CV</a
           >
-          <a href="#contact-section" rel="noopener noreferrer">
-            <button type="button" class="button button-color-2">
-              Contact Info
-            </button></a
+          <a href="#contact-section" class="button button-color-2">
+            Contact Info</a
           >
         </div>
         <div class="socials-container">
@@ -135,6 +178,12 @@
             </div>
           </div>
           <div class="text-container about-me-text scroll-animation">
+            <p class="scroll-animation">
+              I'm actively looking for my next role. Located in Belgrade, Serbia
+              with permanent residence permit and unrestricted legal work
+              authorization. Open to remote, hybrid, on-site roles, and
+              relocation opportunities.
+            </p>
             <p class="scroll-animation">
               I specialize in delivering innovative architecture solutions and
               top-notch web application development to help you boost your
@@ -237,17 +286,13 @@
             </p>
             <p class="scroll-animation">
               If you need professional web solutions,
-              <a href="#contact-section" rel="noopener noreferrer">contact me</a
-              >. I'm sure my expertise can help you.
+              <a href="#contact-section">contact me</a>. I'm sure my expertise
+              can help you.
             </p>
           </div>
         </div>
       </div>
-      <a
-        href="#skills-section"
-        rel="noopener noreferrer"
-        aria-label="Navigate to the Skills Section"
-      >
+      <a href="#skills-section" aria-label="Navigate to the Skills Section">
         <img
           src="./assets/arrow.png"
           title="Navigate to the Skills Section"
@@ -423,11 +468,7 @@
           </div>
         </div>
       </div>
-      <a
-        href="#projects-section"
-        rel="noopener noreferrer"
-        aria-label="Navigate to the Projects Section"
-      >
+      <a href="#projects-section" aria-label="Navigate to the Projects Section">
         <img
           src="./assets/arrow.png"
           title="Navigate to the Projects Section"
@@ -463,20 +504,18 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/cryptocurrency-tracker/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
-                ><button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                class="project-github-link button button-color-2 project-button"
+                >GitHub</a
               >
               <a
                 href="https://primesolar.github.io/cryptocurrency-tracker/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -503,21 +542,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/move-it/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/move-it/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -542,21 +579,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/docs/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/docs/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -581,21 +616,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/news-blog/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/news-blog/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -627,21 +660,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/ocean-minded/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://ocean-minded.onrender.com/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -666,21 +697,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/unison/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/unison/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -705,21 +734,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/shopping-app/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/shopping-app/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -744,21 +771,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/praise-generator/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/praise-generator/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -783,21 +808,19 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/simon-game/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/simon-game/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
@@ -822,31 +845,25 @@
             <div class="button-container">
               <a
                 href="https://github.com/PrimeSolar/password-generator/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-github-link"
+                class="project-github-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  GitHub
-                </button></a
+                GitHub</a
               >
               <a
                 href="https://primesolar.github.io/password-generator/"
+                target="_blank"
                 rel="noopener noreferrer"
-                class="project-instance-link"
+                class="project-instance-link button button-color-2 project-button"
               >
-                <button class="button button-color-2 project-button">
-                  Live Demo
-                </button></a
+                Live Demo</a
               >
             </div>
           </div>
         </div>
       </div>
-      <a
-        href="#contact-section"
-        rel="noopener noreferrer"
-        aria-label="Navigate to the Contact Section"
-      >
+      <a href="#contact-section" aria-label="Navigate to the Contact Section">
         <img
           src="./assets/arrow.png"
           title="Navigate to the Contact Section"
@@ -854,43 +871,47 @@
           class="badge-button arrow"
       /></a>
     </section>
-    <section class="contact scroll-animation" id="contact-section">
-      <p class="section__text__p2">Get in Touch</p>
-      <h2 class="title-card">Contact Me</h2>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <a
-            href="mailto:hypervisor7@pm.me"
-            class="email-link"
-            title="Send me an email"
-            ><img
-              src="./assets/envelope.svg"
-              alt="Email Badge"
-              aria-label="Send me an email"
-              class="badge contact-badge email-badge"
-            />
-            <p>hypervisor7@pm.me</p></a
-          >
-        </div>
-        <div class="contact-info-container">
-          <a
-            href="https://www.linkedin.com/in/pepsico"
-            class="linkedin-link"
-            title="Connect with me on LinkedIn"
-            ><img
-              src="./assets/linkedin.svg"
-              alt="LinkedIn Badge"
-              aria-label="Connect with me on LinkedIn"
-              class="badge contact-badge linkedin-badge"
-            />
-            <p>LinkedIn</p></a
-          >
+    <section id="contact-section">
+      <div class="contact scroll-animation">
+        <p class="section__text__p2">Get in Touch</p>
+        <h2 class="title-card">Contact Me</h2>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <a
+              href="mailto:hypervisor7@pm.me"
+              title="Send me an email"
+              class="email-link"
+              ><img
+                src="./assets/envelope.svg"
+                alt="Email Badge"
+                aria-label="Send me an email"
+                class="badge contact-badge email-badge"
+              />
+              <p>hypervisor7@pm.me</p></a
+            >
+          </div>
+          <div class="contact-info-container">
+            <a
+              href="https://www.linkedin.com/in/pepsico"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Connect with me on LinkedIn"
+              class="linkedin-link"
+              ><img
+                src="./assets/linkedin.svg"
+                alt="LinkedIn Badge"
+                aria-label="Connect with me on LinkedIn"
+                class="badge contact-badge linkedin-badge"
+              />
+              <p>LinkedIn</p></a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <nav>
+      <nav aria-label="Footer navigation">
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about-section">About</a></li>
@@ -899,10 +920,10 @@
             <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
+
+        <div class="FooterContainer"></div>
       </nav>
     </footer>
-
-    <div class="FooterContainer"></div>
 
     <noscript>
       <style>
@@ -1022,6 +1043,6 @@
       </section>
     </noscript>
 
-    <script src="scripts/meta-tags-min.js"></script>
+    <script type="text/javascript" src="scripts/meta-tags-min.js"></script>
   </body>
 </html>
