@@ -41,6 +41,8 @@
     border-radius: 2rem;
     border: #353535 0.1rem solid;
     border-color: #a7a7a7;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
   }
 
   .about-containers {
@@ -72,12 +74,11 @@
     flex-shrink: 0;
   }
 
-  section.contact {
+  .contact {
     position: relative;
     width: 35vw; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
-    margin: 100px 0 0;
-    padding: 0 2rem;
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -86,17 +87,12 @@
     align-self: center;
   }
 
-  section.contact > p.section__text__p2 {
-    margin-top: 5vh;
-    margin-bottom: 0;
-  }
-
   div.contact-info-upper-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content; /* Set the width of the element. */
+    width: calc(100% - 5rem); /* Set the width of the element. */
     height: 7.5vh; /* Set the height of the element. */
     border-radius: 2rem;
     padding: 2.5rem; /* Set the padding of the element. */
@@ -115,6 +111,7 @@
     text-align: center;
     color: #0070ba;
     padding: 1rem 0;
+    /* padding: 0; */
   }
 
   .contact > h1.title-card {
@@ -190,14 +187,22 @@
     flex-basis: 30vw;
   }
 
-  section.contact {
+  .contact {
     width: fit-content; /* Set the width of the element. */
-    margin-top: 225px;
-    margin-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  section.profile {
+    margin-top: 2.5vh;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) {
+  section.profile {
+    margin-top: 4.75vh;
+  }
+
   .profile .section__text__p2 {
     font-size: 18px;
   }
@@ -208,6 +213,10 @@
 
   .project-button {
     width: 7rem; /* Set the width of the element. */
+  }
+
+  footer {
+    margin: 0; /* Set the thickness for the margin area of the element. */
   }
 }
 
@@ -278,7 +287,7 @@
 
   .contact,
   footer {
-    height: 37vh; /* Set the height of the element. */
+    height: 35vh; /* Set the height of the element. */
   }
 
   .profile {
@@ -371,11 +380,15 @@
     flex-basis: 88%;
   }
 
-  section.contact {
+  #contact-section {
+    height: 65vh;
+  }
+
+  .contact {
     margin: 0 5vw 5vh;
     width: 90vw; /* Set the width of the element. */
-    height: 225px; /* Set the height of the element. */
-    padding: 0;
+    height: fit-content; /* Set the height of the element. */
+    padding: 0 43px;
   }
 
   div.contact-info-upper-container {
@@ -396,7 +409,16 @@
   }
 
   footer {
-    height: 30vh; /* Set the height of the element. */
+    height: 35vh;
+    margin: 0; /* Set the thickness for the margin area of the element. */
+  }
+
+  footer nav {
+    height: 100%; /* Set the height of the element. */
+  }
+
+  .nav-links {
+    gap: 0.5em;
   }
 }
 
@@ -405,12 +427,61 @@
     flex-basis: 84%;
   }
 
+  section.profile {
+    margin-top: 2.5vh;
+  }
+
   .profile > .section__text {
-    padding: 3.7rem 2.5rem;
+    padding: 3rem 2.5rem;
   }
 
   div.contact-info-upper-container {
     padding: 1rem;
+  }
+
+  .contact {
+    padding: 0 25px;
+  }
+
+  .title-card {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    gap: 0.5em;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  section.profile {
+    margin-top: 0.75rem;
+  }
+
+  .section__text {
+    padding: 0.75rem 2.5rem;
+  }
+
+  .title-card {
+    padding: 0.75rem 0;
+  }
+
+  #contact-section {
+    padding: 0;
+  }
+}
+
+@media screen and (max-height: 370px) {
+  section.profile {
+    margin-top: 0.55rem;
+  }
+
+  .title-card {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .button {
+    padding: 0.5rem 0.25rem;
   }
 }
 
