@@ -16,15 +16,18 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/** The years of experience. */
-let experiencesText = document.querySelector(".about .card-text");
+/** The dynamically updated number of years of my commercial experience in IT (since 2019). */
+const yearsOfExperience = document.querySelectorAll(".years-of-experience");
 /**
  * The script includes detailed comments
  * to support stakeholders with varying JS knowledge.
  */
-if (experiencesText) {
-  experiencesText.textContent =
-    new Date().getFullYear() - 2019 + experiencesText.textContent;
+if (yearsOfExperience) {
+  for (let x of yearsOfExperience) {
+    x.textContent = `${
+      new Date().getFullYear() - 2019
+    } years of commercial experience in IT (since 2019)`;
+  }
 }
 
 /** The dynamically created tooltips with project descriptions. */
@@ -110,7 +113,7 @@ const year = new Date().getFullYear();
 function footerContainerF(FooterContainer) {
   if (FooterContainer) {
     /** Define the footer content. */
-    FooterContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All Rights Reserved.</span>`;
+    FooterContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All rights reserved.</span>`;
   }
 }
 footerContainerF(FooterContainer);
