@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" itemscope itemtype="schema.org/WebPage">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
   </head>
   <body>
     <header>
-      <h1>Vladislav Kazantsev</h1>
+      <h1 itemprop="headline">Vladislav Kazantsev</h1>
       <address
         itemscope
         itemtype="https://schema.org/Person"
@@ -32,10 +32,7 @@
       >
         <p>
           <strong>
-            <a
-              href="https://primesolar.github.io/web-developer/"
-              rel="noopener noreferrer"
-              itemprop="url"
+            <a href="https://primesolar.github.io/web-developer/" itemprop="url"
               >Personal Website</a
             ></strong
           >
@@ -44,7 +41,8 @@
           <strong>
             <a
               href="https://www.linkedin.com/in/pepsico/"
-              rel="noopener noreferrer"
+              target="_blank"
+              rel="noreferrer noopener"
               itemprop="sameAs"
               >LinkedIn Profile</a
             ></strong
@@ -54,7 +52,8 @@
           <strong>
             <a
               href="https://github.com/PrimeSolar"
-              rel="noopener noreferrer"
+              target="_blank"
+              rel="noreferrer noopener"
               itemprop="sameAs"
               >GitHub Profile</a
             ></strong
@@ -106,110 +105,124 @@
 
     <section class="skills" id="skills-section">
       <h2>Skills</h2>
-      <h3>Frontend Development</h3>
-      <ul class="skills-collection">
-        <li>Web Applications</li>
-        <li>SPAs & MPAs</li>
-        <li>Websites</li>
-        <li>JS (JavaScript)</li>
-        <li>jQuery</li>
-        <li>DevTools</li>
-        <li>Web APIs</li>
-        <li>OOP (Object-Oriented Programming)</li>
-        <li>FP (Functional Programming)</li>
-        <li>Cross-Browser Development</li>
-        <li>Asynchronous Programming</li>
-        <li>Performance Optimization</li>
-        <li>Continuous Improvement</li>
-        <li>Security Best Practices</li>
-        <li>Accessibility</li>
-        <li>Tailwind CSS</li>
-        <li>Bootstrap (Framework)</li>
-        <li>CSS3</li>
-        <li>Flexbox</li>
-        <li>Grid</li>
-        <li>Pixel Perfect</li>
-        <li>Responsive Design</li>
-        <li>UX/UI</li>
-        <li>HTML5</li>
-        <li>RSS</li>
-        <li>IndexedDB</li>
-        <li>Dexie.js</li>
-        <li>SEO (Search Engine Optimization)</li>
-        <li>VS Code (Visual Studio Code)</li>
-      </ul>
-      <h3>Backend Development & DevOps</h3>
-      <ul class="skills-collection">
-        <li>REST API</li>
-        <li>PHP</li>
-        <li>Twig</li>
-        <li>Python</li>
-        <li>Docker</li>
-        <li>Jenkins</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>EJS</li>
-        <li>Business Logic</li>
-      </ul>
-      <h3>Data & Databases</h3>
-      <ul class="skills-collection">
-        <li>SQL</li>
-        <li>PostgreSQL</li>
-        <li>JSON</li>
-        <li>XML</li>
-      </ul>
-      <h3>Technical Writing & Documentation Engineering</h3>
-      <ul class="skills-collection">
-        <li>Docs-as-Code</li>
-        <li>MD (Markdown)</li>
-        <li>Documentation Review</li>
-        <li>Documentation Maintenance</li>
-        <li>Documentation Management</li>
-        <li>Localization (Translation)</li>
-        <li>Oxygen XML Editor</li>
-        <li>Microsoft Office</li>
-        <li>REST API Documentation</li>
-        <li>API Request/Response Examples</li>
-        <li>Database Documentation</li>
-        <li>Query Examples</li>
-        <li>Tutorials</li>
-        <li>READMEs</li>
-        <li>Release Notes</li>
-        <li>Style Guides</li>
-        <li>Information Architecture</li>
-        <li>Business Requirements</li>
-        <li>Analytical Skills</li>
-        <li>Functional Specifications</li>
-        <li>Technical Content</li>
-        <li>Digital Content</li>
-        <li>Written Communication</li>
-      </ul>
-      <h3>Collaboration Technologies</h3>
-      <ul class="skills-collection">
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>GitLab</li>
-        <li>Jira</li>
-        <li>Confluence</li>
-      </ul>
-      <h3>Design & Modeling</h3>
-      <ul class="skills-collection">
-        <li>Figma</li>
-        <li>Lucidchart</li>
-        <li>Microsoft Visio</li>
-        <li>draw.io</li>
-        <li>AutoCAD</li>
-        <li>Technical Drawings</li>
-        <li>BPMN (Business Process Model and Notation)</li>
-        <li>DFD (Data Flow Diagram)</li>
-        <li>UML (Unified Modeling Language)</li>
-      </ul>
-      <h3>Domain Expertise</h3>
-      <ul class="skills-collection">
-        <li>FinTech (Financial Technologies)</li>
-        <li>Server Firmware</li>
-        <li>Complex Data Systems</li>
-      </ul>
+      <div class="skills-collection">
+        <h3>Frontend Development</h3>
+        <ul>
+          <li>Web Applications</li>
+          <li>SPAs & MPAs</li>
+          <li>Websites</li>
+          <li>JS (JavaScript)</li>
+          <li>jQuery</li>
+          <li>DevTools</li>
+          <li>Web APIs</li>
+          <li>OOP (Object-Oriented Programming)</li>
+          <li>FP (Functional Programming)</li>
+          <li>Cross-Browser Development</li>
+          <li>Asynchronous Programming</li>
+          <li>Performance Optimization</li>
+          <li>Continuous Improvement</li>
+          <li>Security Best Practices</li>
+          <li>Accessibility</li>
+          <li>Tailwind CSS</li>
+          <li>Bootstrap (Framework)</li>
+          <li>CSS3</li>
+          <li>Flexbox</li>
+          <li>Grid</li>
+          <li>Pixel Perfect</li>
+          <li>Responsive Design</li>
+          <li>UX/UI</li>
+          <li>HTML5</li>
+          <li>RSS</li>
+          <li>IndexedDB</li>
+          <li>Dexie.js</li>
+          <li>SEO (Search Engine Optimization)</li>
+          <li>VS Code (Visual Studio Code)</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Backend Development & DevOps</h3>
+        <ul>
+          <li>REST API</li>
+          <li>PHP</li>
+          <li>Twig</li>
+          <li>Python</li>
+          <li>Docker</li>
+          <li>Jenkins</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>EJS</li>
+          <li>Business Logic</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Data & Databases</h3>
+        <ul>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>JSON</li>
+          <li>XML</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Technical Writing & Documentation Engineering</h3>
+        <ul>
+          <li>Docs-as-Code</li>
+          <li>MD (Markdown)</li>
+          <li>Documentation Review</li>
+          <li>Documentation Maintenance</li>
+          <li>Documentation Management</li>
+          <li>Localization (Translation)</li>
+          <li>Oxygen XML Editor</li>
+          <li>Microsoft Office</li>
+          <li>REST API Documentation</li>
+          <li>API Request/Response Examples</li>
+          <li>Database Documentation</li>
+          <li>Query Examples</li>
+          <li>Tutorials</li>
+          <li>READMEs</li>
+          <li>Release Notes</li>
+          <li>Style Guides</li>
+          <li>Information Architecture</li>
+          <li>Business Requirements</li>
+          <li>Analytical Skills</li>
+          <li>Functional Specifications</li>
+          <li>Technical Content</li>
+          <li>Digital Content</li>
+          <li>Written Communication</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Collaboration Technologies</h3>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitLab</li>
+          <li>Jira</li>
+          <li>Confluence</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Design & Modeling</h3>
+        <ul>
+          <li>Figma</li>
+          <li>Lucidchart</li>
+          <li>Microsoft Visio</li>
+          <li>draw.io</li>
+          <li>AutoCAD</li>
+          <li>Technical Drawings</li>
+          <li>BPMN (Business Process Model and Notation)</li>
+          <li>DFD (Data Flow Diagram)</li>
+          <li>UML (Unified Modeling Language)</li>
+        </ul>
+      </div>
+      <div class="skills-collection">
+        <h3>Domain Expertise</h3>
+        <ul>
+          <li>FinTech (Financial Technologies)</li>
+          <li>Server Firmware</li>
+          <li>Complex Data Systems</li>
+        </ul>
+      </div>
     </section>
 
     <section class="projects" id="projects-section">
@@ -421,10 +434,10 @@
             <p>
               Company website:
               <a
-                href="https://fabit.ru"
+                href="https://fit-corp.ru"
                 target="_blank"
                 rel="noreferrer noopener"
-                >https://fabit.ru</a
+                >https://fit-corp.ru</a
               >
             </p>
             <h4>Responsibilities</h4>
