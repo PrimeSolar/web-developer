@@ -129,6 +129,13 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  /* Respect users' motion preferences. */
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media print {
   body {
     margin: 0;
