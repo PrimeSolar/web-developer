@@ -485,6 +485,13 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  /* Respect users' motion preferences. */
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media print {
   * {
     font-size: 12pt;
