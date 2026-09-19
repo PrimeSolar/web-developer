@@ -107,7 +107,8 @@
 @media screen and (max-width: 1290px) {
   .title-card {
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 1; /* Set the vertical spacing between lines of text.
+    Unitless "line-height" scales proportionally with "font-size". */
     text-align: center;
     color: #0070ba;
     padding: 1rem 0;
