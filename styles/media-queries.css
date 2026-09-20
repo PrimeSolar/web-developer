@@ -19,8 +19,9 @@
     height: fit-content; /* Set the height of the element. */
   }
 
-  /* The style sheet includes detailed property comments
-  to support stakeholders with varying CSS knowledge. */
+  /* The style sheet includes detailed property commentaries
+  to support stakeholders with varying CSS knowledge, show intentional design decisions,
+  and improve maintainability. */
   .section__pic-container {
     margin: 0 auto 2rem;
     width: 275px; /* Set the width of the element. */
@@ -39,8 +40,7 @@
     color: #000000;
     padding: 2.5rem;
     border-radius: 2rem;
-    border: #353535 0.1rem solid;
-    border-color: #a7a7a7;
+    border: solid 0.1rem #a7a7a7;
     /* padding-top: 1rem;
     padding-bottom: 1rem; */
   }
@@ -105,6 +105,12 @@
 }
 
 @media screen and (max-width: 1290px) {
+  .profile .section__text__p1,
+  .profile .section__text__p2 {
+    line-height: 1.6rem; /* Set the vertical spacing between lines of text.
+    Increased "line-height" improves readability. */
+  }
+
   .title-card {
     font-size: 3rem;
     line-height: 1; /* Set the vertical spacing between lines of text.
@@ -204,6 +210,7 @@
     margin-top: 4.75vh;
   }
 
+  .profile .section__text__p1,
   .profile .section__text__p2 {
     font-size: 18px;
   }
@@ -241,8 +248,16 @@
     margin-bottom: 0;
   }
 
-  .section__text__p1 {
+  .profile .section__text__p1 {
     font-size: 20px;
+  }
+
+  .profile .section__text__p2 {
+    font-size: 18px;
+  }
+
+  .profile .section__text__p3 {
+    font-size: 14px;
   }
 
   .nav-links a:hover {
@@ -258,7 +273,6 @@
 
   .arrow,
   .arrow-up {
-    width: auto; /* Set the width of the element. */
     height: 50px; /* Set the height of the element. */
     right: 0;
     bottom: 0;
@@ -341,10 +355,6 @@
     width: auto; /* Set the width of the element. */
     height: 46vw; /* Set the height of the element. */
     justify-content: center;
-  }
-
-  .profile .section__text__p2 {
-    font-size: 18px;
   }
 
   .title {
@@ -487,9 +497,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Respect users' motion preferences. */
+  /* Respect users' motion preferences that must always override component style rules. */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
   }
 }
 
