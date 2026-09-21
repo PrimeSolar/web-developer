@@ -18,8 +18,9 @@
     display: none;
   }
 
-  /* The style sheet includes detailed property comments
-  to support stakeholders with varying CSS knowledge. */
+  /* The style sheet includes detailed property commentaries
+  to support stakeholders with varying CSS knowledge, show intentional design decisions,
+  and improve maintainability. */
   .arrow-up {
     width: 5vw;
     right: 0;
@@ -130,9 +131,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Respect users' motion preferences. */
+  /* Respect users' motion preferences that must always override default component style rules. */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
   }
 }
 
