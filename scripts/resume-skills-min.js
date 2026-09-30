@@ -1,0 +1,1 @@
+const skillCollection=document.querySelector(".skill-collection");fetch("../index.html").then((e=>{if(!e.ok)throw new Error("Failed to fetch index.html");return e.text()})).then((e=>{const t=(new DOMParser).parseFromString(e,"text/html").querySelector(".skills .details-container");skillCollection.append(t)})).catch((e=>{}));
