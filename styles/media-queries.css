@@ -433,6 +433,17 @@
   }
 }
 
+@media (max-width: 480px) {
+  .skill-group ul {
+    gap: unset;
+  }
+
+  .skill-group li {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
 @media screen and (max-width: 370px) and (min-height: 800px) {
   .project-card {
     flex-basis: 84%;
@@ -541,5 +552,21 @@
 
   [data-tooltip]::after {
     opacity: 0 !important;
+  }
+
+  .skill-group {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .skill-group ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .skill-group li {
+    font-size: 0.75rem;
+    padding: 3px 7px;
   }
 }
