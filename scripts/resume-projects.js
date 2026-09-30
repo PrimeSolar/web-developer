@@ -1,15 +1,16 @@
-/*
+/**
  * Project Cards for the Resume
  *
- * Dynamically load and render project cards from index.html.
- * - Fetch and parse project data from index.html using DOMParser.
- * - Extract project data (title, GitHub link, instance link, description).
- * - Handle <br /> tags in titles by replacing with spaces for clean display.
- * - Generate project card elements with proper semantic HTML structure.
- * - Implement tooltip fallbacks for project information.
- * - Establish error handling for fetch.
+ * Dynamically load project data from the main page (index.html)
+ * and append it to the "Projects" section of the resume. The script allows to:
+ * ✓ Fetch and parse project data from index.html using DOMParser.
+ * ✓ Extract project data (title, GitHub link, instance link, description).
+ * ✓ Handle <br /> tags in titles by replacing with spaces for clean display.
+ * ✓ Generate project card elements with proper semantic HTML structure.
+ * ✓ Implement tooltip fallbacks for project information.
+ * ✓ Establish error handling for fetch.
  * This enables dynamic project portfolio rendering without duplicating HTML,
- * implementing reusability and improving maintainability.
+ * implementing reusability, ensuring single-source-of-truth, and improving maintainability.
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
