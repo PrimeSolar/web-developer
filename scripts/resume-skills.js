@@ -1,5 +1,5 @@
-/*
- * Skill Groups for the Resume
+/**
+ * Skill Collection for the Resume
  *
  * Dynamically fetch skill data from the main page (index.html)
  * and append it to the "Skills" section of the resume. The script allows to:
