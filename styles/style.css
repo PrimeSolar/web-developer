@@ -23,8 +23,13 @@
   color: #ffffff; /* Set the color for the text of the element. */
 }
 
-/* The style sheet includes detailed property comments
-to support stakeholders with varying CSS knowledge. */
+*:not(body, nav, to-top *) {
+  animation: brighten 0.5s;
+}
+
+/* The style sheet includes detailed property commentaries
+to support stakeholders with varying CSS knowledge, show intentional design decisions,
+and improve maintainability. */
 body {
   margin: 0; /* Set the thickness for the margin area of the element. */
   padding: 0; /* Set the padding of the element. */
@@ -369,6 +374,11 @@ section.profile {
   box-shadow: 0 8px 21px #ffffff7a;
 }
 
+.profile .section__text__p1,
+.profile .section__text__p2 {
+  line-height: 2.5rem;
+}
+
 .profile .section__text__p4 {
   margin-bottom: 1.5em;
   font-size: 14px;
@@ -404,7 +414,9 @@ abbr {
 
 .title {
   font-size: 3rem;
-  line-height: 3rem;
+  line-height: 1.5; /* Set the vertical spacing between lines of text.
+  Increased "line-height" improves readability.
+  Unitless "line-height" scales proportionally with "font-size". */
   text-align: center;
   color: #ffffff; /* Set the color for the text of the element. */
   padding: 0.5rem 0; /* Set the padding of the element. */
@@ -412,7 +424,9 @@ abbr {
 
 .title-card {
   font-size: 4.5rem;
-  line-height: 5rem;
+  line-height: 1.5; /* Set the vertical spacing between lines of text.
+  Increased "line-height" improves readability.
+  Unitless "line-height" scales proportionally with "font-size". */
   text-align: center;
   color: #0070ba; /* Set the color for the text of the element. */
   padding: 0.5rem 0; /* Set the padding of the element. */
@@ -471,11 +485,13 @@ h4 {
 
 .badge {
   height: 2rem;
+  aspect-ratio: 1 / 1; /* Prevents a layout shift as an image loads. */
 }
 
 .badge-button {
-  cursor: pointer;
   height: 2rem;
+  aspect-ratio: 1 / 1; /* Prevents a layout shift as an image loads. */
+  cursor: pointer;
   transition: transform 0.27s ease-in-out;
 }
 
@@ -603,8 +619,57 @@ h4 {
 }
 
 .skills.about-containers > .details-container {
+  margin: 2rem auto;
+}
+
+.skills.about-containers > .details-container {
   min-width: 30vw;
   min-height: fit-content;
+}
+
+.skills ul,
+.experience ul,
+.certifications ul,
+.languages ul {
+  list-style-type: none;
+}
+
+.skills li,
+.experience li,
+.certifications li,
+.languages li {
+  margin: 5px 0;
+}
+
+.skill-group ul {
+  max-width: 1000px;
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 15px 5px;
+  font-weight: bold;
+  background: linear-gradient(#1ab1ff, #1177ff);
+  box-shadow: 0 10px 25px #0000001a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1px;
+}
+
+.skill-group li {
+  list-style: none;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px #fffffffa;
+  border: 1px solid transparent;
+  color: #171717; /* Set the color for the text of the element. */
+}
+
+.skill-group li:hover {
+  box-shadow: 0 3px 7px #fffffff6;
 }
 
 .projects .details-container {
@@ -746,9 +811,9 @@ article .badge {
 }
 
 .project-image {
-  border-radius: 2rem;
   width: 90%;
   height: 90%;
+  border-radius: 2rem;
 }
 
 .project-title {
@@ -1003,7 +1068,9 @@ noscript details summary {
 }
 
 noscript li {
-  line-height: 1.5em;
+  line-height: 1.5; /* Set the vertical spacing between lines of text.
+  Increased "line-height" improves readability.
+  Unitless "line-height" scales proportionally with "font-size". */
   margin: 2vh 0; /* Set the thickness for the margin area of the element. */
   color: #2f2f2f; /* Set the color for the text of the element. */
 }
