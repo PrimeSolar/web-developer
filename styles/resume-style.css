@@ -17,7 +17,8 @@
 
 :root {
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern font stack prioritizes system fonts
+    Roboto, "Ubuntu", "Noto Sans", "Liberation Sans", "Helvetica Neue", Arial,
+    sans-serif; /* Modern font stack prioritizes system fonts
     for faster rendering and native typography experiences across platforms. */
   --font-size: clamp(
     14px,
