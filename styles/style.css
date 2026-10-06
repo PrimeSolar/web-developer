@@ -32,6 +32,7 @@ to support stakeholders with varying CSS knowledge, show intentional design deci
 and improve maintainability. */
 body {
   margin: 0; /* Set the thickness for the margin area of the element. */
+  width: 100%;
   padding: 0; /* Set the padding of the element. */
   font-family: "Poppins", sans-serif;
   /* Use flexbox to align the content inside the element. */
