@@ -30,7 +30,7 @@
 
 @media (max-width: 900px) {
   :root {
-    --project-column: calc(50% - var(--projects-collection-gap) / 2);
+    --project-column: calc(50% - var(--project-collection-gap) / 2);
   }
 
   .contact-info {
@@ -51,7 +51,7 @@
     margin-top: 0.5rem;
   }
 
-  .projects-collection {
+  .project-collection {
     grid-template-columns: var(--project-column) var(--project-column);
   }
 }
@@ -114,11 +114,11 @@
     font-size: 1.8em;
   }
 
-  .skills-collection ul {
+  .skill-group ul {
     gap: unset;
   }
 
-  .skills-collection li {
+  .skill-group li {
     font-size: 12px;
     padding: 8px 12px;
   }
@@ -181,23 +181,23 @@
     font-size: 0.9rem;
   }
 
-  .skills-collection {
+  .skill-group {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
 
-  .skills-collection ul {
+  .skill-group ul {
     margin: 0 !important;
     padding: 0 !important;
     gap: 0 !important;
   }
 
-  .skills-collection li {
+  .skill-group li {
     font-size: 0.75rem;
     padding: 3px 7px;
   }
 
-  .projects-collection {
+  .project-collection {
     gap: 1px;
   }
 
