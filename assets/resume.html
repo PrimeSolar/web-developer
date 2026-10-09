@@ -31,6 +31,12 @@
     <!-- Prefetch to external resources. -->
     <link rel="dns-prefetch" href="https://www.linkedin.com" />
     <link rel="dns-prefetch" href="https://github.com" />
+
+    <!-- Scripts. -->
+    <script type="module" src="../scripts/resume-buttons-min.js"></script>
+    <script type="module" src="../scripts/components-min.js"></script>
+    <script type="module" src="../scripts/resume-skills-min.js"></script>
+    <script type="module" src="../scripts/resume-projects-min.js"></script>
   </head>
   <body>
     <header>
@@ -115,129 +121,12 @@
 
     <section class="skills" id="skills-section">
       <h2>Skills</h2>
-      <div class="skills-collection">
-        <h3>Frontend Development</h3>
-        <ul>
-          <li>Web Applications</li>
-          <li>SPAs & MPAs</li>
-          <li>Websites</li>
-          <li>JS (JavaScript)</li>
-          <li>jQuery</li>
-          <li>DevTools</li>
-          <li>Web APIs</li>
-          <li>OOP (Object-Oriented Programming)</li>
-          <li>FP (Functional Programming)</li>
-          <li>Cross-Browser Development</li>
-          <li>Asynchronous Programming</li>
-          <li>Performance Optimization</li>
-          <li>Continuous Improvement</li>
-          <li>Security Best Practices</li>
-          <li>Accessibility</li>
-          <li>Tailwind CSS</li>
-          <li>Bootstrap (Framework)</li>
-          <li>CSS3</li>
-          <li>Flexbox</li>
-          <li>Grid</li>
-          <li>Pixel Perfect</li>
-          <li>Responsive Design</li>
-          <li>UX/UI</li>
-          <li>HTML5</li>
-          <li>RSS</li>
-          <li>IndexedDB</li>
-          <li>Dexie.js</li>
-          <li>SEO (Search Engine Optimization)</li>
-          <li>VS Code (Visual Studio Code)</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Backend Development & DevOps</h3>
-        <ul>
-          <li>REST API</li>
-          <li>PHP</li>
-          <li>Twig</li>
-          <li>Python</li>
-          <li>Docker</li>
-          <li>Jenkins</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>EJS</li>
-          <li>Business Logic</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Data & Databases</h3>
-        <ul>
-          <li>SQL</li>
-          <li>PostgreSQL</li>
-          <li>JSON</li>
-          <li>XML</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Technical Writing & Documentation Engineering</h3>
-        <ul>
-          <li>Docs-as-Code</li>
-          <li>MD (Markdown)</li>
-          <li>Documentation Review</li>
-          <li>Documentation Maintenance</li>
-          <li>Documentation Management</li>
-          <li>Localization (Translation)</li>
-          <li>Oxygen XML Editor</li>
-          <li>Microsoft Office</li>
-          <li>REST API Documentation</li>
-          <li>API Request/Response Examples</li>
-          <li>Database Documentation</li>
-          <li>Query Examples</li>
-          <li>Tutorials</li>
-          <li>READMEs</li>
-          <li>Release Notes</li>
-          <li>Style Guides</li>
-          <li>Information Architecture</li>
-          <li>Business Requirements</li>
-          <li>Analytical Skills</li>
-          <li>Functional Specifications</li>
-          <li>Technical Content</li>
-          <li>Digital Content</li>
-          <li>Written Communication</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Collaboration Technologies</h3>
-        <ul>
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>GitLab</li>
-          <li>Jira</li>
-          <li>Confluence</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Design & Modeling</h3>
-        <ul>
-          <li>Figma</li>
-          <li>Lucidchart</li>
-          <li>Microsoft Visio</li>
-          <li>draw.io</li>
-          <li>AutoCAD</li>
-          <li>Technical Drawings</li>
-          <li>BPMN (Business Process Model and Notation)</li>
-          <li>DFD (Data Flow Diagram)</li>
-          <li>UML (Unified Modeling Language)</li>
-        </ul>
-      </div>
-      <div class="skills-collection">
-        <h3>Domain Expertise</h3>
-        <ul>
-          <li>FinTech (Financial Technologies)</li>
-          <li>Server Firmware</li>
-          <li>Complex Data Systems</li>
-        </ul>
-      </div>
+      <div class="skill-collection"></div>
     </section>
 
     <section class="projects" id="projects-section">
       <h2>Projects</h2>
-      <div class="projects-collection"></div>
+      <div class="project-collection"></div>
     </section>
 
     <section class="experience" id="experience-section">
@@ -253,9 +142,10 @@
             <p>
               Finstar Financial Group is an international private investment
               advisory company with around US$2 billion of assets under
-              management. I enhanced and standardized documentation for complex
-              software systems, directly contributing to the firm's compliance,
-              client communication, and growth objectives.
+              management that develops financial software systems. I enhanced
+              and standardized documentation for software systems, directly
+              contributing to the firm's compliance, client communication, and
+              growth objectives.
             </p>
             <p>
               Company website:
@@ -327,7 +217,7 @@
               </li>
             </ul>
             <h4>Achievements</h4>
-            <ul>
+            <ul class="achievements">
               <li>
                 Developed the company's first technical documentation
                 infrastructure from scratch: built a centralized knowledge
@@ -373,7 +263,10 @@
           </div>
         </div>
         <div class="timeline-item">
-          <h3>Technical Writer (IT)</h3>
+          <h3>
+            Technical Writer Developing Web Documentation (IT) | Technical
+            Documentation Specialist
+          </h3>
           <p>YADRO | February 2021 - April 2022</p>
           <div class="timeline-details">
             <p>
@@ -412,7 +305,7 @@
               </li>
             </ul>
             <h4>Achievements</h4>
-            <ul>
+            <ul class="achievements">
               <li>
                 The creation of documentation facilitated the timely completion
                 of contracts, that enabled the company to receive payments.
@@ -435,7 +328,7 @@
           </div>
         </div>
         <div class="timeline-item">
-          <h3>Technical Writer (IT)</h3>
+          <h3>Technical Writer (IT) | Technical Documentation Specialist</h3>
           <p>Factory of Information Technology | May 2019 - January 2021</p>
           <div class="timeline-details">
             <p>
@@ -638,15 +531,5 @@
         inclusion.
       </p>
     </section>
-
-    <script
-      type="text/javascript"
-      src="../scripts/resume-buttons-min.js"
-    ></script>
-    <script type="text/javascript" src="../scripts/components-min.js"></script>
-    <script
-      type="text/javascript"
-      src="../scripts/resume-links-min.js"
-    ></script>
   </body>
 </html>
