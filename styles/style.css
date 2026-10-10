@@ -16,6 +16,18 @@
 /*----- The common style rules -----*/
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Modern font stack prioritizes system fonts
+  for faster rendering and native typography experiences across platforms. */
+  --poppins: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Ubuntu", "Noto Sans", "Liberation Sans", "Helvetica Neue", Arial,
+    sans-serif;
+  --inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Ubuntu", "Noto Sans", "Liberation Sans", "Helvetica Neue", Arial,
+    sans-serif;
+}
 
 * {
   margin: 0; /* Set the thickness for the margin area of the element. */
@@ -34,7 +46,7 @@ body {
   margin: 0; /* Set the thickness for the margin area of the element. */
   width: 100%;
   padding: 0; /* Set the padding of the element. */
-  font-family: "Poppins", sans-serif;
+  font-family: var(--poppins);
   /* Use flexbox to align the content inside the element. */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
   display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model). */
@@ -52,10 +64,6 @@ html {
   background-position: center center;
   background-attachment: fixed;
   background-size: 100vw 100vh;
-}
-
-.card-title {
-  color: #000000; /* Set the color for the text of the element. */
 }
 
 div img {
@@ -106,8 +114,12 @@ to-top > a.active {
   opacity: 1;
 }
 
-p {
-  color: #000000; /* Set the color for the text of the element. */
+.details-container p,
+.details-container p *,
+.text-container p,
+.text-container p * {
+  font-family: var(--inter);
+  color: #373737; /* Set the color for the text of the element. */
 }
 
 .about-me-text {
@@ -383,7 +395,7 @@ section.profile {
 .profile .section__text__p4 {
   margin-bottom: 1.5em;
   font-size: 14px;
-  color: #575757;
+  color: #373737;
 }
 
 abbr {
@@ -461,7 +473,11 @@ div:has(h4) {
 
 h3,
 h4 {
-  color: #000000; /* Set the color for the text of the element. */
+  color: #373737; /* Set the color for the text of the element. */
+}
+
+.about-me-text h3 {
+  color: #0070ba; /* Set the color for the text of the element. */
 }
 
 h4 {
@@ -527,7 +543,7 @@ h4 {
 
 .button {
   width: 8rem;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   padding: 1rem; /* Set the padding of the element. */
   border-radius: 2rem;
@@ -643,11 +659,12 @@ h4 {
 }
 
 .skill-group ul {
-  max-width: 1000px;
   margin: 10px auto;
-  border-radius: 15px;
+  max-width: 1000px;
   padding: 15px 5px;
+  font-family: var(--inter);
   font-weight: bold;
+  border-radius: 15px;
   background: linear-gradient(#1ab1ff, #1177ff);
   box-shadow: 0 10px 25px #0000001a;
   display: flex;
@@ -666,7 +683,7 @@ h4 {
   transition: all 0.3s ease;
   box-shadow: 0 1px 2px #fffffffa;
   border: 1px solid transparent;
-  color: #171717; /* Set the color for the text of the element. */
+  color: #373737; /* Set the color for the text of the element. */
 }
 
 .skill-group li:hover {
@@ -835,6 +852,7 @@ article .badge {
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 0.9em;
+  font-family: var(--inter);
   font-weight: bold;
   text-align: center;
   color: #ffffff;
@@ -847,6 +865,7 @@ article .badge {
   bottom: 50px;
   left: 0;
   right: 0;
+  font-family: var(--inter);
   display: flex;
   justify-content: center;
 }
@@ -861,6 +880,7 @@ article .badge {
   bottom: 15px;
   left: 0;
   right: 0;
+  font-size: 17px;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -881,6 +901,7 @@ article .badge {
   border: solid 1px #555555;
   border-radius: 6px;
   padding: 8px 12px;
+  font-family: var(--inter);
   z-index: 100;
   opacity: 0;
   background: #ffffff;
@@ -1048,7 +1069,7 @@ noscript main {
 
 noscript h2 {
   padding: 5vh 0; /* Set the padding of the element. */
-  color: #2f2f2f; /* Set the color for the text of the element. */
+  color: #1f1f1f; /* Set the color for the text of the element. */
 }
 
 noscript p {
