@@ -20,8 +20,8 @@
   }
 
   /* The style sheet includes detailed property commentaries
-  to support stakeholders with varying CSS knowledge, show intentional design decisions,
-  and improve maintainability. */
+  to support stakeholders with varying levels of CSS knowledge, to show intentional design decisions,
+  and to improve maintainability. */
   .section__pic-container {
     margin: 0 auto 2rem;
     width: 275px; /* Set the width of the element. */
