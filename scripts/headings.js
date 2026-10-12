@@ -29,9 +29,12 @@
 const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 const levels = [];
 let violations = [];
+
 /**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
+ * The script includes detailed commentaries
+ * to support stakeholders with varying levels of JS (JavaScript) knowledge,
+ * to show intentional logic decisions,
+ * and to improve maintainability.
  */
 headings.forEach((heading, index) => {
   const level = parseInt(heading.tagName[1]);
