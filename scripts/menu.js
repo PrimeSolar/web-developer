@@ -1,5 +1,5 @@
-/*
- * Script
+/**
+ * The Menu Component
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
@@ -15,26 +15,35 @@
 
 const menu = document.querySelector(".menu-links");
 const badge = document.querySelector(".hamburger-badge");
+
 /**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
+ * The script includes detailed commentaries
+ * to support stakeholders with varying levels of JS (JavaScript) knowledge,
+ * to show intentional logic decisions,
+ * and to improve maintainability.
  */
-menu.addEventListener("click", toggleMenu);
-badge.addEventListener("click", toggleMenu);
+if (menu) {
+  menu.addEventListener("click", toggleMenu);
+}
+if (badge) {
+  badge.addEventListener("click", toggleMenu);
+}
 
 function toggleMenu() {
   menu.classList.toggle("open");
   badge.classList.toggle("open");
 }
 
-window.addEventListener("click", function (event) {
-  if (
-    !event.target.matches(".menu-links") &&
-    !event.target.matches(".hamburger-badge") &&
-    !event.target.matches(".hamburger-badge span") &&
-    menu.classList.contains("open") === true
-  ) {
-    menu.classList.toggle("open");
-    badge.classList.toggle("open");
-  }
-});
+if (menu) {
+  window.addEventListener("click", function (event) {
+    if (
+      !event.target.matches(".menu-links") &&
+      !event.target.matches(".hamburger-badge") &&
+      !event.target.matches(".hamburger-badge span") &&
+      menu.classList.contains("open") === true
+    ) {
+      menu.classList.toggle("open");
+      badge.classList.toggle("open");
+    }
+  });
+}
