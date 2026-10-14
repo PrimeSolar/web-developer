@@ -1,0 +1,1 @@
+const yearsOfExperience=document.querySelectorAll(".years-of-experience");if(yearsOfExperience)for(let e of yearsOfExperience){const n=(new Date).getFullYear()-2019,t=document.createElement("abbr");t.title="Information Technology",t.textContent="IT",e.textContent=`${n} years of commercial experience in `,e.appendChild(t),e.append(" (since 2019)")}
