@@ -1,0 +1,1 @@
+const footerContainer=document.querySelector(".footerContainer"),year=(new Date).getFullYear();function footerContainerF(e){e&&(e.innerHTML+=`Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All rights reserved.</span>`)}footerContainerF(footerContainer);
