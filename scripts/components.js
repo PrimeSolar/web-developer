@@ -1,4 +1,4 @@
-/*
+/**
  * The Library of Custom Reusable Web Components
  * This file is the library containing my collection of custom, reusable web components
  * that can be used across different parts of the project. These components go beyond what browsers provide,
@@ -16,106 +16,14 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/** The dynamically updated number of years of my commercial experience in IT (since 2019). */
-const yearsOfExperience = document.querySelectorAll(".years-of-experience");
-/**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
- */
-if (yearsOfExperience) {
-  for (let x of yearsOfExperience) {
-    x.textContent = `${
-      new Date().getFullYear() - 2019
-    } years of commercial experience in IT (since 2019)`;
-  }
-}
-
-/** The dynamically created tooltips with project descriptions. */
-const projectImages = document.querySelectorAll(".project-image");
-for (const projectImage of projectImages) {
-  const projectCard = projectImage.closest(".project-card");
-  projectCard.setAttribute("data-tooltip", projectImage.alt);
-  const description = document.createElement("div");
-  description.classList.add("project-description");
-  const p = document.createElement("p");
-  p.textContent = "> Open Description";
-  description.appendChild(p);
-  projectCard.appendChild(description);
-  /** The logic for opening and closing a tooltip with a description for each project. */
-  description.addEventListener("click", function () {
-    if (!projectCard.classList.contains("project-description-enabled")) {
-      for (let x of document.querySelectorAll(".project-card")) {
-        if (x.classList.contains("project-description-enabled")) {
-          x.classList.toggle("project-description-enabled");
-          x.querySelector(".project-description p").textContent =
-            "> Open Description";
-        }
-      }
-      projectCard.classList.toggle("project-description-enabled");
-      p.textContent = "> Close Description";
-    } else {
-      projectCard.classList.toggle("project-description-enabled");
-      p.textContent = "> Open Description";
-    }
-  });
-}
-
-/** The "Navigate to page top" button. */
-const toTopButton = document.body.appendChild(document.createElement("to-top"));
-const a = document.createElement("a");
-a.areaLabel = "Navigate to page top";
-a.rel = "noopener noreferrer";
-toTopButton.appendChild(a);
-toTopButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-const toTopButtonBehaviorOnWindowResize = () => {
-  a.replaceChildren();
-
-  const isMobile = window.innerWidth <= 600;
-  const isResumePage = new URL(window.location).pathname.includes("resume");
-
-  if (isMobile) {
-    const span = document.createElement("span");
-    span.append(document.createTextNode("⬆"));
-    span.classList.add("badge", "arrow-up");
-    a.appendChild(span);
-  } else {
-    const img = document.createElement("img");
-    img.src = isResumePage
-      ? "../assets/arrow-up-circle-blue.svg"
-      : "./assets/arrow-up-circle-white.svg";
-    img.title = "Navigate to page top";
-    img.alt = "Navigate to page top";
-    img.classList.add("badge", "arrow-up");
-    a.appendChild(img);
-  }
-};
-
-const toTopButtonBehaviorOnWindowScroll = () => {
-  if (window.pageYOffset > 450) {
-    a.classList.add("active");
-  } else {
-    a.classList.remove("active");
-  }
-};
-
-toTopButtonBehaviorOnWindowResize();
-window.addEventListener("resize", toTopButtonBehaviorOnWindowResize);
-window.addEventListener("scroll", toTopButtonBehaviorOnWindowScroll);
-
-/** The footer. */
-const FooterContainer = document.querySelector(".FooterContainer");
-const year = new Date().getFullYear();
-
-function footerContainerF(FooterContainer) {
-  if (FooterContainer) {
-    /** Define the footer content. */
-    FooterContainer.innerHTML += `Copyright © ${year} Vladislav Kazantsev. <span class="nowrap">All rights reserved.</span>`;
-  }
-}
-footerContainerF(FooterContainer);
+import "./years-of-experience-min.js";
+import "./menu-min.js";
+import "./resume-copy-buttons-min.js";
+import "./resume-download-min.js";
+import "./resume-skills-min.js";
+import "./to-top.js";
+import "./resume-projects-min.js";
+import "./contact-details-min.js";
+import "./footer-min.js";
 
 console.log("components.js is completed");
