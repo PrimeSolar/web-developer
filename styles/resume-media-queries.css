@@ -19,12 +19,24 @@
   }
 
   /* The style sheet includes detailed property commentaries
-  to support stakeholders with varying CSS knowledge, show intentional design decisions,
-  and improve maintainability. */
+  to support stakeholders with varying levels of CSS knowledge, to show intentional design decisions,
+  and to improve maintainability. */
   .arrow-up {
     width: 5vw;
     right: 0;
     bottom: 0;
+  }
+}
+
+@media (min-width: 1176px) and (max-width: 1352px) {
+  .contact-info > div:nth-of-type(5) {
+    border: unset;
+  }
+}
+
+@media (max-width: 1174px) {
+  .contact-info > div:nth-of-type(4) {
+    border: unset;
   }
 }
 
@@ -46,9 +58,10 @@
   .contact-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  .contact-info p {
+  .contact-info > div {
     margin: 0;
     padding: 0.5rem;
     border-left: none;
@@ -57,7 +70,22 @@
     align-items: center;
   }
 
-  .contact-info p:first-of-type {
+  .contact-info > div.email-phone {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .email,
+  .phone {
+    padding: 0.5rem;
+    border: none;
+  }
+
+  .contact-info .download-resume {
+    margin: 0.5rem;
+  }
+
+  .contact-info > div:first-of-type {
     margin-top: 0.5rem;
   }
 
@@ -67,10 +95,6 @@
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
   nav ul li {
     margin: 5px 0;
   }
@@ -174,6 +198,11 @@
     break-inside: avoid !important;
   }
 
+  header,
+  header * {
+    font-size: 14px;
+  }
+
   h1,
   .contact-info a {
     -webkit-text-fill-color: unset;
@@ -203,7 +232,7 @@
   }
 
   .skill-group li {
-    font-size: 0.75rem;
+    font-size: 14px;
     padding: 3px 7px;
   }
 
@@ -222,6 +251,23 @@
 
   .pageBreak {
     page-break-before: always;
+  }
+
+  .contact-info,
+  .contact-info > div.email-phone {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .contact-info,
+  .contact-info div,
+  .contact-info div strong,
+  .contact-info div strong a,
+  nav ul li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   nav ul li a {
