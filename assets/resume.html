@@ -6,9 +6,13 @@
     <!-- Viewport settings. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Prefetch to external resources. -->
+    <link rel="dns-prefetch" href="https://linkedin.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+
     <!-- SEO (Search Engine Optimization). -->
     <title>
-      Vladislav Kazantsev | Full Stack Web Developer & Senior Technical Writer
+      Vladislav Kazantsev | Senior Technical Writer & Full Stack Web Developer
     </title>
     <meta name="author" content="Vladislav Kazantsev" />
     <meta name="copyright" content="© 2026 Vladislav Kazantsev" />
@@ -28,15 +32,9 @@
     <!-- Logo. -->
     <link rel="icon" href="logo.png" />
 
-    <!-- Prefetch to external resources. -->
-    <link rel="dns-prefetch" href="https://www.linkedin.com" />
-    <link rel="dns-prefetch" href="https://github.com" />
-
     <!-- Scripts. -->
-    <script type="module" src="../scripts/resume-buttons-min.js"></script>
     <script type="module" src="../scripts/components-min.js"></script>
-    <script type="module" src="../scripts/resume-skills-min.js"></script>
-    <script type="module" src="../scripts/resume-projects-min.js"></script>
+    <script type="module" src="../scripts/headings.js"></script>
   </head>
   <body>
     <header>
@@ -46,14 +44,14 @@
         itemtype="https://schema.org/Person"
         class="contact-info"
       >
-        <p>
+        <div>
           <strong>
             <a href="https://primesolar.github.io/web-developer/" itemprop="url"
               >Personal Website</a
             ></strong
           >
-        </p>
-        <p>
+        </div>
+        <div>
           <strong>
             <a
               href="https://www.linkedin.com/in/pepsico/"
@@ -63,8 +61,8 @@
               >LinkedIn Profile</a
             ></strong
           >
-        </p>
-        <p>
+        </div>
+        <div>
           <strong>
             <a
               href="https://github.com/PrimeSolar"
@@ -74,23 +72,30 @@
               >GitHub Profile</a
             ></strong
           >
-        </p>
-        <p class="email">
-          <strong
-            >Email:
-            <a href="mailto:hypervisor7@pm.me" itemprop="email"
-              >hypervisor7@pm.me</a
-            ></strong
-          >
-        </p>
-        <p class="phone">
-          <strong
-            >Phone:
-            <a href="tel:+38162236148" itemprop="telephone"
-              >+38162236148</a
-            ></strong
-          >
-        </p>
+        </div>
+        <div class="email-phone">
+          <div class="email">
+            <strong
+              >Email:
+              <a href="mailto:hypervisor7@pm.me" itemprop="email"
+                >hypervisor7@pm.me</a
+              ></strong
+            >
+          </div>
+          <div class="phone">
+            <strong
+              >Phone:
+              <a href="tel:+38162236148" itemprop="telephone"
+                >+38162236148</a
+              ></strong
+            >
+          </div>
+        </div>
+        <div>
+          <button type="button" class="button download-resume">
+            Download Resume
+          </button>
+        </div>
       </address>
       <nav>
         <ul>
@@ -516,19 +521,20 @@
     <section class="professional-summary" id="professional-summary-section">
       <h2>Professional Summary</h2>
       <p>
-        A skilled full stack web developer & senior technical writer with 7
-        years of commercial experience in IT (since 2019), including 4 years of
-        experience in a FinTech company with international projects, building
-        and maintaining web interfaces and documentation. Implemented
-        documentation systems serving hundreds of internal and external users,
-        leading to company-wide improvements in knowledge sharing. Passionate
-        about usability and visual design, I bring a proven track record of
-        developing scalable, well-documented code. Committed to continuous
-        self-improvement that ensures my expertise in web development and
-        technical writing remains current with industry standards. I deliver
-        results to achieve business goals through high-quality performance,
-        ethical practices, and collaborative teamwork that prioritizes
-        inclusion.
+        Senior technical writer & full stack web developer with 7 years of
+        commercial IT experience (since 2019), including 4 years of experience
+        in international FinTech, building and scaling web documentation and its
+        infrastructure. Architected Docs-as-Code systems serving hundreds of
+        internal teams and external users, leading to company-wide improvements
+        in knowledge sharing. Author of hundreds of interactive technical
+        documents. Skilled in mentoring specialists, defining documentation
+        standards, and conducting code reviews. Proficient in JavaScript,
+        Node.js, Express, PostgreSQL, Markdown, Git-based workflows, RESTful
+        APIs, and information architecture. Committed to continuous
+        self-improvement that ensures my expertise remains current with industry
+        standards. I deliver results to achieve business goals through
+        high-quality performance, ethical practices, and collaborative teamwork
+        that prioritizes inclusion.
       </p>
     </section>
   </body>
