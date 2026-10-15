@@ -33,8 +33,8 @@
 }
 
 /* The style sheet includes detailed property commentaries
-to support stakeholders with varying CSS knowledge, show intentional design decisions,
-and improve maintainability. */
+to support stakeholders with varying levels of CSS knowledge, to show intentional design decisions,
+and to improve maintainability. */
 * {
   scroll-behavior: smooth;
 }
@@ -94,10 +94,12 @@ a:hover {
 
 .contact-info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.contact-info p {
-  margin-top: 1.5em;
+.contact-info > div {
+  margin-top: 15px;
   padding: 1em;
   border-left: 1px solid transparent;
   border-image: linear-gradient(#1ab1ff, #1177ff) 1;
@@ -106,7 +108,7 @@ a:hover {
   align-items: center;
 }
 
-.contact-info p:first-of-type {
+.contact-info > div:first-of-type {
   border-left: none;
 }
 
@@ -125,7 +127,30 @@ a:hover {
   border-image-slice: 1;
 }
 
-.copy-button {
+.contact-info > div.email-phone {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.email,
+.phone {
+  padding: 1em;
+  display: flex;
+  align-items: baseline;
+}
+
+.email {
+  padding-left: 0;
+}
+
+.phone {
+  border-left: 1px solid transparent;
+  border-image: linear-gradient(#1ab1ff, #1177ff) 1;
+  border-image-slice: 1;
+  padding-right: 0;
+}
+
+.button {
   --bg: linear-gradient(to right, #1ab1ff, #1177ff);
   --text: #ffffff;
   --shadow: 0 6px 18px #0f175a29;
@@ -136,6 +161,7 @@ a:hover {
   white-space: nowrap;
   padding: 17px 14px;
   font-size: 14px;
+  /* font-weight: bold; */
   color: var(--text);
   background: var(--bg);
   border: none;
@@ -150,22 +176,23 @@ a:hover {
   backface-visibility: hidden;
   text-align: center;
   width: 100px;
+  min-width: fit-content;
   height: 25px;
   display: flex;
   align-items: center;
 }
 
-.copy-button:hover {
+.button:hover {
   transform: translateY(-1px);
   box-shadow: 0 12px 30px #0f172a37;
   filter: saturate(1.05);
 }
 
-.copy-button:active {
+.button:active {
   transform: translateY(-1px) scale(0.995);
 }
 
-.copy-button.copied {
+.button.copied {
   background: var(--text);
   color: var(--bg);
 }
@@ -226,7 +253,7 @@ ul {
 }
 
 .contact-info {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .cover-letter,
@@ -276,8 +303,17 @@ ul {
   box-shadow: 0 8px 16px #2568ea17;
 }
 
+to-top {
+  display: none;
+}
+
+to-top.active {
+  display: block;
+}
+
 to-top > a {
   position: fixed; /* Specify the positioning method for the element. */
+  display: none;
   bottom: 2.5vw;
   right: 2.5vw;
   font-size: 16px;
