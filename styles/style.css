@@ -18,6 +18,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
+/* The style sheet includes detailed property commentaries
+to support stakeholders with varying levels of CSS knowledge, to show intentional design decisions,
+and to improve maintainability. */
 :root {
   /* Modern font stack prioritizes system fonts
   for faster rendering and native typography experiences across platforms. */
@@ -39,12 +42,9 @@
   animation: brighten 0.5s;
 }
 
-/* The style sheet includes detailed property commentaries
-to support stakeholders with varying CSS knowledge, show intentional design decisions,
-and improve maintainability. */
 body {
   margin: 0; /* Set the thickness for the margin area of the element. */
-  width: 100%;
+  width: 100%; /* Set the width of the element. */
   padding: 0; /* Set the padding of the element. */
   font-family: var(--poppins);
   /* Use flexbox to align the content inside the element. */
@@ -57,7 +57,7 @@ body {
 html {
   margin: 0; /* Set the thickness for the margin area of the element. */
   padding: 0; /* Set the padding of the element. */
-  height: 100%;
+  height: 100%; /* Set the height of the element. */
   scroll-behavior: smooth;
   background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
@@ -91,8 +91,17 @@ div img {
   white-space: nowrap;
 }
 
+to-top {
+  display: none;
+}
+
+to-top.active {
+  display: block;
+}
+
 to-top > a {
   position: fixed; /* Specify the positioning method for the element. */
+  display: none;
   bottom: 2.5vw;
   right: 2.5vw;
   font-size: 16px;
@@ -130,7 +139,8 @@ to-top > a.active {
   border-radius: 10px;
 }
 
-.about-me-text p {
+.about-me-text p,
+.about-me-text h3 {
   padding: 0.5rem; /* Set the padding of the element. */
 }
 
@@ -172,7 +182,8 @@ nav {
   font-size: 1.5rem;
 }
 
-.nav-links a,
+.desktop-nav a,
+.mobile-nav a,
 .contact-info-container a,
 .about-me-text a {
   position: relative;
@@ -233,16 +244,16 @@ a:hover {
 
 /*----- The Menu -----*/
 
-.hamburger-nav {
+.mobile-nav {
   display: none;
 }
 
-.hamburger-menu {
+.mobile-menu {
   position: relative; /* Specify the positioning method for the element. */
   display: inline-block;
 }
 
-.hamburger-badge {
+.mobile-badge {
   width: 30px;
   height: 24px;
   cursor: pointer;
@@ -254,7 +265,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.hamburger-badge span {
+.mobile-badge span {
   width: 100%;
   height: 2px;
   background-color: #ffffff;
@@ -292,27 +303,27 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.hamburger-badge.open span:first-child {
+.mobile-badge.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
 
-.hamburger-badge.open span:nth-child(2) {
+.mobile-badge.open span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-badge.open span:last-child {
+.mobile-badge.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-badge span:first-child {
+.mobile-badge span:first-child {
   transform: none;
 }
 
-.hamburger-badge span:first-child {
+.mobile-badge span:first-child {
   opacity: 1;
 }
 
-.hamburger-badge span:first-child {
+.mobile-badge span:first-child {
   transform: none;
 }
 
@@ -675,15 +686,16 @@ h4 {
 
 .skill-group li {
   list-style: none;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 8px 10px;
   margin: 5px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 2px #fffffffa;
+  width: fit-content;
   border: 1px solid transparent;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: #ffffff;
   color: #373737; /* Set the color for the text of the element. */
+  box-shadow: 0 1px 2px #fffffffa;
+  transition: all 0.3s ease;
 }
 
 .skill-group li:hover {
@@ -849,14 +861,14 @@ article .badge {
 }
 
 [class^="skill-badge-"] {
-  border-radius: 8px;
   padding: 8px 12px;
   font-size: 0.9em;
   font-family: var(--inter);
   font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  border-radius: 8px;
   background: linear-gradient(to right, #1ab1ff, #1177ff);
+  color: #ffffff;
   box-shadow: 4px 4px 15px #00000037, -4px -4px 15px #ffffffcd;
 }
 
