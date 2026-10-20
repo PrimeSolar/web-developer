@@ -12,17 +12,24 @@
     <!-- Viewport settings. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- DNS (Domain Name System) prefetch and preconnect for external resources. -->
+    <link rel="dns-prefetch" href="https://www.linkedin.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <!-- SEO (Search Engine Optimization). -->
     <meta name="author" content="Vladislav Kazantsev" />
     <meta name="copyright" content="© 2026 Vladislav Kazantsev" />
     <meta
       name="description"
-      content="Technical writer & full stack web developer Vladislav Kazantsev showcasing portfolio and resume."
+      content="Technical writer & full stack web developer Vladislav Kazantsev showcasing portfolio and resume. Expert in API documentation, FinTech systems, and web applications. 7 years of commercial experience in IT, including 4 years in frontend development for international FinTech. Git, Markdown, Docs-as-Code, software documentation, hardware documentation, web development, Node.js, Express, EJS, SQL, Docker."
     />
     <meta
       name="keywords"
-      content="web developer portfolio, frontend developer, backend developer, full stack developer, technical writer, technical documentation engineer, technical documentation specialist, responsive web design, UX/UI design, web application development, JS developer, JavaScript developer, SQL developer, JS, JavaScript, nodejs, express, ejs, HTML, CSS, python, pandas, sql, postgresql, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration"
+      content="web developer portfolio, frontend developer, backend developer, full stack developer, technical writer, technical documentation engineer, technical documentation specialist, technical documentation, documentation portals, responsive web design, UX/UI design, web application development, JS developer, JavaScript developer, SQL developer, Git, pull-request reviews, Markdown, Docs-as-Code, software documentation, hardware documentation, web development, English, C1, localization, CI/CD, JS, JavaScript, nodejs, express, ejs, HTML, CSS, python, pandas, sql, postgresql, eCommerce web development, mobile-friendly design, SEO for web development, best web development practices, website development services, custom web design, portfolio website design, graphic design for developers, certifications, programming languages, API integration"
     />
+
+    <!-- Webpage title. -->
     <title>
       Vladislav Kazantsev | Senior Technical Writer & Full Stack Web Developer
     </title>
@@ -72,10 +79,13 @@
     />
 
     <!-- Open Graph tags for social media sharing. -->
-    <meta property="og:title" content="Vladislav Kazantsev" />
+    <meta
+      property="og:title"
+      content="Vladislav Kazantsev | Senior Technical Writer & Full Stack Web Developer"
+    />
     <meta
       property="og:description"
-      content="Senior Technical Writer & Full Stack Web Developer"
+      content="Senior Technical Writer & Full Stack Web Developer. Expert in API documentation, FinTech systems, and web applications. 7 years of commercial experience in IT, including 4 years in frontend development for international FinTech. Git, Markdown, Docs-as-Code, software documentation, hardware documentation, web development, Node.js, Express, EJS, React, SQL, Docker."
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vladislav Kazantsev" />
@@ -87,17 +97,29 @@
       property="og:image"
       content="https://primesolar.github.io/web-developer/assets/logo.png"
     />
+    <meta
+      property="og:image:alt"
+      content="Vladislav Kazantsev - Senior Technical Writer & Full Stack Web Developer"
+    />
+    <meta property="og:locale" content="en" />
 
     <!-- Twitter card tags. -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vladislav Kazantsev" />
+    <meta
+      name="twitter:title"
+      content="Vladislav Kazantsev | Senior Technical Writer & Full Stack Web Developer"
+    />
     <meta
       name="twitter:description"
-      content="Senior Technical Writer & Full Stack Web Developer"
+      content="Senior Technical Writer & Full Stack Web Developer. Expert in API documentation, FinTech systems, and web applications. 7 years of commercial experience in IT, including 4 years in frontend development for international FinTech. Git, Markdown, Docs-as-Code, software documentation, hardware documentation, web development, Node.js, Express, EJS, React, SQL, Docker."
     />
     <meta
       name="twitter:image"
       content="https://primesolar.github.io/web-developer/assets/logo.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Vladislav Kazantsev - Senior Technical Writer & Full Stack Web Developer"
     />
 
     <!-- JSON-LD structured data. -->
@@ -106,16 +128,40 @@
         "@context": "https://schema.org",
         "@type": "ProfilePage",
         "headline": "Vladislav Kazantsev | Senior Technical Writer & Full Stack Web Developer",
-        "description": "Technical Writer & Full Stack Web Developer showcasing portfolio and resume.",
+        "description": "Senior Technical Writer & Full Stack Web Developer showcasing portfolio and resume. Expert in API documentation, FinTech systems, and web applications. 7 years of commercial experience in IT, including 4 years in frontend development for international FinTech. Git, Markdown, Docs-as-Code, software documentation, hardware documentation, web development, Node.js, Express, EJS, SQL, Docker.",
         "url": "https://primesolar.github.io/web-developer/",
         "mainEntity": {
           "@type": "Person",
           "name": "Vladislav Kazantsev",
-          "jobTitle": " Senior Technical Writer & Full Stack Web Developer",
+          "jobTitle": "Senior Technical Writer & Full Stack Web Developer",
           "url": "https://primesolar.github.io/web-developer/",
+          "image": "https://primesolar.github.io/web-developer/assets/logo.png",
           "sameAs": [
             "https://www.linkedin.com/in/pepsico/",
             "https://github.com/PrimeSolar"
+          ],
+          "email": "hypervisor7@pm.me",
+          "knowsLanguage": ["en", "fr", "ru", "sr"],
+          "knowsAbout": [
+            "Technical Writing",
+            "Git",
+            "Pull-Request Reviews"
+            "Markdown",
+            "Docs-as-Code",
+            "CI/CD",
+            "Technical Documentation",
+            "Software Documentation",
+            "Hardware Documentation",
+            "API Documentation",
+            "Documentation portals",
+            "Localization",
+            "Web Development",
+            "Full Stack Development",
+            "FinTech Systems",
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "Web Architecture"
           ]
         }
       }
@@ -127,9 +173,16 @@
   </head>
 
   <body>
-    <nav class="desktop-nav">
-      <div class="logo">Vladislav Kazantsev</div>
-      <div>
+    <nav class="desktop-nav" aria-label="Desktop navigation" role="navigation">
+      <div class="logo">
+        <a
+          href="./index.html"
+          aria-label="Vladislav Kazantsev | Technical Writer & Full Stack Developer"
+          >Vladislav Kazantsev</a
+        >
+      </div>
+      <!-- Desktop menu wrapper -->
+      <div class="desktop-menu">
         <ul class="nav-links">
           <li><a href="#about-section">About</a></li>
           <li><a href="#skills-section">Skills</a></li>
@@ -138,13 +191,26 @@
         </ul>
       </div>
     </nav>
-    <nav class="hamburger-nav">
-      <div class="logo">Vladislav Kazantsev</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-badge">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav class="mobile-nav" aria-label="Mobile navigation" role="navigation">
+      <div class="logo">
+        <a
+          href="./index.html"
+          aria-label="Vladislav Kazantsev | Technical Writer & Full Stack Developer"
+          >Vladislav Kazantsev</a
+        >
+      </div>
+      <!-- Mobile menu wrapper -->
+      <div class="mobile-menu">
+        <!-- Mobile toggle -->
+        <div
+          class="mobile-badge"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="menu-links"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </div>
         <ul class="menu-links">
           <li><a href="#about-section">About</a></li>
@@ -429,6 +495,7 @@
               <h3>Frontend Development</h3>
               <ul>
                 <li>Web Applications</li>
+                <li>Web Development</li>
                 <li>SPAs & MPAs</li>
                 <li>Websites</li>
                 <li>JS (JavaScript)</li>
