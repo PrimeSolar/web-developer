@@ -14,7 +14,7 @@
  */
 
 const menu = document.querySelector(".menu-links");
-const badge = document.querySelector(".hamburger-badge");
+const badge = document.querySelector(".mobile-badge");
 
 /**
  * The script includes detailed commentaries
@@ -38,8 +38,8 @@ if (menu) {
   window.addEventListener("click", function (event) {
     if (
       !event.target.matches(".menu-links") &&
-      !event.target.matches(".hamburger-badge") &&
-      !event.target.matches(".hamburger-badge span") &&
+      !event.target.matches(".mobile-badge") &&
+      !event.target.matches(".mobile-badge span") &&
       menu.classList.contains("open") === true
     ) {
       menu.classList.toggle("open");
