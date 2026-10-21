@@ -25,17 +25,21 @@
 const skillCollection = document.querySelector(".skill-collection");
 
 /**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
+ * The script includes detailed commentaries
+ * to support stakeholders with varying levels of JS (JavaScript) knowledge,
+ * to show intentional logic decisions,
+ * and to improve maintainability.
  */
-fetch("../index.html")
-  .then((response) => {
-    if (!response.ok) throw new Error("Failed to fetch index.html");
-    return response.text();
-  })
-  .then((html) => {
-    const doc = new DOMParser().parseFromString(html, "text/html");
-    const skills = doc.querySelector(".skills .details-container");
-    skillCollection.append(skills);
-  })
-  .catch((error) => console.error("Error loading skills:", error));
+if (window.location.href.includes("resume.html")) {
+  fetch("../index.html")
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to fetch index.html");
+      return response.text();
+    })
+    .then((html) => {
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const skills = doc.querySelector(".skills .details-container");
+      skillCollection?.append(skills);
+    })
+    .catch((error) => console.error("Error loading skills:", error));
+}
