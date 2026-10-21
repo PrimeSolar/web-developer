@@ -1,4 +1,4 @@
-/*
+/**
  * Configuration Script
  *
  * This script sets up the essential HTML structure.
@@ -38,8 +38,10 @@ const html = document.querySelector("html");
 html.lang = "en";
 
 /**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
+ * The script includes detailed commentaries
+ * to support stakeholders with varying levels of JS (JavaScript) knowledge,
+ * to show intentional logic decisions,
+ * and to improve maintainability.
  */
 /** Set `dir="ltr"` for the <html> element. */
 html.dir = "ltr";
