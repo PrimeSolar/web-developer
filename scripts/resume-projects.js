@@ -29,10 +29,7 @@
 /** The dynamically created tooltips with project descriptions for the main page. */
 
 const projectImages = document.querySelectorAll(".project-image");
-if (
-  window.location.href === "https://primesolar.github.io/web-developer/" ||
-  window.location.href.includes("index.html")
-) {
+if (!window.location.href.includes("resume.html")) {
   for (const projectImage of projectImages) {
     const projectCard = projectImage.closest(".project-card");
     projectCard.setAttribute("data-tooltip", projectImage.alt);
