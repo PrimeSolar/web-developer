@@ -1,5 +1,5 @@
 /**
- * The Dynamically Created Project Cards for the Resume
+ * The Dynamically Created Project Tooltips and Cards for the Main Page and Resume
  *
  * Dynamically load project data from the main page (index.html)
  * and append it to the "Projects" section of the resume. The script allows to:
@@ -26,6 +26,43 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
+/** The dynamically created tooltips with project descriptions for the main page. */
+
+const projectImages = document.querySelectorAll(".project-image");
+if (
+  window.location.href === "https://primesolar.github.io/web-developer/" ||
+  window.location.href.includes("index.html")
+) {
+  for (const projectImage of projectImages) {
+    const projectCard = projectImage.closest(".project-card");
+    projectCard.setAttribute("data-tooltip", projectImage.alt);
+    const description = document.createElement("div");
+    description.classList.add("project-description");
+    const p = document.createElement("p");
+    p.textContent = "> Open Description";
+    description?.appendChild(p);
+    projectCard?.appendChild(description);
+    /** The logic for opening and closing a tooltip with a description for each project. */
+    description.addEventListener("click", function () {
+      if (!projectCard.classList.contains("project-description-enabled")) {
+        for (let x of document.querySelectorAll(".project-card")) {
+          if (x.classList.contains("project-description-enabled")) {
+            x.classList.toggle("project-description-enabled");
+            x.querySelector(".project-description p").textContent =
+              "> Open Description";
+          }
+        }
+        projectCard.classList.toggle("project-description-enabled");
+        p.textContent = "> Close Description";
+      } else {
+        projectCard.classList.toggle("project-description-enabled");
+        p.textContent = "> Open Description";
+      }
+    });
+  }
+}
+
+/** The dynamically created project cards for the resume. */
 const projectCollection = document.querySelector(".project-collection");
 if (window.location.href.includes("resume.html")) {
   /**
@@ -120,36 +157,4 @@ if (window.location.href.includes("resume.html")) {
       });
     })
     .catch((error) => console.error("Error loading project:", error));
-}
-
-/** The dynamically created tooltips with project descriptions. */
-const projectImages = document.querySelectorAll(".project-image");
-if (window.location.href.includes("index.html")) {
-  for (const projectImage of projectImages) {
-    const projectCard = projectImage.closest(".project-card");
-    projectCard.setAttribute("data-tooltip", projectImage.alt);
-    const description = document.createElement("div");
-    description.classList.add("project-description");
-    const p = document.createElement("p");
-    p.textContent = "> Open Description";
-    description?.appendChild(p);
-    projectCard?.appendChild(description);
-    /** The logic for opening and closing a tooltip with a description for each project. */
-    description.addEventListener("click", function () {
-      if (!projectCard.classList.contains("project-description-enabled")) {
-        for (let x of document.querySelectorAll(".project-card")) {
-          if (x.classList.contains("project-description-enabled")) {
-            x.classList.toggle("project-description-enabled");
-            x.querySelector(".project-description p").textContent =
-              "> Open Description";
-          }
-        }
-        projectCard.classList.toggle("project-description-enabled");
-        p.textContent = "> Close Description";
-      } else {
-        projectCard.classList.toggle("project-description-enabled");
-        p.textContent = "> Open Description";
-      }
-    });
-  }
 }
