@@ -22,6 +22,10 @@ const downloadResumeButton = document.querySelector(".download-resume");
  * to show intentional logic decisions,
  * and to improve maintainability.
  */
+/**
+ * Resume download with defensive null checking.
+ * The native window.print() API allows to ensure cross-browser compatibility.
+ */
 if (downloadResumeButton) {
   downloadResumeButton.addEventListener("click", function () {
     window.print();
@@ -81,7 +85,7 @@ if (downloadResumeButton) {
 // .education,
 // .certifications,
 // .languages,
-// .professional-summary,
+// .summary,
 // p {
 // display: block;
 // page-break-inside: avoid !important;
@@ -131,7 +135,7 @@ if (downloadResumeButton) {
 // }
 
 // .education p,
-// .professional-summary p {
+// .summary p {
 // max-width: fit-content;
 // min-height: fit-content;
 // }`;
