@@ -1,5 +1,7 @@
-/*
- * Script
+/**
+ * The Scroll Animation Handler
+ *
+ * Intersection Observer API provides performant viewport detection without scroll event listeners.
  *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
@@ -15,23 +17,43 @@
 
 const sections = document.querySelectorAll(".scroll-animation");
 /**
- * The script includes detailed comments
- * to support stakeholders with varying JS knowledge.
+ * The script includes detailed commentaries
+ * to support stakeholders with varying levels of JS (JavaScript) knowledge,
+ * to show intentional logic decisions,
+ * and to improve maintainability.
  */
-if (sections) {
-  const options = {
+/** Detects user's motion preference to ensure accessible UX before instantiating observers. */
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+/** Feature detection to gracefully handle older browsers without IntersectionObserver support. */
+const hasIntersectionObserverSupport =
+  typeof IntersectionObserver !== "undefined";
+
+if (sections && (prefersReducedMotion || !hasIntersectionObserverSupport)) {
+  /** Applies "visible" class, making elements immediately visible to respect users' motion preferences
+   * and/or to ensure compatibility with older browsers without the Intersection Observer.
+   * The content remains fully accessible. */
+  sections.forEach((section) => section.classList.add("visible"));
+} else if (sections) {
+  /** A threshold is activated when 10% of an element enters the viewport. */
+  const observerConfig = {
     root: null,
     threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
+      /** Intersection Observer detects a viewport entry. */
       if (entry.isIntersecting) {
+        /** Intersection Observer applies an animation class. */
         entry.target.classList.add("visible");
+        /** Intersection Observer unobserves after applying the class to prevent memory leaks. */
         observer.unobserve(entry.target);
       }
     });
-  }, options);
+  }, observerConfig);
 
   sections.forEach((section) => {
     observer.observe(section);
