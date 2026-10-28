@@ -23,7 +23,7 @@
   to support stakeholders with varying levels of CSS knowledge, to show intentional design decisions,
   and to improve maintainability. */
   .section__pic-container {
-    margin: 0 auto 2rem;
+    margin: 0 auto 2rem; /* Set the thickness for the margin area of the element. */
     width: 275px; /* Set the width of the element. */
     height: 275px; /* Set the height of the element. */
   }
@@ -53,9 +53,10 @@
   }
 
   .about-details-container {
-    justify-content: flex-start;
     flex-direction: column;
-    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0; /* Set the thickness for the margin area of the element. */
     padding: 0;
   }
 
@@ -63,9 +64,18 @@
     height: fit-content; /* Set the height of the element. */
   }
 
-  .projects {
-    margin: 5% 0 10%;
+  .about > .section-container {
+    width: fit-content;
     height: fit-content; /* Set the height of the element. */
+  }
+
+  .projects {
+    margin: 5% 0 10%; /* Set the thickness for the margin area of the element. */
+    height: fit-content; /* Set the height of the element. */
+  }
+
+  .projects-internal-container {
+    gap: 2rem;
   }
 
   .project-card {
@@ -78,7 +88,7 @@
     position: relative;
     width: 35vw; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
-    margin: 0;
+    margin: 0; /* Set the thickness for the margin area of the element. */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -100,7 +110,7 @@
   }
 
   .contact-info-container {
-    margin: 0.25rem 0;
+    margin: 0.25rem 0; /* Set the thickness for the margin area of the element. */
   }
 }
 
@@ -140,12 +150,12 @@
   }
 
   .about {
-    width: fit-content; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
   }
 
   .about > .section-container {
-    width: fit-content; /* Set the width of the element. */
+    width: 100%;
+    padding: 0;
     height: fit-content; /* Set the height of the element. */
   }
 
@@ -166,8 +176,7 @@
     margin-top: 2rem;
   }
 
-  .profile,
-  .section-container {
+  .profile {
     display: block;
   }
 
@@ -187,7 +196,7 @@
   }
 
   section {
-    margin: 0 5%;
+    margin: 0; /* Set the thickness for the margin area of the element. */
   }
 
   .project-card {
@@ -199,9 +208,15 @@
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px) {
+@media screen and (min-width: 800px) and (max-width: 1200px) {
   section.profile {
     margin-top: 2.5vh;
+  }
+
+  .about-containers,
+  .about-me-text {
+    box-sizing: border-box;
+    width: 77vw;
   }
 }
 
@@ -213,6 +228,16 @@
   .profile .section__text__p1,
   .profile .section__text__p2 {
     font-size: 18px;
+  }
+
+  .about-details-container {
+    width: 100vw;
+  }
+
+  .about-containers,
+  .about-me-text {
+    box-sizing: border-box;
+    width: 77vw;
   }
 
   .projects .button-container {
@@ -242,9 +267,16 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .project-button {
+    padding: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   section.profile {
     height: 750px; /* Set the height of the element. */
+    margin-top: 3.5vh;
     margin-bottom: 0;
   }
 
@@ -262,6 +294,16 @@
 
   .nav-links a:hover {
     transform: none;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .about-me-text {
+    box-sizing: border-box;
+    width: 90vw;
+    padding: 1rem;
   }
 
   to-top > a {
@@ -284,7 +326,7 @@
   }
 
   .profile > div.section__text {
-    margin: 0 1.7rem 10vh;
+    margin: 0 1.7rem 10vh; /* Set the thickness for the margin area of the element. */
   }
 
   .skills {
@@ -292,12 +334,12 @@
   }
 
   .project-card {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.25rem;
   }
 
   [data-tooltip]::after {
     width: 100%; /* Set the width of the element. */
-    height: fit-content;
+    height: fit-content; /* Set the height of the element. */
   }
 
   .contact,
@@ -325,12 +367,31 @@
     flex-wrap: wrap;
   }
 
+  .about-containers {
+    margin: 2rem; /* Set the thickness for the margin area of the element. */
+  }
+
+  .skills,
+  .skills-details-container {
+    margin-top: 0;
+  }
+
   .skills.about-containers > .details-container {
     width: 75vw; /* Set the width of the element. */
   }
 
+  .skill-group ul {
+    gap: unset;
+  }
+
+  .skill-group li {
+    margin: 4px; /* Set the thickness for the margin area of the element. */
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+
   .contact-info-container {
-    margin: 0;
+    margin: 0; /* Set the thickness for the margin area of the element. */
   }
 
   .contact-info-container p,
@@ -361,8 +422,8 @@
     font-size: 2rem;
   }
 
-  .text-container {
-    text-align: justify;
+  .text-container h3 {
+    font-size: 18px;
   }
 
   .profile {
@@ -392,27 +453,25 @@
   }
 
   #contact-section {
-    height: 65vh;
+    height: 65vh; /* Set the height of the element. */
   }
 
   .contact {
-    margin: 0 5vw 5vh;
+    margin: 0 5vw; /* Set the thickness for the margin area of the element. */
     width: 90vw; /* Set the width of the element. */
     height: fit-content; /* Set the height of the element. */
-    padding: 0 43px;
   }
 
   div.contact-info-upper-container {
     flex-direction: column;
     align-content: center;
-    max-width: fit-content;
-    width: fit-content; /* Set the width of the element. */
+    max-width: calc(100% - 32px);
+    width: calc(100% - 32px); /* Set the width of the element. */
     max-height: fit-content;
     height: fit-content; /* Set the height of the element. */
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     gap: 1.5rem;
-    margin-bottom: 50px;
-    padding: 2.5rem;
+    margin: 1.5rem 0 50px; /* Set the thickness for the margin area of the element. */
   }
 
   div.contact-info-upper-container * {
@@ -420,7 +479,7 @@
   }
 
   footer {
-    height: 35vh;
+    height: 35vh; /* Set the height of the element. */
     margin: 0; /* Set the thickness for the margin area of the element. */
   }
 
@@ -440,7 +499,7 @@
 
   .skill-group li {
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 7px 11px;
   }
 }
 
@@ -481,6 +540,15 @@
 
   .section__text {
     padding: 0.75rem 2.5rem;
+  }
+
+  .profile .section__text__p1 {
+    line-height: 1rem;
+  }
+
+  .profile .section__text__p2,
+  .profile .section__text__p4 {
+    margin-bottom: 0.75rem;
   }
 
   .title-card {
@@ -560,7 +628,7 @@
   }
 
   .skill-group ul {
-    margin: 0 !important;
+    margin: 0 !important; /* Set the thickness for the margin area of the element. */
     padding: 0 !important;
     gap: 0 !important;
   }
