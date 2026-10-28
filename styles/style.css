@@ -169,7 +169,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  margin: 0;
+  margin: 0; /* Set the thickness for the margin area of the element. */
   height: 15vh;
   border: 1px solid #ffffff37;
   -webkit-backdrop-filter: blur(10px);
@@ -185,7 +185,8 @@ nav {
 .desktop-nav a,
 .mobile-nav a,
 .contact-info-container a,
-.about-me-text a {
+.about-me-text a,
+footer a {
   position: relative;
   text-decoration: none !important;
   transition: color 0.3s ease, transform 0.2s ease;
@@ -596,6 +597,8 @@ h4 {
 .about > .section-container {
   width: 50vw;
   padding: 0 calc(25vw - 10rem); /* Set the padding of the element. */
+  display: flex;
+  justify-content: center;
 }
 
 .title.about-me {
@@ -604,8 +607,7 @@ h4 {
 
 .about-containers {
   gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0; /* Set the thickness for the margin area of the element. */
 }
 
 .about-details-container {
@@ -647,7 +649,7 @@ h4 {
 }
 
 .skills.about-containers > .details-container {
-  margin: 2rem auto;
+  margin: 2rem auto; /* Set the thickness for the margin area of the element. */
 }
 
 .skills.about-containers > .details-container {
@@ -666,11 +668,11 @@ h4 {
 .experience li,
 .certifications li,
 .languages li {
-  margin: 5px 0;
+  margin: 5px 0; /* Set the thickness for the margin area of the element. */
 }
 
 .skill-group ul {
-  margin: 10px auto;
+  margin: 10px auto; /* Set the thickness for the margin area of the element. */
   max-width: 1000px;
   padding: 15px 5px;
   font-family: var(--inter);
@@ -686,7 +688,7 @@ h4 {
 
 .skill-group li {
   list-style: none;
-  margin: 5px;
+  margin: 5px; /* Set the thickness for the margin area of the element. */
   width: fit-content;
   border: 1px solid transparent;
   padding: 8px 10px;
@@ -742,7 +744,7 @@ h4 {
   color: #555555; /* Set the color for the text of the element. */
   font-weight: 600;
   font-size: 1.75rem;
-  margin: calc(2rem - 24px) auto 2rem;
+  margin: calc(2rem - 24px) auto 2rem; /* Set the thickness for the margin area of the element. */
 }
 
 .skills-details-container {
@@ -752,6 +754,7 @@ h4 {
   display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   align-content: center;
 }
 
@@ -885,6 +888,9 @@ article .badge {
 .project-button {
   box-sizing: border-box;
   border-color: #a5a5a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-description {
@@ -969,7 +975,7 @@ article .badge {
 }
 
 .contact-info-upper-container {
-  margin: 1.5rem auto 2rem;
+  margin: 1.5rem auto 2rem; /* Set the thickness for the margin area of the element. */
   width: calc(100% - 5rem); /* Set the width of the element. */
   padding: 1rem; /* Set the padding of the element. */
   border-radius: 2rem;
@@ -1051,7 +1057,7 @@ footer p {
   color: #ffffff; /* Set the color for the text of the element. */
 }
 
-.FooterContainer {
+.footerContainer {
   text-align: center;
 }
 
