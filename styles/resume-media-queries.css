@@ -30,12 +30,14 @@
 
 @media (min-width: 1176px) and (max-width: 1352px) {
   .contact-info > div:nth-of-type(5) {
+    margin-top: 0;
     border: unset;
   }
 }
 
 @media (max-width: 1174px) {
   .contact-info > div:nth-of-type(4) {
+    margin-top: 0;
     border: unset;
   }
 }
@@ -63,7 +65,7 @@
 
   .contact-info > div {
     margin: 0;
-    padding: 0.5rem;
+    padding: 5px;
     border-left: none;
     display: flex;
     justify-content: center;
@@ -77,16 +79,16 @@
 
   .email,
   .phone {
-    padding: 0.5rem;
+    padding: 5px;
     border: none;
   }
 
   .contact-info .download-resume {
-    margin: 0.5rem;
+    margin: 0;
   }
 
   .contact-info > div:first-of-type {
-    margin-top: 0.5rem;
+    margin-top: 5px;
   }
 
   .project-collection {
@@ -114,6 +116,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    line-height: 1;
+  }
+
   .skill-group ul {
     gap: unset;
   }
@@ -183,6 +189,11 @@
 }
 
 @media print {
+  @page {
+    margin: 15px 5px 0;
+    padding: 0;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -203,9 +214,23 @@
     break-inside: avoid !important;
   }
 
+  .skills,
+  .projects,
+  .experience,
+  .education,
+  .certifications,
+  .languages,
+  .summary {
+    padding: 0;
+  }
+
   header,
   header * {
     font-size: 14px;
+  }
+
+  header {
+    margin: 0;
   }
 
   h1,
@@ -214,6 +239,7 @@
   }
 
   h1 {
+    padding: 0;
     font-size: 1.5rem;
   }
 
@@ -238,7 +264,13 @@
 
   .skill-group li {
     font-size: 14px;
-    padding: 3px 7px;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
+  .skill-group li:not(li:last-of-type)::after {
+    content: " | ";
   }
 
   abbr {
