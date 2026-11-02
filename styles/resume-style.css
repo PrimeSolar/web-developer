@@ -99,7 +99,7 @@ a:hover {
 }
 
 .contact-info > div {
-  margin-top: 15px;
+  margin-top: 5px;
   padding: 1em;
   border-left: 1px solid transparent;
   border-image: linear-gradient(#1ab1ff, #1177ff) 1;
@@ -198,7 +198,7 @@ a:hover {
 }
 
 nav {
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border-radius: 10px;
   background: linear-gradient(#1ab1ff, #1177ff);
 }
@@ -253,7 +253,8 @@ ul {
 }
 
 .contact-info {
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .cover-letter,
@@ -362,7 +363,7 @@ to-top > a.active {
 }
 
 .skill-group ul {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
   border-radius: 15px;
   padding: 20px;
