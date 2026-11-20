@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 873px) {
-  nav ul li {
-    margin: 5px;
-  }
-
   nav ul li a {
     padding: 5px 12px;
   }
@@ -102,7 +98,6 @@
   }
 
   .education {
-    padding: 1.5rem;
     margin: 0 auto 5px;
   }
 
@@ -201,13 +196,10 @@
 
   header,
   .projects,
-  .experience,
   .education,
   .certifications,
   .languages,
   .summary,
-  .timeline-item:nth-of-type(2),
-  .timeline-item:nth-of-type(3),
   p {
     display: block;
     page-break-inside: avoid !important;
@@ -221,7 +213,38 @@
   .certifications,
   .languages,
   .summary {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 5px !important;
+  }
+
+  .experience {
+    padding-bottom: 0 !important;
+  }
+
+  .experience h2 {
+    margin-top: 0;
+  }
+
+  #experience-section {
+    display: block;
+    height: 0;
+    margin-top: 5mm;
     padding: 0;
+  }
+
+  .education h4,
+  .languages ul,
+  .summary p {
+    margin: 0 auto;
+  }
+
+  .summary p {
+    width: 100vw;
+    font-size: 15px;
   }
 
   header,
@@ -233,7 +256,7 @@
     margin: 0;
   }
 
-  h1,
+  .text-gradient,
   .contact-info a {
     -webkit-text-fill-color: unset;
   }
@@ -244,18 +267,29 @@
   }
 
   h2 {
+    margin: 0 !important;
+    padding-top: 15px;
     padding-bottom: 15px;
     font-size: 1.2rem;
   }
 
-  .skills h2,
-  .certifications h2,
-  .languages h2 {
-    padding-top: 15px;
+  h2.text-gradient {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    padding-top: 5px !important;
+  }
+
+  .certifications li {
+    font-size: 14px;
   }
 
   h3 {
+    margin: 0;
     font-size: 0.9rem;
+    color: #007bff;
   }
 
   .skill-group {
