@@ -25,7 +25,7 @@
     2vw,
     16px
   ); /* Fluid typography scales smoothly across viewports. */
-  --line-height: 1.6; /* Increased "line-height" improves readability.
+  --line-height: 1.4; /* Increased "line-height" improves readability.
   Unitless "line-height" scales proportionally with "font-size". */
   --line-height-in-px: calc(var(--font-size) * var(--line-height));
   --project-collection-gap: 15px;
@@ -37,6 +37,16 @@ to support stakeholders with varying levels of CSS knowledge, to show intentiona
 and to improve maintainability. */
 * {
   scroll-behavior: smooth;
+  animation: brighten 0.5s;
+}
+
+@keyframes brighten {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body {
@@ -67,10 +77,12 @@ h1 {
   margin: 0;
   font-size: 2.1em;
   color: #007bff;
+}
+
+.text-gradient {
   background: linear-gradient(to right, #1ab1ff, #1177ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: brighten 1s;
 }
 
 p,
@@ -117,7 +129,6 @@ a:hover {
   background: linear-gradient(to right, #1ab1ff, #1177ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: brighten 1s;
   text-decoration: none;
 }
 
@@ -213,10 +224,11 @@ nav ul {
 
 nav ul li {
   position: relative;
-  margin: 0 5px;
+  margin: 5px;
 }
 
 nav ul li a {
+  display: inline-block;
   padding: 8px 12px;
   font-weight: bold;
   text-decoration: none;
@@ -234,20 +246,31 @@ nav ul li a:hover {
 }
 
 h2 {
-  margin-top: 0;
-  border-bottom: 2px solid #eaeaea;
-  padding-bottom: 5px;
   color: #007bff;
 }
 
+h2.text-gradient {
+  margin: 0;
+}
+
+h2:not(.text-gradient) {
+  margin-top: 0;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 5px;
+}
+
 h3 {
-  margin-top: 15px;
+  margin: 5px auto;
   color: #555555;
+}
+
+h4 {
+  margin: 0;
 }
 
 p,
 ul {
-  margin: 10px 0;
+  margin: 0;
   padding-inline-start: 0;
   list-style-type: none;
 }
@@ -359,7 +382,7 @@ to-top > a.active {
 .experience li,
 .certifications li,
 .languages li {
-  margin: 5px 0;
+  margin: 0;
 }
 
 .skill-group ul {
@@ -369,7 +392,7 @@ to-top > a.active {
   padding: 20px;
   font-weight: bold;
   background: linear-gradient(#1ab1ff, #1177ff);
-  box-shadow: 0 10px 25px #0000001a;
+  box-shadow: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -464,19 +487,19 @@ to-top > a.active {
   position: relative;
   margin: 0 auto;
   max-width: 800px;
-  padding: 25px 0 0;
+  padding: 0;
 }
 
 .timeline-item {
   position: relative;
-  padding: 25px;
-  margin: 5px 0;
+  padding: 5px 15px;
+  margin: 0;
   background: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 10px #0000001a;
 }
 
-.timeline-item:last-of-type {
+.timeline-item:not(.timeline-item:first-of-type) {
   margin: 5px 0 0;
 }
 
@@ -486,8 +509,21 @@ to-top > a.active {
   color: #007bff;
 }
 
+.education h3,
+.education h4 {
+  font-weight: normal;
+}
+
+abbr[title] {
+  text-underline-offset: 3px;
+}
+
+.skills abbr[title] {
+  text-underline-offset: unset;
+}
+
 .timeline-item p {
-  margin: 5px 0;
+  margin: 0;
   text-align: left;
   color: #555555;
 }
@@ -498,7 +534,7 @@ to-top > a.active {
 
 .timeline-details {
   margin-top: 8px;
-  padding: 8px;
+  padding: 0 8px;
   border-left: 3px solid transparent;
   border-image: linear-gradient(#1ab1ff, #1177ff) 1;
   border-image-slice: 1;
@@ -538,7 +574,7 @@ to-top > a.active {
   color: #575757;
 }
 
-.education::after {
+/* .education::after {
   content: "✓ Official Diploma";
   display: block;
   font-size: 0.75rem;
@@ -546,15 +582,30 @@ to-top > a.active {
   font-weight: 700;
   margin-top: 2rem;
   letter-spacing: 0.5px;
-}
+} */
 
 .certifications ul {
-  margin: 10px 0 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
 }
 
-.certifications li:last-of-type,
-.languages li:last-of-type {
-  margin: 5px 5px 0;
+.certifications li,
+.languages li {
+  display: inline;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+
+.certifications li:not(li:last-of-type)::after,
+.languages li:not(li:last-of-type)::after {
+  content: " | ";
+}
+
+a:has(abbr) {
+  text-underline-offset: 3px;
 }
 
 .summary p {
